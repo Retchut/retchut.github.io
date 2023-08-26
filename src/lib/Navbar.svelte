@@ -22,9 +22,9 @@
 	>
 	<div class="bg-background px-3 py-4 rounded-full">
 		<div class="space-y-2">
-			<div class="w-8 h-0.5 bg-title"></div>
-			<div class="w-8 h-0.5 bg-title"></div>
-			<div class="w-8 h-0.5 bg-title"></div>
+			<div class="w-8 h-0.5 hamburguertheme{themeVal}"></div>
+			<div class="w-8 h-0.5 hamburguertheme{themeVal}"></div>
+			<div class="w-8 h-0.5 hamburguertheme{themeVal}"></div>
 		</div>
 	</div>
 </nav>
