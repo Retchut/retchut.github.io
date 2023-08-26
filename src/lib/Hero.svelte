@@ -6,6 +6,8 @@
 		"Getting my hands dirty with clockwork and game development as a hobby"
 	];
 	const contact = "Contact me";
+
+	const theme = 4;
 </script>
 
 <section class="relative grow flex items-center mx-auto my-12">
@@ -13,13 +15,12 @@
 		<header class="relative z-10 max-w-[400px]">
 			<h1 class="text-6xl pb-4">{title}</h1>
 			<h2 class="text-xl">{subtitle}</h2>
-			<hr class="w-16 border-scheme1accent1 border-2 rounded-full my-8" />
+			<hr class="w-16 linetheme{theme} border-2 rounded-full my-8" />
 			{#each paragraphs as content}
 				<p class="text-base pb-1">{content}</p>
 			{/each}
 		</header>
-		<button
-			class="px-6 py-4 mt-4 rounded-full border-2 border-scheme1accent1 bg-scheme1accent1 text-scheme1background hover:bg-scheme1background hover:text-scheme1accent1 ease-in duration-200"
+		<button class="px-6 py-4 mt-4 rounded-full border-2 ease-in duration-200 btntheme{theme}"
 			>{contact}</button
 		>
 		<img src="/profile.jpg" alt="My portrait" class="profile" />
@@ -34,5 +35,50 @@
 		z-index: 0;
 		max-height: 700px;
 		border-radius: 2px;
+	}
+
+	/* Color test classes below */
+	.btntheme1 {
+		@apply border-scheme1accent1 bg-scheme1accent1 text-scheme1background;
+	}
+	.btntheme1:hover {
+		@apply bg-scheme1background text-scheme1accent1;
+	}
+
+	.btntheme2 {
+		@apply border-scheme1accent2 bg-scheme1accent2 text-scheme1background;
+	}
+	.btntheme2:hover {
+		@apply bg-scheme1background text-scheme1accent2;
+	}
+
+	.btntheme3 {
+		@apply border-scheme1accent3 bg-scheme1accent3 text-scheme1background;
+	}
+	.btntheme3:hover {
+		@apply bg-scheme1background text-scheme1accent3;
+	}
+
+	.btntheme4 {
+		@apply border-scheme1accent4 bg-scheme1accent4 text-scheme1background;
+	}
+	.btntheme4:hover {
+		@apply bg-scheme1background text-scheme1accent4;
+	}
+
+	.linetheme1 {
+		@apply border-scheme1accent1;
+	}
+
+	.linetheme2 {
+		@apply border-scheme1accent2;
+	}
+
+	.linetheme3 {
+		@apply border-scheme1accent3;
+	}
+
+	.linetheme4 {
+		@apply border-scheme1accent4;
 	}
 </style>
