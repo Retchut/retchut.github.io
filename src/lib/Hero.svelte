@@ -9,7 +9,7 @@
 </script>
 
 <section class="relative grow flex items-center mx-auto my-12">
-	<div class="min-w-[800px] max-w-[800px]">
+	<div class="w-[800px]">
 		<header class="relative z-10 max-w-[400px]">
 			<h1 class="text-6xl pb-4">{title}</h1>
 			<h2 class="text-xl">{subtitle}</h2>
