@@ -11,23 +11,19 @@ export default {
 				scheme1accent2: "#95cffb", // blue
 				scheme1accent3: "#F6BE9A", // pink
 
-				scheme1secondary: "#F6BE9A",
-
 				scheme2background: "#040510",
 				scheme2main: "#e5e6df",
 				scheme2accent0: "#9ec0dc",
-
-				scheme2secondary: "#d1d3d9",
-				scheme2title: "#6392d8",
-				scheme2other: "#737681",
+				scheme2accent1: "#6392d8",
+				scheme2accent2: "#d1d3d9",
+				scheme2accent3: "#737681",
 
 				scheme3background: "#25283b",
 				scheme3main: "#e5e6df",
 				scheme3accent0: "#91958b",
-
-				scheme3secondary: "#95cffb",
-				scheme3title: "#6392d8",
-				scheme3other: "#737681"
+				scheme3accent1: "#6392d8",
+				scheme3accent2: "#95cffb",
+				scheme3accent3: "#737681"
 			},
 			fontFamily: {
 				oswald: ["Oswald", "sans-serif"],
