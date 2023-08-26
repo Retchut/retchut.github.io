@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				scheme1background: "#0C1618",
-				scheme1main: "#FAF4D3", // 3
+				scheme1main: "#FAF4D3",
 				scheme1accent0: "#D1AC00", // yellow
 				scheme1accent1: "#09f755", // green
 				scheme1accent2: "#95cffb", // blue
