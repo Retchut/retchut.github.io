@@ -22,16 +22,16 @@
 	>
 	<div class="bg-background px-3 py-4 rounded-full">
 		<div class="space-y-2">
-			<div class="hamburguer-inactive hamburguertheme{themeVal}"></div>
-			<div class="hamburguer-inactive hamburguertheme{themeVal}"></div>
-			<div class="hamburguer-inactive hamburguertheme{themeVal}"></div>
+			<div class="hamburguer-inactive fade-anim hamburguertheme{themeVal}"></div>
+			<div class="hamburguer-inactive fade-anim hamburguertheme{themeVal}"></div>
+			<div class="hamburguer-inactive fade-anim hamburguertheme{themeVal}"></div>
 		</div>
 	</div>
 </nav>
 
 <style>
 	.hamburguer-inactive {
-		@apply w-8 h-0.5 fade-anim;
+		@apply w-8 h-0.5;
 	}
 
 	.fade-anim {
