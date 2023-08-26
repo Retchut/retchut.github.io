@@ -1,0 +1,62 @@
+/* Hero button */
+.btntheme0 {
+	@apply border-scheme1accent0 bg-scheme1accent0 text-scheme1background;
+}
+.btntheme0:hover {
+	@apply bg-scheme1background text-scheme1accent0;
+}
+
+.btntheme1 {
+	@apply border-scheme1accent1 bg-scheme1accent1 text-scheme1background;
+}
+.btntheme1:hover {
+	@apply bg-scheme1background text-scheme1accent1;
+}
+
+.btntheme2 {
+	@apply border-scheme1accent2 bg-scheme1accent2 text-scheme1background;
+}
+.btntheme2:hover {
+	@apply bg-scheme1background text-scheme1accent2;
+}
+
+.btntheme3 {
+	@apply border-scheme1accent3 bg-scheme1accent3 text-scheme1background;
+}
+.btntheme3:hover {
+	@apply bg-scheme1background text-scheme1accent3;
+}
+
+/* Hero line */
+.linetheme0 {
+	@apply border-scheme1accent0;
+}
+
+.linetheme1 {
+	@apply border-scheme1accent1;
+}
+
+.linetheme2 {
+	@apply border-scheme1accent2;
+}
+
+.linetheme3 {
+	@apply border-scheme1accent3;
+}
+
+/* Navbar logo */
+.logotheme0 {
+	@apply text-scheme1accent0;
+}
+
+.logotheme1 {
+	@apply text-scheme1accent1;
+}
+
+.logotheme2 {
+	@apply text-scheme1accent2;
+}
+
+.logotheme3 {
+	@apply text-scheme1accent3;
+}
