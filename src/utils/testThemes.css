@@ -60,3 +60,20 @@
 .logotheme3 {
 	@apply text-scheme1accent3;
 }
+
+/* Navbar hamburguer */
+.hamburguertheme0 {
+	@apply bg-scheme1accent0;
+}
+
+.hamburguertheme1 {
+	@apply bg-scheme1accent1;
+}
+
+.hamburguertheme2 {
+	@apply bg-scheme1accent2;
+}
+
+.hamburguertheme3 {
+	@apply bg-scheme1accent3;
+}
