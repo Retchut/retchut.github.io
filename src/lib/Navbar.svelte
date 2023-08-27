@@ -13,21 +13,23 @@
 	};
 </script>
 
-<nav class="flex justify-between items-center px-16 py-8">
-	<h1 class="text-3xl font-babas-neue textaccenttheme{themeVal} fade-anim">MÁRIO TRAVASSOS</h1>
-	<!-- Test themes button -->
-	<button
-		class="btntheme{themeVal} border-2 p-2 px-4 rounded-full fade-anim"
-		on:click={() => toggleTheme()}>Toggle theme</button
-	>
-	<div class="bg-background px-3 py-4 rounded-full">
-		<div class="space-y-2">
-			<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
-			<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
-			<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
+<div class="fixed w-screen z-30">
+	<nav class="flex justify-between items-center px-16 py-8">
+		<h1 class="text-3xl font-babas-neue textaccenttheme{themeVal} fade-anim">MÁRIO TRAVASSOS</h1>
+		<!-- Test themes button -->
+		<button
+			class="btntheme{themeVal} border-2 p-2 px-4 rounded-full fade-anim"
+			on:click={() => toggleTheme()}>Toggle theme</button
+		>
+		<div class="bg-background px-3 py-4 rounded-full">
+			<div class="space-y-2">
+				<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
+				<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
+				<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
+			</div>
 		</div>
-	</div>
-</nav>
+	</nav>
+</div>
 
 <style>
 	.hamburguer-inactive {
