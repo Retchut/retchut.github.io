@@ -22,7 +22,7 @@
 		<header class="relative z-10 max-w-[400px]">
 			<h1 class="text-6xl pb-4">{title}</h1>
 			<h2 class="text-xl">{subtitle}</h2>
-			<hr class="w-16 linetheme{themeVal} border-2 rounded-full my-8 fade-anim" />
+			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full my-8 fade-anim" />
 			{#each paragraphs as content}
 				<p class="text-base pb-1">{content}</p>
 			{/each}
@@ -42,9 +42,5 @@
 		z-index: 0;
 		max-height: 700px;
 		border-radius: 2px;
-	}
-
-	.fade-anim {
-		@apply ease-in duration-200;
 	}
 </style>
