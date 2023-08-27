@@ -7,7 +7,7 @@
 	import Contacts from "./lib/Contacts.svelte";
 </script>
 
-<main class="min-w-screen bg-background overflow-hidden">
+<main class="min-w-screen bg-scheme1background overflow-hidden">
 	<!-- Inside div to make hero section grow to fill remaining space -->
 	<div class="flex flex-col h-screen">
 		<Navbar />

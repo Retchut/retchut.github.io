@@ -1,4 +1,13 @@
 <script lang="ts">
+	import { theme } from "../utils/stores";
+
+	import "../utils/testThemes.css";
+
+	let themeVal: number;
+	theme.subscribe((value) => {
+		themeVal = value;
+	});
+
 	const title = "Hello I'm Mário,";
 	const subtitle = "I make stuff";
 	const paragraphs = [
@@ -13,13 +22,12 @@
 		<header class="relative z-10 max-w-[400px]">
 			<h1 class="text-6xl pb-4">{title}</h1>
 			<h2 class="text-xl">{subtitle}</h2>
-			<hr class="w-16 border-accent border-2 rounded-full my-8" />
+			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full my-8 fade-anim" />
 			{#each paragraphs as content}
 				<p class="text-base pb-1">{content}</p>
 			{/each}
 		</header>
-		<button
-			class="px-6 py-4 mt-4 rounded-full border-2 border-accent bg-accent text-background hover:bg-background hover:text-accent ease-in duration-200"
+		<button class="px-6 py-4 mt-4 rounded-full border-2 btntheme{themeVal} fade-anim"
 			>{contact}</button
 		>
 		<img src="/profile.jpg" alt="My portrait" class="profile" />

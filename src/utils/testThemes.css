@@ -1,0 +1,79 @@
+/* Hero button */
+.btntheme0 {
+	@apply border-scheme1accent0 bg-scheme1accent0 text-scheme1background;
+}
+.btntheme0:hover {
+	@apply bg-scheme1background text-scheme1accent0;
+}
+
+.btntheme1 {
+	@apply border-scheme1accent1 bg-scheme1accent1 text-scheme1background;
+}
+.btntheme1:hover {
+	@apply bg-scheme1background text-scheme1accent1;
+}
+
+.btntheme2 {
+	@apply border-scheme1accent2 bg-scheme1accent2 text-scheme1background;
+}
+.btntheme2:hover {
+	@apply bg-scheme1background text-scheme1accent2;
+}
+
+.btntheme3 {
+	@apply border-scheme1accent3 bg-scheme1accent3 text-scheme1background;
+}
+.btntheme3:hover {
+	@apply bg-scheme1background text-scheme1accent3;
+}
+
+/* Hero line */
+.borderaccenttheme0 {
+	@apply border-scheme1accent0;
+}
+
+.borderaccenttheme1 {
+	@apply border-scheme1accent1;
+}
+
+.borderaccenttheme2 {
+	@apply border-scheme1accent2;
+}
+
+.borderaccenttheme3 {
+	@apply border-scheme1accent3;
+}
+
+/* Navbar logo */
+.textaccenttheme0 {
+	@apply text-scheme1accent0;
+}
+
+.textaccenttheme1 {
+	@apply text-scheme1accent1;
+}
+
+.textaccenttheme2 {
+	@apply text-scheme1accent2;
+}
+
+.textaccenttheme3 {
+	@apply text-scheme1accent3;
+}
+
+/* Navbar hamburguer */
+.bgaccenttheme0 {
+	@apply bg-scheme1accent0;
+}
+
+.bgaccenttheme1 {
+	@apply bg-scheme1accent1;
+}
+
+.bgaccenttheme2 {
+	@apply bg-scheme1accent2;
+}
+
+.bgaccenttheme3 {
+	@apply bg-scheme1accent3;
+}

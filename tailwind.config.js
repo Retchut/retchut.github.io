@@ -4,25 +4,26 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				background: "#0C1618",
-				title: "#004643",
-				accent: "#D1AC00",
-				main: "#FAF4D3",
-				secondary: "#F6BE9A",
+				scheme1background: "#0C1618",
+				scheme1main: "#FAF4D3",
+				scheme1accent0: "#D1AC00", // yellow
+				scheme1accent1: "#09f755", // green
+				scheme1accent2: "#95cffb", // blue
+				scheme1accent3: "#F6BE9A", // pink
 
-				background1: "#040510",
-				title1: "#6392d8",
-				accent1: "#9ec0dc",
-				main1: "#e5e6df",
-				secondary1: "#d1d3d9",
-				other1: "#737681",
+				scheme2background: "#040510",
+				scheme2main: "#e5e6df",
+				scheme2accent0: "#9ec0dc",
+				scheme2accent1: "#6392d8",
+				scheme2accent2: "#d1d3d9",
+				scheme2accent3: "#737681",
 
-				background2: "#25283b",
-				title2: "#6392d8",
-				accent2: "#91958b",
-				main2: "#e5e6df",
-				secondary2: "#95cffb",
-				other2: "#737681"
+				scheme3background: "#25283b",
+				scheme3main: "#e5e6df",
+				scheme3accent0: "#91958b",
+				scheme3accent1: "#6392d8",
+				scheme3accent2: "#95cffb",
+				scheme3accent3: "#737681"
 			},
 			fontFamily: {
 				oswald: ["Oswald", "sans-serif"],
