@@ -13,7 +13,7 @@
 	};
 </script>
 
-<div class="fixed w-screen z-30">
+<div class="fixed z-30 w-full">
 	<nav class="flex justify-between items-center px-16 py-8">
 		<h1 class="text-3xl font-babas-neue textaccenttheme{themeVal} fade-anim">MÁRIO TRAVASSOS</h1>
 		<!-- Test themes button -->

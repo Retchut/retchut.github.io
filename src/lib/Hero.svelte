@@ -17,23 +17,23 @@
 	const contact = "Contact me";
 </script>
 
-<section class="relative grow flex items-center mx-auto my-12">
-	<div class="w-[800px]">
-		<header class="relative z-10 max-w-[400px]">
+<section class="mx-auto w-[800px] h-[90vh]">
+	<div class="h-[80vh] flex items-center relative">
+		<header class="ml-28 z-10 max-w-[400px] flex flex-col">
 			<h1 class="title">{title}</h1>
 			<h2 class="subtitle">{subtitle}</h2>
 			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
 			{#each paragraphs as content}
 				<p class="main-text">{content}</p>
 			{/each}
+			<button class="w-fit px-6 py-4 mt-4 rounded-full border-2 btntheme{themeVal} fade-anim"
+				>{contact}</button
+			>
 		</header>
-		<button class="px-6 py-4 mt-4 rounded-full border-2 btntheme{themeVal} fade-anim"
-			>{contact}</button
-		>
 		<img
 			src="/profile.jpg"
 			alt="My portrait"
-			class="absolute bottom-[5%] right-0 z-0 max-h-[700px] rounded-sm"
+			class="absolute bottom-12 right-12 z-0 max-h-[600px] rounded-sm"
 		/>
 	</div>
 </section>
