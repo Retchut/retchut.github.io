@@ -13,7 +13,7 @@
 	};
 </script>
 
-<div class="fixed w-screen z-30">
+<div class="fixed z-30 w-full">
 	<nav class="flex justify-between items-center px-16 py-8">
 		<h1 class="text-3xl font-babas-neue textaccenttheme{themeVal} fade-anim">MÁRIO TRAVASSOS</h1>
 		<!-- Test themes button -->
@@ -23,16 +23,13 @@
 		>
 		<div class="bg-background px-3 py-4 rounded-full">
 			<div class="space-y-2">
-				<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
-				<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
-				<div class="hamburguer-inactive fade-anim bgaccenttheme{themeVal}"></div>
+				<div class="w-8 h-0.5 fade-anim bgaccenttheme{themeVal}"></div>
+				<div class="w-8 h-0.5 fade-anim bgaccenttheme{themeVal}"></div>
+				<div class="w-8 h-0.5 fade-anim bgaccenttheme{themeVal}"></div>
 			</div>
 		</div>
 	</nav>
 </div>
 
 <style>
-	.hamburguer-inactive {
-		@apply w-8 h-0.5;
-	}
 </style>
