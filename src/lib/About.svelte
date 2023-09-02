@@ -1,7 +1,47 @@
 <script lang="ts">
+	import { theme } from "../utils/stores";
+
+	import "../utils/testThemes.css";
+
+	let themeVal: number;
+	theme.subscribe((value) => {
+		themeVal = value;
+	});
+
+	const title = "About me";
+	const paragraphs = [
+		"My name is Mário Travassos, an aspiring Software Developer from Portugal. I'm deeply interested in Game Design, Game Development and Web Development.",
+		"When I'm not studying or working in the aforementioned areas, you may find me reparing and/or tinkering with electronics and clockwork, automating simple tasks I could have done myself by hand in 30 seconds, playing video games or trading card games, or consuming all kinds of media.",
+		"I'm currently attending the 2nd year of a Master's Degree in Informatics and Computer Engineering at FEUP, working on a thesis focused working on optimizing photo-realistic VR experiences for the web.",
+		"I am also the current President of the Nucleus of Computer Graphics and Multimedia of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto."
+	];
+	const title2 = "Skillset";
+	const paragraphs2 = ["Front-End", "Back-end", "Computer Graphics", "Game Development"];
 </script>
 
-<section class="mx-auto max-w-[1300px]"></section>
+<section class="h-screen bg-scheme1background2 flex items-center">
+	<div class="mx-auto p-8 w-[1300px] h-[70vh] flex justify-between">
+		<header class="w-1/3">
+			<h1 class="title">{title}</h1>
+			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
+			{#each paragraphs as content}
+				<p class="main-text">{content}</p>
+			{/each}
+		</header>
+		<div class="w-1/2 flex flex-col">
+			<div class="grow flex justify-end items-start">
+				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
+			</div>
+			<h1 class="title">{title2}</h1>
+			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
+			<div class="flex">
+				{#each paragraphs2 as content}
+					<p class="main-text">{content}</p>
+				{/each}
+			</div>
+		</div>
+	</div>
+</section>
 
 <style>
 </style>
