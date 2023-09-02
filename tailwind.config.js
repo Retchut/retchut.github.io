@@ -10,6 +10,7 @@ export default {
 				scheme1accent1: "#09f755", // green
 				scheme1accent2: "#95cffb", // blue
 				scheme1accent3: "#F6BE9A", // pink
+				scheme1background2: "#3d4546",
 
 				scheme2background: "#040510",
 				scheme2main: "#e5e6df",

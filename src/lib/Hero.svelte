@@ -17,8 +17,8 @@
 	const contact = "Contact me";
 </script>
 
-<section class="mx-auto w-[800px] h-[90vh]">
-	<div class="h-[80vh] flex items-center relative">
+<section class="pt-12 h-screen bg-scheme1background overflow-hidden">
+	<div class="mx-auto w-[800px] h-[85vh] flex items-center relative">
 		<header class="ml-28 z-10 max-w-[400px] flex flex-col">
 			<h1 class="title">{title}</h1>
 			<h2 class="subtitle">{subtitle}</h2>
@@ -33,9 +33,10 @@
 		<img
 			src="/profile.jpg"
 			alt="My portrait"
-			class="absolute bottom-12 right-12 z-0 max-h-[600px] rounded-sm"
+			class="absolute bottom-24 right-12 z-0 max-h-[600px] rounded-sm"
 		/>
 	</div>
+	<div class="h-[15vh] bg-scheme1background2"></div>
 </section>
 
 <style>

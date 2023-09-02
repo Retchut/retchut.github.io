@@ -7,9 +7,9 @@
 	import Contacts from "./lib/Contacts.svelte";
 </script>
 
-<main class="w-screen bg-scheme1background overflow-hidden">
+<main class="w-screen bg-scheme1background2">
 	<Navbar />
-	<div class="pt-12 z-40 flex flex-col">
+	<div class="z-40 flex flex-col">
 		<Hero />
 		<About />
 		<Projects />
