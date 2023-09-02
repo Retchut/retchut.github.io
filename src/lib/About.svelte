@@ -19,7 +19,7 @@
 	const paragraphs2 = ["Front-End", "Back-end", "Computer Graphics", "Game Development"];
 </script>
 
-<section class="h-screen bg-scheme1background2 flex items-center">
+<section class="h-screen flex items-center">
 	<div class="mx-auto p-8 w-[1300px] h-[70vh] flex justify-between">
 		<header class="w-1/3">
 			<h1 class="title">{title}</h1>
