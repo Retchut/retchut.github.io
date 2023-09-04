@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { theme } from "../utils/stores";
+	import { theme } from "../../../utils/stores";
 
-	import "../utils/testThemes.css";
+	import "../../../utils/testThemes.css";
 
 	let themeVal: number;
 	theme.subscribe((value) => {

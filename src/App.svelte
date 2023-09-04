@@ -1,11 +1,11 @@
 <script lang="ts">
 	import "./app.css";
-	import Navbar from "./lib/Navbar.svelte";
-	import Sidebar from "./lib/Sidebar.svelte";
-	import About from "./lib/About.svelte";
-	import Hero from "./lib/Hero.svelte";
-	import Projects from "./lib/Projects.svelte";
-	import Contacts from "./lib/Contacts.svelte";
+	import Navbar from "./lib/Components/Navigation/Navbar.svelte";
+	import Sidebar from "./lib/Components/Navigation/Sidebar.svelte";
+	import About from "./lib/Sections/About.svelte";
+	import Hero from "./lib/Sections/Hero.svelte";
+	import Projects from "./lib/Sections/Projects.svelte";
+	import Contacts from "./lib/Sections/Contacts.svelte";
 </script>
 
 <main class="w-screen bg-scheme1background2">

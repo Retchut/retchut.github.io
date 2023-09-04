@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { scrollToSection } from "../utils/scrollToSection";
-	import { theme } from "../utils/stores";
+	import { scrollToSection } from "../../../utils/scrollToSection";
+	import { theme } from "../../../utils/stores";
 
-	import "../utils/testThemes.css";
+	import "../../../utils/testThemes.css";
 
 	let themeVal: number;
 	theme.subscribe((value) => {
