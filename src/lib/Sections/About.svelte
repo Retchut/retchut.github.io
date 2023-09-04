@@ -2,6 +2,7 @@
 	import { theme } from "../../utils/stores";
 
 	import "../../utils/testThemes.css";
+	import Card from "../Components/Card/Card.svelte";
 	import Paragraph from "../Components/Text/Paragraph.svelte";
 
 	let themeVal: number;
@@ -17,7 +18,12 @@
 		"I am also the current President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto."
 	];
 	const title2 = "Skillset";
-	const paragraphs2 = ["Front-End", "Back-end", "Computer Graphics", "Game Development"];
+	const cards = [
+		{ title: "Front-End", content: "React, Svelte, Tailwind, Bootstrap" },
+		{ title: "Back-end", content: "" },
+		{ title: "Computer Graphics", content: "" },
+		{ title: "Game Development", content: "" }
+	];
 </script>
 
 <section class="h-screen flex items-center">
@@ -35,9 +41,9 @@
 			</div>
 			<h1 class="title">{title2}</h1>
 			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
-			<div class="flex">
-				{#each paragraphs2 as content}
-					<p class="main-text">{content}</p>
+			<div class="grid grid-cols-4 bg-green-950">
+				{#each cards as data}
+					<Card {data} />
 				{/each}
 			</div>
 		</div>
