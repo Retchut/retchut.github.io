@@ -27,7 +27,7 @@ const getSectionOffset = (currentSection: number) => {
 	}
 };
 
-function handleScroll(event: Event) {
+function handleScroll() {
 	const currentSection = get(websiteSection);
 
 	// snap to section if on scroll cooldown

@@ -26,7 +26,7 @@
 	</div>
 </main>
 
-<svelte:window on:scroll={debounce(handleScroll, 50)} />
+<svelte:window on:scroll={() => handleScroll()} />
 
 <style>
 </style>
