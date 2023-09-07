@@ -6,10 +6,13 @@
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
-	import { handleScroll } from "./utils/scrollToSection";
+	import { websiteSection } from "./utils/stores";
+	import { handleScroll, scrollToSection } from "./utils/scrollToSection";
 	import debounce from "./utils/debounce";
 
 	import "./app.css";
+
+	scrollToSection(0);
 </script>
 
 <main class="w-screen bg-scheme1background2">
@@ -23,7 +26,7 @@
 	</div>
 </main>
 
-<svelte:window on:scroll={debounce(handleScroll, 100)} />
+<svelte:window on:scroll={debounce(handleScroll, 50)} />
 
 <style>
 </style>
