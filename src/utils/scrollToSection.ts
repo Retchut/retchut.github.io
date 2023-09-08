@@ -2,7 +2,7 @@ import { get } from "svelte/store";
 import { websiteSection } from "./stores";
 
 const PAGE_OFFSET: number = window.innerHeight;
-const SCROLL_DELAY: number = 1500; // ms
+const SCROLL_DELAY: number = 700; // ms
 const SECTIONS: number[] = [0, 1];
 
 let onScrollCooldown: boolean = false;

@@ -6,9 +6,7 @@
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
-	import { websiteSection } from "./utils/stores";
 	import { handleScroll, scrollToSection } from "./utils/scrollToSection";
-	import debounce from "./utils/debounce";
 
 	import "./app.css";
 
