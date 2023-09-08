@@ -1,11 +1,16 @@
 <script lang="ts">
-	import "./app.css";
 	import Navbar from "./lib/Components/Navigation/Navbar.svelte";
 	import Sidebar from "./lib/Components/Navigation/Sidebar.svelte";
 	import About from "./lib/Sections/About.svelte";
 	import Hero from "./lib/Sections/Hero.svelte";
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
+
+	import { handleScroll, scrollToSection } from "./utils/scrollToSection";
+
+	import "./app.css";
+
+	scrollToSection(0);
 </script>
 
 <main class="w-screen bg-scheme1background2">
@@ -18,6 +23,8 @@
 		<Contacts />
 	</div>
 </main>
+
+<svelte:window on:scroll={() => handleScroll(null)} />
 
 <style>
 </style>
