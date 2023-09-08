@@ -27,7 +27,7 @@ const getSectionOffset = (currentSection: number) => {
 	}
 };
 
-function handleScroll() {
+function handleScroll(targetSection: number | null) {
 	const currentSection = get(websiteSection);
 
 	// snap to section if on scroll cooldown
@@ -38,7 +38,8 @@ function handleScroll() {
 
 	onScrollCooldown = true;
 
-	const nextSection = currentSection + getSectionOffset(currentSection);
+	const nextSection =
+		targetSection !== null ? targetSection : currentSection + getSectionOffset(currentSection);
 
 	if (nextSection !== currentSection) {
 		// scroll events shouldn't be fired upwards from section 0, or downwards from the last section, but we're still checking just in case
@@ -47,12 +48,15 @@ function handleScroll() {
 		} else {
 			scrollToSection(currentSection);
 		}
-	}
 
-	// reset scrolling flag
-	setTimeout(function () {
+		// reset scrolling flag after delay if we scroll
+		setTimeout(function () {
+			onScrollCooldown = false;
+		}, SCROLL_DELAY);
+	} else {
+		// no scrolling was made, so we just clear the flag
 		onScrollCooldown = false;
-	}, SCROLL_DELAY);
+	}
 }
 
 export { scrollToSection, handleScroll };
