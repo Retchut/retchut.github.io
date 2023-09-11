@@ -3,8 +3,6 @@
 
 	import Button from "../Components/Button/Button.svelte";
 
-	import "../../utils/testThemes.css";
-
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
@@ -21,10 +19,10 @@
 
 <section class="pt-12 h-screen bg-scheme1background overflow-hidden">
 	<div class="mx-auto w-[800px] h-[85vh] flex items-center relative">
-		<header class="ml-28 z-10 max-w-[400px] flex flex-col">
+		<header class="ml-28 z-10 max-w-[400px] flex flex-col text-scheme1main">
 			<h1 class="title">{title}</h1>
 			<h2 class="subtitle">{subtitle}</h2>
-			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
+			<hr class="w-16 border-scheme1accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
 			{#each paragraphs as content}
 				<p class="main-text">{content}</p>
 			{/each}

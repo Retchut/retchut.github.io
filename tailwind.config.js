@@ -1,6 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
+	safelist: [
+		{
+			pattern: /(bg|text|border)-scheme1(background|accent.)/,
+			variants: ["hover"]
+		}
+	],
 	theme: {
 		extend: {
 			colors: {

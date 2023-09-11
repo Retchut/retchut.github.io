@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { theme } from "../../utils/stores";
 
-	import "../../utils/testThemes.css";
 	import Card from "../Components/Card/Card.svelte";
 	import Paragraph from "../Components/Text/Paragraph.svelte";
 
@@ -28,9 +27,9 @@
 
 <section class="h-screen flex items-center">
 	<div class="mx-auto p-8 w-[1300px] h-[70vh] flex justify-between">
-		<header class="w-1/3">
+		<header class="w-1/3 text-scheme1main">
 			<h1 class="title">{title}</h1>
-			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
+			<hr class="w-16 border-scheme1accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
 			{#each paragraphs as content}
 				<Paragraph {content} />
 			{/each}
@@ -39,9 +38,9 @@
 			<div class="grow flex justify-end items-start">
 				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
 			</div>
-			<h1 class="title">{title2}</h1>
-			<hr class="w-16 borderaccenttheme{themeVal} border-2 rounded-full mb-8 fade-anim" />
-			<div class="grid grid-cols-4 bg-green-950">
+			<h1 class="title text-scheme1main">{title2}</h1>
+			<hr class="w-16 border-scheme1accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
+			<div class="grid grid-cols-4">
 				{#each cards as data}
 					<Card {data} />
 				{/each}
