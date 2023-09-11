@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { theme } from "../../utils/stores";
 
+	import Button from "../Components/Button/Button.svelte";
+
 	import "../../utils/testThemes.css";
 
 	let themeVal: number;
@@ -26,9 +28,11 @@
 			{#each paragraphs as content}
 				<p class="main-text">{content}</p>
 			{/each}
-			<button class="w-fit px-6 py-4 mt-4 rounded-full border-2 btntheme{themeVal} fade-anim"
-				>{contact}</button
-			>
+			<Button
+				class="w-fit px-6 py-4 mt-4"
+				text={contact}
+				action={() => console.warn("TODO: head to contact page")}
+			/>
 		</header>
 		<img
 			src="/profile.jpg"

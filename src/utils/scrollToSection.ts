@@ -7,7 +7,7 @@ const SECTIONS: number[] = [0, 1];
 
 let onScrollCooldown: boolean = false;
 
-function scrollToSection(num: number) {
+function scrollToSection(num: number): void {
 	window.scrollTo({
 		top: num * PAGE_OFFSET,
 		left: 0,
@@ -16,7 +16,7 @@ function scrollToSection(num: number) {
 	websiteSection.update((value) => num);
 }
 
-const getSectionOffset = (currentSection: number) => {
+const getSectionOffset = (currentSection: number): number => {
 	const scrollY = window.scrollY;
 	if (scrollY > currentSection * PAGE_OFFSET) {
 		return 1;
@@ -27,7 +27,7 @@ const getSectionOffset = (currentSection: number) => {
 	}
 };
 
-function handleScroll(targetSection: number | null) {
+function handleScroll(targetSection: number | null): void {
 	const currentSection = get(websiteSection);
 
 	// snap to section if on scroll cooldown
