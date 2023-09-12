@@ -17,10 +17,10 @@
 	<nav class="flex justify-between items-center px-16 py-8">
 		<h1 class="text-3xl font-babas-neue text-scheme1accent{themeVal} fade-anim">MÁRIO TRAVASSOS</h1>
 		<!-- Test themes button -->
-		<Button class="p-2 px-4" text="Toggle theme" action={() => toggleTheme()} />
+		<Button class="p-2 px-4" text="Toggle theme" action={toggleTheme} />
 		<div class="bg-background px-3 py-4 rounded-full">
 			<div class="space-y-2">
-				{#each Array(3) as i}
+				{#each Array(3) as _i}
 					<div class="w-8 h-0.5 fade-anim bg-scheme1accent{themeVal}"></div>
 				{/each}
 			</div>

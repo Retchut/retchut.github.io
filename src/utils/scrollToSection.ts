@@ -13,7 +13,7 @@ function scrollToSection(num: number): void {
 		left: 0,
 		behavior: "smooth"
 	});
-	websiteSection.update((value) => num);
+	websiteSection.update((_value) => num);
 }
 
 const getSectionOffset = (currentSection: number): number => {
