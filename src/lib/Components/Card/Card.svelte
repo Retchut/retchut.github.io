@@ -11,7 +11,7 @@
 </script>
 
 <article
-	class="border-2 border-scheme1accent{themeVal} bg-scheme1accent{themeVal} text-scheme1background hover:bg-transparent hover:text-scheme1accent{themeVal}"
+	class="border-2 border-accent{themeVal} bg-accent{themeVal} text-background hover:bg-transparent hover:text-accent{themeVal}"
 >
 	<h3 class="subtitle">{title}</h3>
 	<h4 class="main-text">{content}</h4>

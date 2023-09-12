@@ -13,7 +13,7 @@
 	scrollToSection(0);
 </script>
 
-<main class="w-screen bg-scheme1background2">
+<main class="w-screen bg-background2">
 	<Navbar />
 	<Sidebar />
 	<div class="z-40 flex flex-col">

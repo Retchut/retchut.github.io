@@ -14,7 +14,7 @@
 
 	$: className =
 		classParam +
-		` rounded-full fade-anim border-2 border-scheme1accent${themeVal} text-scheme1background hover:text-scheme1accent${themeVal} bg-scheme1accent${themeVal} hover:bg-transparent`;
+		` rounded-full fade-anim border-2 border-accent${themeVal} text-background hover:text-accent${themeVal} bg-accent${themeVal} hover:bg-transparent`;
 </script>
 
 <button class={className} on:click={action}>{text}</button>
