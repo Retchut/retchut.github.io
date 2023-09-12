@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { theme } from "../../../utils/stores";
 
-	import "../../../utils/testThemes.css";
-
 	export let data = { title: "title", content: "content" };
 	const { title, content } = data;
 
@@ -12,7 +10,12 @@
 	});
 </script>
 
-<article class="btntheme{themeVal} border-2">
-	<h3 class="subtitle text-scheme1background hover:textaccenttheme{themeVal}">{title}</h3>
-	<h4 class="main-text text-scheme1background hover:textaccenttheme{themeVal}">{content}</h4>
+<article
+	class="border-2 border-accent{themeVal} bg-accent{themeVal} text-background hover:bg-transparent hover:text-accent{themeVal}"
+>
+	<h3 class="subtitle">{title}</h3>
+	<h4 class="main-text">{content}</h4>
 </article>
+
+<style>
+</style>

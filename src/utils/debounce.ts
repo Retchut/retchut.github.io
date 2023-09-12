@@ -1,9 +1,10 @@
-function debounce(func: Function, ms: number) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function debounce<T extends any[]>(func: (...args: T) => void, ms: number) {
 	if (ms === undefined) {
 		ms = 0;
 	}
 	let timeoutID: ReturnType<typeof setTimeout>;
-	return function (this: any, ...args: any[]) {
+	return function (...args: T) {
 		if (timeoutID) {
 			clearTimeout(timeoutID);
 		}
