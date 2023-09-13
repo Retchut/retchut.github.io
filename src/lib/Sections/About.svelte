@@ -11,17 +11,31 @@
 
 	const title = "About me";
 	const paragraphs = [
-		"My name is Mário Travassos, an aspiring Software Developer from Portugal. I'm deeply interested in **Game Design**, **Game Development** and **Web Development**.",
+		"My name is Mário Travassos, an aspiring Software Developer from Portugal. I'm deeply interested in **UX Design**, **Game Development** and **Web Development**.",
 		"When I'm not studying or working in the aforementioned areas, you may find me **reparing** and/or **tinkering** with electronics and clockwork, **automating** simple tasks I could have done myself by hand in 30 seconds, playing video or trading card **games**, or consuming all kinds of media.",
 		"I'm currently attending the 2nd year of a Master's Degree in Informatics and Computer Engineering at FEUP, working on my thesis focused on **optimizing photo-realistic VR experiences for the web**.",
 		"I am also the current President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto."
 	];
 	const title2 = "Skillset";
 	const cards = [
-		{ title: "Front-End", content: "React, Svelte, Tailwind, Bootstrap" },
-		{ title: "Back-end", content: "" },
-		{ title: "Computer Graphics", content: "" },
-		{ title: "Game Development", content: "" }
+		{
+			title: ["Front-End"],
+			content: [
+				"react",
+				"svelte",
+				"typescript",
+				"javascript",
+				"tailwind",
+				"bootstrap",
+				"css",
+				"html5"
+			]
+		},
+		{ title: ["Back-end"], content: ["php", "nodejs", "express", "mongodb", "mariadb", "sql"] },
+		{
+			title: ["Computer Graphics &", " Game Development"],
+			content: ["blender", "threejs", "aframe", "unity", "godot"]
+		}
 	];
 </script>
 
@@ -40,7 +54,7 @@
 			</div>
 			<h1 class="title text-main">{title2}</h1>
 			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
-			<div class="grid grid-cols-4">
+			<div class="w-full grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
 				{#each cards as data}
 					<Card {data} />
 				{/each}

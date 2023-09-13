@@ -10,11 +10,23 @@
 	});
 </script>
 
-<article
-	class="border-2 border-accent{themeVal} bg-accent{themeVal} text-background hover:bg-transparent hover:text-accent{themeVal}"
->
-	<h3 class="subtitle">{title}</h3>
-	<h4 class="main-text">{content}</h4>
+<article class="h-[100px] border-2 border-accent{themeVal} bg-accent{themeVal} text-background">
+	<!-- Card Front -->
+	<div class="peer h-full flex flex-col justify-center">
+		{#each title as paragraph}
+			<h3 class="text-xl text-center">{paragraph}</h3>
+		{/each}
+	</div>
+	<!-- Card back -->
+	<div
+		class="hidden peer-hover:block hover:block absolute top-0 left-0 z-10 w-full h-full overflow-hidden bg-green-900"
+	>
+		<div class="bg-accent{themeVal} w-full flex">
+			{#each content as imgSrc}
+				<img class="p-4 max-h-[100px]" src={`./cards/${imgSrc}.png`} alt={imgSrc} />
+			{/each}
+		</div>
+	</div>
 </article>
 
 <style>
