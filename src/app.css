@@ -18,7 +18,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button {
 	@apply font-oswald;
 }
 
@@ -36,4 +37,15 @@ h6 {
 
 .main-text {
 	@apply text-base pb-1;
+}
+
+/* Disable scrollbar */
+/* Note to self: this will NOT work on the main application scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none; /* IE/Edge */
+	scrollbar-width: none; /* Firefox */
 }
