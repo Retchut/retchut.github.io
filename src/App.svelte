@@ -24,7 +24,7 @@
 	</div>
 </main>
 
-<!-- <svelte:window on:scroll={() => handleScroll(null)} /> -->
+<svelte:window on:scroll={() => handleScroll(null)} />
 
 <style>
 </style>
