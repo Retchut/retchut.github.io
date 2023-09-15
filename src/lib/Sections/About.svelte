@@ -16,27 +16,27 @@
 		"I'm currently attending the 2nd year of a Master's Degree in Informatics and Computer Engineering at FEUP, working on my thesis focused on **optimizing photo-realistic VR experiences for the web**.",
 		"I am also the current President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto."
 	];
-	const title2 = "Skillset";
-	const cards = [
-		{
-			title: ["Front-End"],
-			content: [
-				"react",
-				"svelte",
-				"typescript",
-				"javascript",
-				"tailwind",
-				"bootstrap",
-				"css",
-				"html5"
-			]
-		},
-		{ title: ["Back-end"], content: ["php", "nodejs", "express", "mongodb", "mariadb", "sql"] },
-		{
-			title: ["Computer Graphics &", " Game Development"],
-			content: ["blender", "threejs", "aframe", "unity", "godot"]
-		}
-	];
+	// const title2 = "Skillset";
+	// const cards = [
+	// 	{
+	// 		title: ["Front-End"],
+	// 		content: [
+	// 			"react",
+	// 			"svelte",
+	// 			"typescript",
+	// 			"javascript",
+	// 			"tailwind",
+	// 			"bootstrap",
+	// 			"css",
+	// 			"html5"
+	// 		]
+	// 	},
+	// 	{ title: ["Back-end"], content: ["php", "nodejs", "express", "mongodb", "mariadb", "sql"] },
+	// 	{
+	// 		title: ["Computer Graphics &", " Game Development"],
+	// 		content: ["blender", "threejs", "aframe", "unity", "godot"]
+	// 	}
+	// ];
 </script>
 
 <section class="h-screen flex items-center">
@@ -52,13 +52,20 @@
 			<div class="grow flex justify-end items-start">
 				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
 			</div>
-			<h1 class="title text-main">{title2}</h1>
+			<h1 class="title text-main">Something else</h1>
 			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
-			<div class="w-full grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
+			<p class="text-main">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<!-- <div class="w-full grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
 				{#each cards as data}
 					<Card {data} />
 				{/each}
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
