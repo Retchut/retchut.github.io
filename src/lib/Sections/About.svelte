@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { theme } from "../../utils/stores";
 
-	import Card from "../Components/Card/Card.svelte";
 	import Paragraph from "../Components/Text/Paragraph.svelte";
 
 	let themeVal: number;
@@ -16,27 +15,6 @@
 		"I'm currently attending the 2nd year of a Master's Degree in Informatics and Computer Engineering at FEUP, working on my thesis focused on **optimizing photo-realistic VR experiences for the web**.",
 		"I am also the current President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto."
 	];
-	// const title2 = "Skillset";
-	// const cards = [
-	// 	{
-	// 		title: ["Front-End"],
-	// 		content: [
-	// 			"react",
-	// 			"svelte",
-	// 			"typescript",
-	// 			"javascript",
-	// 			"tailwind",
-	// 			"bootstrap",
-	// 			"css",
-	// 			"html5"
-	// 		]
-	// 	},
-	// 	{ title: ["Back-end"], content: ["php", "nodejs", "express", "mongodb", "mariadb", "sql"] },
-	// 	{
-	// 		title: ["Computer Graphics &", " Game Development"],
-	// 		content: ["blender", "threejs", "aframe", "unity", "godot"]
-	// 	}
-	// ];
 </script>
 
 <section class="h-screen flex items-center">
@@ -61,11 +39,6 @@
 				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
-			<!-- <div class="w-full grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
-				{#each cards as data}
-					<Card {data} />
-				{/each}
-			</div> -->
 		</div>
 	</div>
 </section>

@@ -3,6 +3,7 @@
 	import Sidebar from "./lib/Components/Navigation/Sidebar.svelte";
 	import About from "./lib/Sections/About.svelte";
 	import Hero from "./lib/Sections/Hero.svelte";
+	import Skillset from "./lib/Sections/Skillset.svelte";
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
@@ -19,6 +20,7 @@
 	<div class="z-40 flex flex-col">
 		<Hero />
 		<About />
+		<Skillset />
 		<Projects />
 		<Contacts />
 	</div>
