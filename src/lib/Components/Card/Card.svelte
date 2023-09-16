@@ -4,9 +4,9 @@ This component consists of a card, with a front and a back, the latter of which 
 The front of the card consists of some paragraphs of descriptive text.
 The back of the card consists of a collection images split in 3 columns.
 
-	@param frontText - array of paragraph strings that comprise the front of the card
-	@param backImages - array of strings consisting of the image names (inside the public/cards/ directory) that comprise the back of the card
-	@param index - number used to calculate the margin of the card.
+	@param frontText - string[] - array of paragraph strings that comprise the front of the card
+	@param backImages - string[] - array of strings consisting of the image names (inside the public/cards/ directory) that comprise the back of the card
+	@param index - number - number used to calculate the margin of the card.
 -->
 <script lang="ts">
 	import { buildRows } from "../../../utils/arrayFilters";

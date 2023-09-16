@@ -4,6 +4,8 @@ This component renders a paragraph, with text parsed to be styled according to t
 
 - //text// - *text*
 - \*\*text\*\* - **text**
+
+	@param content - string - string to be parsed and displayed
 -->
 <script lang="ts">
 	export let content = "Default paragraph content";
