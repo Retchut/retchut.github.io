@@ -3,14 +3,15 @@
 	import Sidebar from "./lib/Components/Navigation/Sidebar.svelte";
 	import About from "./lib/Sections/About.svelte";
 	import Hero from "./lib/Sections/Hero.svelte";
+	import Skillset from "./lib/Sections/Skillset.svelte";
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
-	import { handleScroll, scrollToSection } from "./utils/scrollToSection";
+	import { handleScroll } from "./utils/scrollToSection";
 
 	import "./app.css";
 
-	scrollToSection(0);
+	handleScroll(0);
 </script>
 
 <main class="w-screen bg-background2">
@@ -19,6 +20,7 @@
 	<div class="z-40 flex flex-col">
 		<Hero />
 		<About />
+		<Skillset />
 		<Projects />
 		<Contacts />
 	</div>

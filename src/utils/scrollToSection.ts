@@ -3,7 +3,7 @@ import { websiteSection } from "./stores";
 
 const PAGE_OFFSET: number = window.innerHeight;
 const SCROLL_DELAY: number = 700; // ms
-const SECTIONS: number[] = [0, 1];
+const SECTIONS: number[] = [0, 1, 2];
 
 let onScrollCooldown: boolean = false;
 
