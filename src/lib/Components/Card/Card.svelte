@@ -38,7 +38,7 @@ The back of the card consists of a collection images split in 3 columns.
 		class="hidden peer-hover:flex hover:flex flex-col justify-center items-center w-full h-full absolute top-0 left-0 rounded-lg bg-accent{themeVal} p-16"
 	>
 		{#each technologyRows as srcRow}
-			<div class="my-2 flex justify-center items-center">
+			<div class="my-2 fade-in-content flex justify-center items-center">
 				{#each srcRow as src}
 					<div class="mx-1 w-[70px]">
 						<img src={`./cards/${src}.png`} alt={src} />
@@ -50,6 +50,10 @@ The back of the card consists of a collection images split in 3 columns.
 </article>
 
 <style>
+	.fade-in-content {
+		animation: fadeInTop 500ms;
+	}
+
 	.index0,
 	.index2 {
 		margin-top: 3rem;

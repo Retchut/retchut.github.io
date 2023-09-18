@@ -49,3 +49,15 @@ button {
 	-ms-overflow-style: none; /* IE/Edge */
 	scrollbar-width: none; /* Firefox */
 }
+
+/* Animation keyframes */
+@keyframes fadeInTop {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
