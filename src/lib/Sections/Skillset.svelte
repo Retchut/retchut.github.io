@@ -40,10 +40,12 @@
 			<h1 class="title">{title}</h1>
 			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
 		</header>
-		<div class="w-full grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
-			{#each cards as data, index}
-				<Card frontText={data.title} backImages={data.technologies} {index} />
-			{/each}
+		<div class="flex justify-center">
+			<div class="w-[80%] grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
+				{#each cards as data, index}
+					<Card frontText={data.title} backImages={data.technologies} {index} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>
