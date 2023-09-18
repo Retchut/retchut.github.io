@@ -12,9 +12,9 @@ export default {
 			colors: {
 				background: "#0C1618",
 				main: "#FAF4D3",
-				accent0: "#D1AC00", // yellow
+				accent0: "#95cffb", // blue
 				accent1: "#09f755", // green
-				accent2: "#95cffb", // blue
+				accent2: "#D1AC00", // yellow
 				accent3: "#F6BE9A", // pink
 				background2: "#3d4546",
 
