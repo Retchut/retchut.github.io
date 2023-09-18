@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { theme } from "../../utils/stores";
 
-	import Paragraph from "../Components/Text/Paragraph.svelte";
+	import StyledParagraph from "../Components/Text/StyledParagraph.svelte";
 
 	let themeVal: number;
 	theme.subscribe((value) => {
@@ -23,7 +23,7 @@
 			<h1 class="title">{title}</h1>
 			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
 			{#each paragraphs as content}
-				<Paragraph {content} />
+				<StyledParagraph {content} />
 			{/each}
 		</header>
 		<div class="w-1/2 flex flex-col">
