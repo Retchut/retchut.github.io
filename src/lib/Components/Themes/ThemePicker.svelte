@@ -3,11 +3,6 @@
 
 	import Button from "../Button/Button.svelte";
 
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
-
 	const changeTheme = (newVal: number) => {
 		theme.update((_value) => newVal);
 	};
