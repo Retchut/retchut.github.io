@@ -3,9 +3,13 @@ import { websiteSection } from "./stores";
 
 const PAGE_OFFSET: number = window.innerHeight;
 const SCROLL_DELAY: number = 700; // ms
-const SECTIONS: number[] = [0, 1, 2];
+const SECTIONS: number[] = [0, 1, 2, 3, 4];
 
 let onScrollCooldown: boolean = false;
+
+function getSections(): number[] {
+	return SECTIONS;
+}
 
 function scrollToSection(num: number): void {
 	window.scrollTo({
@@ -59,4 +63,4 @@ function handleScroll(targetSection: number | null): void {
 	}
 }
 
-export { scrollToSection, handleScroll };
+export { getSections, scrollToSection, handleScroll };
