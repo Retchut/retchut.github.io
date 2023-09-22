@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { theme } from "../../utils/stores";
 
+	import PageSection from "../Components/Layout/PageSection.svelte";
 	import StyledParagraph from "../Components/Text/StyledParagraph.svelte";
 
 	import sectionData from "../Assets/Data/About.json";
@@ -14,8 +15,8 @@
 	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];
 </script>
 
-<section class="h-screen flex items-center">
-	<div class="mx-auto p-8 w-[1300px] h-[70vh] flex justify-between">
+<PageSection>
+	<div class="flex justify-between">
 		<header class="w-1/3 text-main">
 			<h1 class="title">{title}</h1>
 			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
@@ -24,7 +25,7 @@
 			{/each}
 		</header>
 		<div class="w-1/2 flex flex-col">
-			<div class="grow flex justify-end items-start">
+			<div class="grow flex justify-end items-start mb-8">
 				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
 			</div>
 			<h1 class="title text-main">Something else</h1>
@@ -38,7 +39,7 @@
 			</p>
 		</div>
 	</div>
-</section>
+</PageSection>
 
 <style>
 </style>
