@@ -1,15 +1,9 @@
 <script lang="ts">
-	import { theme } from "../../utils/stores";
-
 	import PageSection from "../Components/Layout/PageSection.svelte";
+	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Button from "../Components/Button/Button.svelte";
 
 	import sectionData from "../Assets/Data/Hero.json";
-
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
 	const subtitle: string = sectionData["subtitle"] ?? "DefaultSubtitleTxt";
@@ -19,12 +13,7 @@
 
 <PageSection heroSection={true}>
 	<header class="ml-28 z-10 max-w-[400px] flex flex-col text-main">
-		<h1 class="title">{title}</h1>
-		<h2 class="subtitle">{subtitle}</h2>
-		<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
-		{#each paragraphs as content}
-			<p class="main-text">{content}</p>
-		{/each}
+		<TextGroup {title} {subtitle} {paragraphs} />
 		<Button
 			class="w-fit px-6 py-4 mt-4"
 			text={contact}

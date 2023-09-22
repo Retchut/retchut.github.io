@@ -25,7 +25,7 @@ It is styled by default to be consistent with the page's appearance, but some of
 
 	$: className =
 		classParam +
-		` rounded-full fade-anim text-background hover:text-accent${themeVal}` +
+		` rounded-full color-fade-anim text-background hover:text-accent${themeVal}` +
 		(overrideTheme
 			? ""
 			: ` border-2 border-accent${themeVal} bg-accent${themeVal} hover:bg-transparent`);

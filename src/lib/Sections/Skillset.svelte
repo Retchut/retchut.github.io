@@ -1,15 +1,9 @@
 <script lang="ts">
-	import { theme } from "../../utils/stores";
-
 	import PageSection from "../Components/Layout/PageSection.svelte";
+	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Card from "../Components/Card/Card.svelte";
 
 	import sectionData from "../Assets/Data/Skillset.json";
-
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	interface CardData {
 		title: string[];
@@ -24,8 +18,7 @@
 
 <PageSection>
 	<header class="w-1/3 text-main">
-		<h1 class="title">{title}</h1>
-		<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
+		<TextGroup {title} />
 	</header>
 	<div class="flex justify-center">
 		<div class="w-[80%] grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">

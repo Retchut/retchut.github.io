@@ -16,8 +16,7 @@ This component renders a paragraph, with text parsed to be styled according to t
 	const parsedParagraph = content.split(/((?:\*\*|\/\/).*?(?:\*\*|\/\/))/);
 </script>
 
-<!-- <p class="main-text">{content}</p> -->
-<p class="main-text">
+<p class="text-base pb-1">
 	{#each parsedParagraph as token}
 		{@const tokenStart = token.slice(0, 2)}
 		{@const tokenEnd = token.slice(-2)}

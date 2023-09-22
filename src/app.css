@@ -23,20 +23,8 @@ button {
 	@apply font-oswald;
 }
 
-.fade-anim {
+.color-fade-anim {
 	@apply ease-in duration-200;
-}
-
-.title {
-	@apply text-6xl pb-4;
-}
-
-.subtitle {
-	@apply text-xl pb-8;
-}
-
-.main-text {
-	@apply text-base pb-1;
 }
 
 /* Disable scrollbar */
