@@ -3,34 +3,21 @@
 
 	import Card from "../Components/Card/Card.svelte";
 
+	import sectionData from "../Assets/Data/Skillset.json";
+
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
 	});
 
-	const title = "Skillset";
-	const cards = [
-		{
-			title: ["Computer Graphics &", " Game Development"],
-			technologies: ["threejs", "aframe", "unity", "godot", "blender"]
-		},
-		{
-			title: ["Front-End", "Web Development"],
-			technologies: [
-				"react",
-				"svelte",
-				"typescript",
-				"javascript",
-				"tailwind",
-				"bootstrap",
-				"css",
-				"html"
-			]
-		},
-		{
-			title: ["Back-end", "Web Development"],
-			technologies: ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
-		}
+	interface CardData {
+		title: string;
+		technologies: string[];
+	}
+
+	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
+	const cards: CardData[] = sectionData["cards"] ?? [
+		{ title: ["Default", "Card"], technologies: ["placeholder"] }
 	];
 </script>
 

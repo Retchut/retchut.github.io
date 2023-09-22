@@ -1,0 +1,26 @@
+{
+	"title": "Skillset",
+	"cards": [
+		{
+			"title": ["Computer Graphics &", " Game Development"],
+			"technologies": ["threejs", "aframe", "unity", "godot", "blender"]
+		},
+		{
+			"title": ["Front-End", "Web Development"],
+			"technologies": [
+				"react",
+				"svelte",
+				"typescript",
+				"javascript",
+				"tailwind",
+				"bootstrap",
+				"css",
+				"html"
+			]
+		},
+		{
+			"title": ["Back-end", "Web Development"],
+			"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
+		}
+	]
+}

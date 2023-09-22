@@ -3,18 +3,17 @@
 
 	import Button from "../Components/Button/Button.svelte";
 
+	import sectionData from "../Assets/Data/Hero.json";
+
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
 	});
 
-	const title = "Hello I'm Mário,";
-	const subtitle = "I make stuff";
-	const paragraphs = [
-		"I am currently finishing up my master's degree, working on optimizing photo-realistic VR experiences for the web",
-		"Getting my hands dirty with clockwork and game development as a hobby"
-	];
-	const contact = "Contact me";
+	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
+	const subtitle: string = sectionData["subtitle"] ?? "DefaultSubtitleTxt";
+	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];
+	const contact: string = sectionData["contact"] ?? "ContactBtnTxt";
 </script>
 
 <section class="pt-12 h-screen bg-background overflow-hidden">
