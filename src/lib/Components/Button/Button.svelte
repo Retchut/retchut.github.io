@@ -2,7 +2,7 @@
 	import { theme } from "../../../utils/stores";
 
 	// class is a reserved keyword so we need this little workaround
-	let classParam: string;
+	let classParam: string = "";
 	export { classParam as class };
 	export let action: () => void = () => console.log("No action specified");
 	export let text: string = "default text";
