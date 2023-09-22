@@ -12,7 +12,7 @@
 	});
 
 	interface CardData {
-		title: string;
+		title: string[];
 		technologies: string[];
 	}
 
