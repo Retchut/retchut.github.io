@@ -1,3 +1,7 @@
+<!--
+@component
+	This component is the webpage's Skillset section.
+-->
 <script lang="ts">
 	import PageSection from "../Components/Layout/PageSection.svelte";
 	import TextGroup from "../Components/Text/TextGroup.svelte";

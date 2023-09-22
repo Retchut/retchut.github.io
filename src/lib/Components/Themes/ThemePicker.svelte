@@ -1,3 +1,8 @@
+<!--
+@component
+	This component is the webpage's Theme Picker.
+	It allows changing the accent color of the webpage.
+-->
 <script lang="ts">
 	import { theme } from "../../../utils/stores";
 

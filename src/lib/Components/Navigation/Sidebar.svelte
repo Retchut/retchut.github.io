@@ -1,3 +1,8 @@
+<!--
+@component
+	This component is the webpage's navigation Sidebar.
+	It contains navigation links to multiple sections of the webpage.
+-->
 <script lang="ts">
 	import { getSections, handleScroll } from "../../../utils/scrollToSection";
 

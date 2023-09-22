@@ -1,3 +1,8 @@
+<!--
+@component
+	This component is the webpage's Navbar.
+	It contains the webpage badge and navigation links.
+-->
 <script lang="ts">
 	import { theme } from "../../../utils/stores";
 

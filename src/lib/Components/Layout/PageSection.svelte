@@ -1,10 +1,10 @@
 <!--
 @component
-This component consists of a generic page section.
-Each section takes up the whole of a page, and has similar styling when it comes to the placement of content within it.
-The content is injected using svelte's <slot> element
-	
-	@param heroSection - boolean - true if this section is the hero section (first) of the website. false by default
+	This component consists of a generic page section.
+	Each section takes up the whole of a page, and has similar styling when it comes to the placement of content within it.
+	The content is injected using svelte's <slot> element
+		
+		@param heroSection - boolean - true if this section is the hero section (first) of the website. false by default
 -->
 <script lang="ts">
 	export let heroSection: boolean = false;

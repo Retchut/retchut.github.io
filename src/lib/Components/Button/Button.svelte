@@ -1,12 +1,12 @@
 <!--
 @component
-This component consists of a generic button.
-It is styled by default to be consistent with the page's appearance, but some of these styles can be overridden.
+	This component consists of a generic button.
+	It is styled by default to be consistent with the page's appearance, but some of these styles can be overridden.
 
-	@param class - string - external styling - generally margins, paddings, etc. As class is a reserved keyword, this parameter is refered to as classParam inside this component.
-	@param action - () => void - action to be performed on button click.
-	@param text - string - button text
-	@param overrideTheme - boolean - true if the button ignores the current theme of the webpage. false by default
+		@param class - string - external styling - generally margins, paddings, etc. As class is a reserved keyword, this parameter is refered to as classParam inside this component.
+		@param action - () => void - action to be performed on button click.
+		@param text - string - button text
+		@param overrideTheme - boolean - true if the button ignores the current theme of the webpage. false by default
 -->
 <script lang="ts" ?>
 	import { theme } from "../../../utils/stores";

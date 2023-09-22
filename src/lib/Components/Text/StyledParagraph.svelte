@@ -1,11 +1,11 @@
 <!--
 @component
-This component renders a paragraph, with text parsed to be styled according to the following specification:
+	This component renders a paragraph, with text parsed to be styled according to the following specification:
 
-- //text// - *text*
-- \*\*text\*\* - **text**
+	- //text// - *text*
+	- \*\*text\*\* - **text**
 
-	@param content - string - string to be parsed and displayed
+		@param content - string - string to be parsed and displayed
 -->
 <script lang="ts">
 	export let content = "Default paragraph content";
