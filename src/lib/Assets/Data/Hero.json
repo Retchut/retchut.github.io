@@ -1,9 +1,6 @@
 {
 	"title": "Hello I'm Mário",
-	"subtitle": "I make stuff",
-	"paragraphs": [
-		"I am currently finishing up my master's degree, working on optimizing photo-realistic VR experiences for the web",
-		"Getting my hands dirty with clockwork and game development as a hobby"
-	],
+	"subtitle": "",
+	"paragraphs": ["I make stuff"],
 	"contact": "Contact me"
 }
