@@ -2,11 +2,17 @@
 	"title": "Skillset",
 	"cards": [
 		{
-			"title": ["Computer Graphics &", " Game Development"],
+			"frontData": {
+				"title": ["Computer Graphics &", " Game Development"],
+				"subtitle": "Breathing Life into Pixels"
+			},
 			"technologies": ["threejs", "aframe", "unity", "godot", "blender"]
 		},
 		{
-			"title": ["Front-End", "Web Development"],
+			"frontData": {
+				"title": ["Front-End", "Web Development"],
+				"subtitle": "Crafting Digital Canvases"
+			},
 			"technologies": [
 				"react",
 				"svelte",
@@ -19,7 +25,10 @@
 			]
 		},
 		{
-			"title": ["Back-end", "Web Development"],
+			"frontData": {
+				"title": ["Back-end", "Web Development"],
+				"subtitle": "Sculpting Digital Foundations"
+			},
 			"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
 		}
 	]

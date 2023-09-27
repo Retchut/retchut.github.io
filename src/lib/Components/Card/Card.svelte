@@ -12,7 +12,8 @@
 	import { buildRows } from "../../../utils/arrayFilters";
 	import { theme } from "../../../utils/stores";
 
-	export let frontText: string[] = ["paragraph1", "paragraph2"];
+	export let frontTitle: string[] = ["Default", "Title"];
+	export let frontSubtitle: string = "This is a subtitle";
 	export let backImages: string[] = ["tech1", "tech2"];
 	export let index: number = 0;
 
@@ -29,9 +30,10 @@
 >
 	<!-- Card Front -->
 	<header class="flex flex-col w-full h-full justify-center peer">
-		{#each frontText as paragraph}
+		{#each frontTitle as paragraph}
 			<h3 class="text-3xl text-center">{paragraph}</h3>
 		{/each}
+		<h2 class="mt-4 text-lg text-center">{frontSubtitle}</h2>
 	</header>
 	<!-- Card Back -->
 	<div
