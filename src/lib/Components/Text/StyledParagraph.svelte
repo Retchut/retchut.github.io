@@ -25,8 +25,6 @@
 
 		return splitContent.slice(0, 2);
 	};
-
-	console.log(parsedParagraph);
 </script>
 
 <p class="text-base pb-1">
