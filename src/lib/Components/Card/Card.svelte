@@ -1,18 +1,19 @@
 <!--
 @component
-This component consists of a card, with a front and a back, the latter of which is initially hidden and can be seen by hovering over the front.
-The front of the card consists of some paragraphs of descriptive text.
-The back of the card consists of a collection images split in 3 columns.
+	This component consists of a card, with a front and a back, the latter of which is initially hidden and can be seen by hovering over the front.
+	The front of the card consists of some paragraphs of descriptive text.
+	The back of the card consists of a collection images split in 3 columns.
 
-	@param frontText - string[] - array of paragraph strings that comprise the front of the card
-	@param backImages - string[] - array of strings consisting of the image names (inside the public/cards/ directory) that comprise the back of the card
-	@param index - number - number used to calculate the margin of the card.
+		@param frontText - string[] - array of paragraph strings that comprise the front of the card
+		@param backImages - string[] - array of strings consisting of the image names (inside the public/cards/ directory) that comprise the back of the card
+		@param index - number - number used to calculate the margin of the card.
 -->
 <script lang="ts">
 	import { buildRows } from "../../../utils/arrayFilters";
 	import { theme } from "../../../utils/stores";
 
-	export let frontText: string[] = ["paragraph1", "paragraph2"];
+	export let frontTitle: string[] = ["Default", "Title"];
+	export let frontSubtitle: string = "This is a subtitle";
 	export let backImages: string[] = ["tech1", "tech2"];
 	export let index: number = 0;
 
@@ -25,13 +26,14 @@ The back of the card consists of a collection images split in 3 columns.
 </script>
 
 <article
-	class="mx-4 index{index} bg-accent{themeVal} text-background flex justify-center items-center min-h-[400px] rounded-lg relative"
+	class="color-fade-anim mx-8 index{index} bg-accent{themeVal} text-background flex justify-center items-center min-h-[400px] rounded-lg relative"
 >
 	<!-- Card Front -->
 	<header class="flex flex-col w-full h-full justify-center peer">
-		{#each frontText as paragraph}
+		{#each frontTitle as paragraph}
 			<h3 class="text-3xl text-center">{paragraph}</h3>
 		{/each}
+		<h2 class="mt-4 text-lg text-center">{frontSubtitle}</h2>
 	</header>
 	<!-- Card Back -->
 	<div

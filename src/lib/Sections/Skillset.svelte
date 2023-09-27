@@ -1,52 +1,53 @@
+<!--
+@component
+	This component is the webpage's Skillset section.
+-->
 <script lang="ts">
-	import { theme } from "../../utils/stores";
-
+	import PageSection from "../Components/Layout/PageSection.svelte";
+	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Card from "../Components/Card/Card.svelte";
 
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
+	import sectionData from "../Assets/Data/Skillset.json";
 
-	const title = "Skillset";
-	const cards = [
+	interface FrontData {
+		title: string[];
+		subtitle: string;
+	}
+
+	interface CardData {
+		frontData: FrontData;
+		technologies: string[];
+	}
+
+	const title: string = sectionData["title"] ?? "DefaultTitle";
+	const cards: CardData[] = sectionData["cards"] ?? [
 		{
-			title: ["Computer Graphics &", " Game Development"],
-			technologies: ["threejs", "aframe", "unity", "godot", "blender"]
-		},
-		{
-			title: ["Front-End", "Web Development"],
-			technologies: [
-				"react",
-				"svelte",
-				"typescript",
-				"javascript",
-				"tailwind",
-				"bootstrap",
-				"css",
-				"html"
-			]
-		},
-		{
-			title: ["Back-end", "Web Development"],
-			technologies: ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
+			frontData: {
+				title: ["Default", "Title"],
+				subtitle: "This is a subtitle"
+			},
+			technologies: ["placeholder"]
 		}
 	];
 </script>
 
-<section class="h-screen flex items-center">
-	<div class="mx-auto p-8 w-[1300px] h-[70vh] flex flex-col">
-		<header class="w-1/3 text-main">
-			<h1 class="title">{title}</h1>
-			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
-		</header>
-		<div class="w-full grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
-			{#each cards as data, index}
-				<Card frontText={data.title} backImages={data.technologies} {index} />
+<PageSection>
+	<header class="w-1/3 text-main">
+		<TextGroup {title} />
+	</header>
+	<div class="flex justify-center">
+		<div class="w-[80%] grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
+			{#each cards as cardData, index}
+				<Card
+					frontTitle={cardData.frontData.title}
+					frontSubtitle={cardData.frontData.subtitle}
+					backImages={cardData.technologies}
+					{index}
+				/>
 			{/each}
 		</div>
 	</div>
-</section>
+</PageSection>
 
 <style>
 </style>

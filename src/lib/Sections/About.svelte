@@ -1,47 +1,33 @@
+<!--
+@component
+	This component is the webpage's About section.
+-->
 <script lang="ts">
-	import { theme } from "../../utils/stores";
+	import PageSection from "../Components/Layout/PageSection.svelte";
+	import TextGroup from "../Components/Text/TextGroup.svelte";
 
-	import StyledParagraph from "../Components/Text/StyledParagraph.svelte";
+	import sectionData from "../Assets/Data/About.json";
 
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
+	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
+	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];
 
-	const title = "About me";
-	const paragraphs = [
-		"My name is Mário Travassos, an aspiring Software Developer from Portugal. I'm deeply interested in **UX Design**, **Game Development** and **Web Development**.",
-		"When I'm not studying or working in the aforementioned areas, you may find me **reparing** and/or **tinkering** with electronics and clockwork, **automating** simple tasks I could have done myself by hand in 30 seconds, playing video or trading card **games**, or consuming all kinds of media.",
-		"I'm currently attending the 2nd year of a Master's Degree in Informatics and Computer Engineering at FEUP, working on my thesis focused on **optimizing photo-realistic VR experiences for the web**.",
-		"I am also the current President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto."
-	];
+	const title2: string = sectionData["title2"] ?? "DefaultTitleTxt2";
+	const paragraphs2: string[] = sectionData["paragraphs2"] ?? ["DefaultValue2"];
 </script>
 
-<section class="h-screen flex items-center">
-	<div class="mx-auto p-8 w-[1300px] h-[70vh] flex justify-between">
+<PageSection>
+	<div class="flex justify-between">
 		<header class="w-1/3 text-main">
-			<h1 class="title">{title}</h1>
-			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
-			{#each paragraphs as content}
-				<StyledParagraph {content} />
-			{/each}
+			<TextGroup {title} {paragraphs} />
 		</header>
-		<div class="w-1/2 flex flex-col">
-			<div class="grow flex justify-end items-start">
+		<div class="w-1/2 flex flex-col text-main">
+			<div class="grow flex justify-end items-start mb-8">
 				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
 			</div>
-			<h1 class="title text-main">Something else</h1>
-			<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-8 fade-anim" />
-			<p class="text-main">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-				laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-				voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+			<TextGroup title={title2} paragraphs={paragraphs2} />
 		</div>
 	</div>
-</section>
+</PageSection>
 
 <style>
 </style>
