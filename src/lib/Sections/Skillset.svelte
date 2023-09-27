@@ -3,11 +3,10 @@
 	This component is the webpage's Skillset section.
 -->
 <script lang="ts">
-	import PageSection from "../Components/Layout/PageSection.svelte";
-	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Card from "../Components/Card/Card.svelte";
 
 	import sectionData from "../Assets/Data/Skillset.json";
+	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
 
 	interface FrontData {
 		title: string[];
@@ -31,10 +30,7 @@
 	];
 </script>
 
-<PageSection>
-	<header class="w-1/3 text-main">
-		<TextGroup {title} />
-	</header>
+<ShowcaseSection {title}>
 	<div class="flex justify-center">
 		<div class="w-[80%] grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
 			{#each cards as cardData, index}
@@ -47,7 +43,7 @@
 			{/each}
 		</div>
 	</div>
-</PageSection>
+</ShowcaseSection>
 
 <style>
 </style>
