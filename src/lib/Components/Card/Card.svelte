@@ -9,12 +9,17 @@
 		@param index - number - number used to calculate the margin of the card.
 -->
 <script lang="ts">
+	import type { FrontData, BackData } from "../../../types/Card";
+
 	import { buildRows } from "../../../utils/arrayFilters";
 	import { theme } from "../../../utils/stores";
 
-	export let frontTitle: string[] = ["Default", "Title"];
-	export let frontSubtitle: string = "This is a subtitle";
-	export let backImages: string[] = ["tech1", "tech2"];
+	export let frontData: FrontData = {
+		title: ["Default", "Title"],
+		subtitle: "Default subtitle"
+	};
+
+	export let backData: BackData = { technologies: ["tech1", "tech2"] };
 	export let index: number = 0;
 
 	let themeVal: number;
@@ -22,7 +27,7 @@
 		themeVal = value;
 	});
 
-	const technologyRows = buildRows(backImages, 3);
+	const technologyRows = buildRows(backData.technologies, 3);
 </script>
 
 <article
@@ -30,10 +35,10 @@
 >
 	<!-- Card Front -->
 	<header class="flex flex-col w-full h-full justify-center peer">
-		{#each frontTitle as paragraph}
+		{#each frontData.title as paragraph}
 			<h3 class="text-3xl text-center">{paragraph}</h3>
 		{/each}
-		<h2 class="mt-4 text-lg text-center">{frontSubtitle}</h2>
+		<h2 class="mt-4 text-lg text-center">{frontData.subtitle}</h2>
 	</header>
 	<!-- Card Back -->
 	<div

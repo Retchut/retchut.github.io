@@ -3,20 +3,12 @@
 	This component is the webpage's Skillset section.
 -->
 <script lang="ts">
+	import type { CardData } from "../../types/Card";
+
 	import Card from "../Components/Card/Card.svelte";
 
 	import sectionData from "../Assets/Data/Skillset.json";
 	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
-
-	interface FrontData {
-		title: string[];
-		subtitle: string;
-	}
-
-	interface CardData {
-		frontData: FrontData;
-		technologies: string[];
-	}
 
 	const title: string = sectionData["title"] ?? "DefaultTitle";
 	const cards: CardData[] = sectionData["cards"] ?? [
@@ -25,7 +17,9 @@
 				title: ["Default", "Title"],
 				subtitle: "This is a subtitle"
 			},
-			technologies: ["placeholder"]
+			backData: {
+				technologies: ["placeholder"]
+			}
 		}
 	];
 </script>
@@ -34,12 +28,7 @@
 	<div class="flex justify-center">
 		<div class="w-[80%] grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
 			{#each cards as cardData, index}
-				<Card
-					frontTitle={cardData.frontData.title}
-					frontSubtitle={cardData.frontData.subtitle}
-					backImages={cardData.technologies}
-					{index}
-				/>
+				<Card frontData={cardData.frontData} backData={cardData.backData} {index} />
 			{/each}
 		</div>
 	</div>
