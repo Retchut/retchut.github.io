@@ -2,7 +2,8 @@
 	import type { ProjectData } from "../../../types/Project";
 
 	import { theme } from "../../../utils/stores";
-	import StyledParagraph from "../Text/StyledParagraph.svelte";
+
+	import TextGroup from "../Text/TextGroup.svelte";
 
 	let themeVal: number;
 	theme.subscribe((value) => {
@@ -25,16 +26,19 @@
 </script>
 
 <li
-	class="project {gridID % 2 ? 'slider-left' : 'slider-right'} bg-accent{themeVal} overflow-hidden"
+	class="project {gridID % 2
+		? 'slider-left'
+		: 'slider-right'} bg-accent{themeVal} color-fade-anim overflow-hidden"
 	style="--after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
-	<div
-		class="w-full flex flex-col justify-center {gridID % 2 ? 'content-right' : 'content-left'} px-8"
-	>
-		<h3 class="text-xl">{projectData.title}</h3>
-		{#each projectData.description as paragraph}
-			<StyledParagraph content={paragraph} />
-		{/each}
+	<div class="w-full flex flex-col justify-center px-8">
+		<TextGroup
+			title={projectData.title}
+			paragraphs={projectData.description}
+			showBar={false}
+			titleSize="2xl"
+			align={gridID % 2 ? "right" : "left"}
+		/>
 	</div>
 </li>
 
@@ -44,14 +48,6 @@
 		height: calc(var(--project-height-px) * 1px);
 		display: flex;
 		position: relative;
-	}
-
-	.content-right {
-		align-items: end;
-	}
-
-	.content-left {
-		align-items: start;
 	}
 
 	.slider-right {

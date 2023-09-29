@@ -5,6 +5,12 @@ export default {
 		{
 			pattern: /(bg|text|border)-(background|accent.)/,
 			variants: ["hover"]
+		},
+		{
+			pattern: /text-(left|center|right)/
+		},
+		{
+			pattern: /xs|sm|base|lg|[2-9]?xl/
 		}
 	],
 	theme: {
