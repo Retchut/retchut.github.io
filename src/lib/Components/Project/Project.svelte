@@ -71,12 +71,12 @@
 	.slider-right::after {
 		right: 0;
 		border-top: calc(var(--project-height-px) * 1px) solid transparent;
-		border-right: calc(var(--after-width-px) * 1px) solid gray;
+		border-right: calc(var(--after-width-px) * 1px) solid var(--background2);
 	}
 
 	.slider-left::after {
 		left: 0;
 		border-bottom: calc(var(--project-height-px) * 1px) solid transparent;
-		border-left: calc(var(--after-width-px) * 1px) solid gray;
+		border-left: calc(var(--after-width-px) * 1px) solid var(--background2);
 	}
 </style>

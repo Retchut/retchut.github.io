@@ -16,27 +16,27 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				background: "#0C1618",
-				main: "#FAF4D3",
-				accent0: "#95cffb", // blue
-				accent1: "#09f755", // green
-				accent2: "#D1AC00", // yellow
-				accent3: "#F6BE9A", // pink
-				background2: "#3d4546",
+				background: "var(--background)",
+				main: "var(--main)",
+				accent0: "var(--accent0)", // blue
+				accent1: "var(--accent1)", // green
+				accent2: "var(--accent2)", // yellow
+				accent3: "var(--accent3)", // pink
+				background2: "var(--background2)",
 
-				scheme2background: "#040510",
-				scheme2main: "#e5e6df",
-				scheme2accent0: "#9ec0dc",
-				scheme2accent1: "#6392d8",
-				scheme2accent2: "#d1d3d9",
-				scheme2accent3: "#737681",
+				scheme2background: "var(--scheme2background)",
+				scheme2main: "var(--scheme2main)",
+				scheme2accent0: "var(--scheme2accent0)",
+				scheme2accent1: "var(--scheme2accent1)",
+				scheme2accent2: "var(--scheme2accent2)",
+				scheme2accent3: "var(--scheme2accent3)",
 
-				scheme3background: "#25283b",
-				scheme3main: "#e5e6df",
-				scheme3accent0: "#91958b",
-				scheme3accent1: "#6392d8",
-				scheme3accent2: "#95cffb",
-				scheme3accent3: "#737681"
+				scheme3background: "var(--scheme3background)",
+				scheme3main: "var(--scheme3main)",
+				scheme3accent0: "var(--scheme3accent0)",
+				scheme3accent1: "var(--scheme3accent1)",
+				scheme3accent2: "var(--scheme3accent2)",
+				scheme3accent3: "var(--scheme3accent3)"
 			},
 			fontFamily: {
 				oswald: ["Oswald", "sans-serif"],
