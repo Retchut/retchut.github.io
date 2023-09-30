@@ -21,18 +21,22 @@
 
 	export let gridID: number = 0;
 
+	const WIDTH_PERCENTS: number[] = [57, 43, 50, 50, 43, 57];
+	const widthPercent: number = WIDTH_PERCENTS[gridID];
 	const afterPaddingPX: number = 70;
 	const projectHeightPX: number = 150;
+	const onRight: boolean = Boolean(gridID % 2); // for readibility's sake
 </script>
 
 <li
-	class="project flex relative bg-accent{themeVal} color-fade-anim overflow-hidden"
-	style="--after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
+	class="project flex relative bg-accent{themeVal} color-fade-anim overflow-hidden rounded-{onRight
+		? 'r'
+		: 'l'}-lg"
+	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
-	<div class="peer w-full h-full {gridID % 2 ? 'slider-left' : 'slider-right'}"></div>
+	<div class="peer w-full h-full {onRight ? 'slider-left' : 'slider-right'}"></div>
 	<div
-		class="absolute top-0 left-0 z-10 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-8 {gridID %
-		2
+		class="absolute top-0 left-0 z-10 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-8 {onRight
 			? 'slider-left'
 			: 'slider-right'}"
 	>
@@ -41,7 +45,7 @@
 			paragraphs={projectData.description}
 			showBar={false}
 			titleSize="2xl"
-			align={gridID % 2 ? "right" : "left"}
+			align={onRight ? "right" : "left"}
 		/>
 	</div>
 </li>
@@ -49,6 +53,7 @@
 <style>
 	.project {
 		/* Could have defined the height with tailwind, but here we avoid having to deal with multiple magic values, as tailwind doesn't compile classNames generated dynamically (without safelisting) */
+		width: calc(var(--width-percent) * 1%);
 		height: calc(var(--project-height-px) * 1px);
 	}
 

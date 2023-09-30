@@ -11,6 +11,9 @@ export default {
 		},
 		{
 			pattern: /xs|sm|base|lg|[2-9]?xl/
+		},
+		{
+			pattern: /rounded-(l|r)-lg/
 		}
 	],
 	theme: {
