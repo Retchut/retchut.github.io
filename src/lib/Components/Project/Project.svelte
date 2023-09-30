@@ -26,12 +26,16 @@
 </script>
 
 <li
-	class="project flex relative bg-accent{themeVal} color-fade-anim overflow-hidden {gridID % 2
-		? 'slider-left'
-		: 'slider-right'}"
+	class="project flex relative bg-accent{themeVal} color-fade-anim overflow-hidden"
 	style="--after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
-	<div class="w-full flex flex-col justify-center px-8">
+	<div class="peer w-full h-full {gridID % 2 ? 'slider-left' : 'slider-right'}"></div>
+	<div
+		class="absolute top-0 left-0 z-10 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-8 {gridID %
+		2
+			? 'slider-left'
+			: 'slider-right'}"
+	>
 		<TextGroup
 			title={projectData.title}
 			paragraphs={projectData.description}
