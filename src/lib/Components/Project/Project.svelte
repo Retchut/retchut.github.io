@@ -26,9 +26,9 @@
 </script>
 
 <li
-	class="project {gridID % 2
+	class="project flex relative bg-accent{themeVal} color-fade-anim overflow-hidden {gridID % 2
 		? 'slider-left'
-		: 'slider-right'} bg-accent{themeVal} color-fade-anim overflow-hidden"
+		: 'slider-right'}"
 	style="--after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
 	<div class="w-full flex flex-col justify-center px-8">
@@ -44,10 +44,8 @@
 
 <style>
 	.project {
-		/* Some stuff that could be defined in tailwind is also defined here to avoid having to deal with multiple magic values, as tailwind doesn't compile classNames generated during runtime (without safelisting) */
+		/* Could have defined the height with tailwind, but here we avoid having to deal with multiple magic values, as tailwind doesn't compile classNames generated dynamically (without safelisting) */
 		height: calc(var(--project-height-px) * 1px);
-		display: flex;
-		position: relative;
 	}
 
 	.slider-right {
