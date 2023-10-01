@@ -6,30 +6,34 @@
 				"title": ["Computer Graphics &", " Game Development"],
 				"subtitle": "Breathing Life into Pixels"
 			},
-			"technologies": ["threejs", "aframe", "unity", "godot", "blender"]
+			"backData": { "technologies": ["threejs", "aframe", "unity", "godot", "blender"] }
 		},
 		{
 			"frontData": {
 				"title": ["Front-End", "Web Development"],
 				"subtitle": "Crafting Digital Canvases"
 			},
-			"technologies": [
-				"react",
-				"svelte",
-				"typescript",
-				"javascript",
-				"tailwind",
-				"bootstrap",
-				"css",
-				"html"
-			]
+			"backData": {
+				"technologies": [
+					"react",
+					"svelte",
+					"typescript",
+					"javascript",
+					"tailwind",
+					"bootstrap",
+					"css",
+					"html"
+				]
+			}
 		},
 		{
 			"frontData": {
 				"title": ["Back-end", "Web Development"],
 				"subtitle": "Sculpting Digital Foundations"
 			},
-			"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
+			"backData": {
+				"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
+			}
 		}
 	]
 }

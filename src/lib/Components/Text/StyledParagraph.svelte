@@ -7,9 +7,13 @@
 	- ||label[www.example.com]|| - [label](https://www.example.com)
 
 		@param content - string - string to be parsed and displayed
+		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided.
 -->
 <script lang="ts">
-	export let content = "Default paragraph content";
+	export let content: string = "Default paragraph content";
+	export let align: string = "left";
+	if (!["left", "center", "right"].includes(align)) align = "left";
+
 	// Note to self:
 	//	sadly can't use capturing groups to make sure we capture the same start and end,
 	//	as any capture group would get picked up and be spliced into the str.split return array
@@ -27,7 +31,7 @@
 	};
 </script>
 
-<p class="text-base pb-1">
+<p class="text-base pb-1 text-{align}">
 	{#each parsedParagraph as token}
 		{@const tokenStart = token.slice(0, 2)}
 		{@const tokenEnd = token.slice(-2)}

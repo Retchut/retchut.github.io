@@ -15,7 +15,7 @@
 <PageSection>
 	<div class="h-[65vh]">
 		<header class=" w-full text-main">
-			<TextGroup {title} />
+			<TextGroup {title} titleSize="5axl" />
 		</header>
 		<slot />
 	</div>
