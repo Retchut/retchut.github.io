@@ -99,11 +99,11 @@ button {
 }
 
 .fade-in-left {
-	animation: fadeInLeft 500ms;
+	animation: fadeInLeft 1000ms;
 }
 
 .fade-in-right {
-	animation: fadeInRight 500ms;
+	animation: fadeInRight 1000ms;
 }
 
 .fade-in-top {

@@ -47,19 +47,20 @@
 		src={`./projects/${projectData.imgName}.jpg`}
 		alt={projectData.imgName}
 	/>
-	<!-- Note to self: this is a flex col so that the children can grow horizontally to 100% of
-						the parent without having to override the styles inside TextGroup
-	-->
-	<div
-		class="z-10 peer flex flex-col justify-center w-full {onRight ? 'slider-left' : 'slider-right'}"
-		class:hidden={hideFront}
-	>
-		<TextGroup
-			title={projectData.title}
-			showBar={false}
-			titleSize="2xl"
-			align={onRight ? "left" : "right"}
-		/>
+	<div class="z-10 peer flex items-center w-full {onRight ? 'slider-left' : 'slider-right'}">
+		<div
+			class="w-full"
+			class:hide-left={onRight && hideFront}
+			class:hide-right={!onRight && hideFront}
+			class:return={!hideFront}
+		>
+			<TextGroup
+				title={projectData.title}
+				showBar={false}
+				titleSize="2xl"
+				align={onRight ? "left" : "right"}
+			/>
+		</div>
 	</div>
 	<a
 		href={projectData.projectURL}
@@ -116,5 +117,23 @@
 		left: 0;
 		border-bottom: calc(var(--project-height-px) * 1px) solid transparent;
 		border-left: calc(var(--after-width-px) * 1px) solid var(--background2);
+	}
+
+	.hide-left {
+		transition: 500ms;
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	.hide-right {
+		transition: 500ms;
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	.return {
+		transition: 500ms;
+		opacity: 1;
+		transform: translateX(0px);
 	}
 </style>
