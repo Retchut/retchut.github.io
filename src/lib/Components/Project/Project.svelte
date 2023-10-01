@@ -40,13 +40,15 @@
 			? 'slider-left'
 			: 'slider-right'}"
 	>
-		<TextGroup
-			title={projectData.title}
-			paragraphs={projectData.description}
-			showBar={false}
-			titleSize="2xl"
-			align={onRight ? "right" : "left"}
-		/>
+		<div class={onRight ? "fade-in-right" : "fade-in-left"}>
+			<TextGroup
+				title={projectData.title}
+				paragraphs={projectData.description}
+				showBar={false}
+				titleSize="2xl"
+				align={onRight ? "right" : "left"}
+			/>
+		</div>
 	</div>
 </li>
 
