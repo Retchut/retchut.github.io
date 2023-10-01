@@ -1,7 +1,7 @@
 export interface ProjectData {
 	title: string;
 	description: string[];
-	imgPath: string;
+	imgName: string;
 	tags: string[];
 	techs: string[];
 	projectURL: string;

@@ -7,7 +7,7 @@
 				"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
 				"Just clone the repo and run the script, and you'll have my workstation up and running."
 			],
-			"imgPath": "",
+			"imgName": "arch-quick-setup",
 			"tags": ["Utility"],
 			"techs": ["Bash", "Linux"],
 			"projectURL": "https://github.com/Retchut/arch-quick-setup"
@@ -18,7 +18,7 @@
 				"Repository holding this website's code.",
 				"Serves as a little archive of what I'm up to."
 			],
-			"imgPath": "",
+			"imgName": "atlas",
 			"tags": ["Web"],
 			"techs": ["Svelte", "Tailwind", "CSS"],
 			"projectURL": "https://github.com/Retchut/portfolio"
@@ -28,7 +28,7 @@
 			"description": [
 				"Project focused on both exploring the generation of photo-realistic 3D models based on real places, and on the development of a platform to explore these models on."
 			],
-			"imgPath": "",
+			"imgName": "atlas",
 			"tags": ["Web", "VR"],
 			"techs": ["A-Frame", "Meshroom", "Express"],
 			"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
@@ -40,7 +40,7 @@
 				"An educative tool made for a Veterinary Medicine University teacher.",
 				"A WIP"
 			],
-			"imgPath": "",
+			"imgName": "atlas",
 			"tags": ["Web"],
 			"techs": ["React", "Tailwind", "Express", "MongoDB"],
 			"projectURL": "https://github.com/Retchut/atlas"
@@ -48,7 +48,7 @@
 		{
 			"title": "More over at my github",
 			"description": ["You can find some other projects of mine, interests, among other things."],
-			"imgPath": "",
+			"imgName": "atlas",
 			"tags": [],
 			"techs": [],
 			"projectURL": "https://github.com/Retchut/"
@@ -58,7 +58,7 @@
 			"description": [
 				"Shifteam empowers managers to effortlessly craft highly efficient schedules, allowing them to allocate more time to prioritize other essential responsibilities. Bolstering an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
 			],
-			"imgPath": "",
+			"imgName": "atlas",
 			"tags": ["Web"],
 			"techs": ["React", "Tailwind", "Django"],
 			"projectURL": "https://www.shifteam.pt"
