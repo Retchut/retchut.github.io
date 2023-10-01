@@ -2,6 +2,17 @@
 	"title": "Projects",
 	"projects": [
 		{
+			"title": "Arch Quick Setup",
+			"description": [
+				"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
+				"Just clone the repo and run the script, and you'll have my workstation up and running."
+			],
+			"imgPath": "",
+			"tags": ["Utility"],
+			"techs": ["Bash", "Linux"],
+			"projectURL": "https://github.com/Retchut/arch-quick-setup"
+		},
+		{
 			"title": "Portfolio Website",
 			"description": [
 				"Repository holding this website's code.",
@@ -23,17 +34,6 @@
 			"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
 		},
 		{
-			"title": "Arch Quick Setup",
-			"description": [
-				"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
-				"Just clone the repo and run the script, and you'll have my workstation up and running."
-			],
-			"imgPath": "",
-			"tags": ["Utility"],
-			"techs": ["Bash", "Linux"],
-			"projectURL": "https://github.com/Retchut/arch-quick-setup"
-		},
-		{
 			"title": "Atlas of Anatomical Pathology",
 			"description": [
 				"An online Atlas of Anatomical Pathology.",
@@ -44,6 +44,24 @@
 			"tags": ["Web"],
 			"techs": ["React", "Tailwind", "Express", "MongoDB"],
 			"projectURL": "https://github.com/Retchut/atlas"
+		},
+		{
+			"title": "More over at my github",
+			"description": ["You can find some other projects of mine, interests, among other things."],
+			"imgPath": "",
+			"tags": [],
+			"techs": [],
+			"projectURL": "https://github.com/Retchut/"
+		},
+		{
+			"title": "Shifteam",
+			"description": [
+				"Shifteam empowers managers to effortlessly craft highly efficient schedules, allowing them to allocate more time to prioritize other essential responsibilities. Bolstering an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
+			],
+			"imgPath": "",
+			"tags": ["Web"],
+			"techs": ["React", "Tailwind", "Django"],
+			"projectURL": "https://www.shifteam.pt"
 		}
 	]
 }
