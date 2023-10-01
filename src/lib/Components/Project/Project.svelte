@@ -35,7 +35,8 @@
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
 	<div class="peer w-full h-full {onRight ? 'slider-left' : 'slider-right'}"></div>
-	<div
+	<a
+		href={projectData.projectURL}
 		class="absolute top-0 left-0 z-10 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-8 {onRight
 			? 'slider-left'
 			: 'slider-right'}"
@@ -49,7 +50,7 @@
 				align={onRight ? "right" : "left"}
 			/>
 		</div>
-	</div>
+	</a>
 </li>
 
 <style>
