@@ -3,7 +3,7 @@ export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	safelist: [
 		{
-			pattern: /(bg|text|border)-(background|accent.)/,
+			pattern: /(bg|text|border|from|to)-(background|accent.)/,
 			variants: ["hover"]
 		},
 		{
@@ -14,6 +14,9 @@ export default {
 		},
 		{
 			pattern: /rounded-(l|r)-lg/
+		},
+		{
+			pattern: /bg-gradient-to-(l|r)/
 		}
 	],
 	theme: {

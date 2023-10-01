@@ -29,9 +29,9 @@
 </script>
 
 <li
-	class="project flex relative bg-accent{themeVal} color-fade-anim overflow-hidden rounded-{onRight
-		? 'r'
-		: 'l'}-lg"
+	class="project flex relative color-fade-anim overflow-hidden bg-gradient-to-{onRight
+		? 'l'
+		: 'r'} from-accent{themeVal} from-60% to-background2 rounded-{onRight ? 'r' : 'l'}-lg"
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
 	<div class="peer w-full h-full {onRight ? 'slider-left' : 'slider-right'}"></div>
