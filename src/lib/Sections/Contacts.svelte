@@ -20,7 +20,7 @@
 		<TextGroup {title} {paragraphs} align="center" />
 		<Button
 			class="mx-auto my-4 p-4"
-			text="Get in touch"
+			text={contactBtnTxt}
 			action={() => (window.location.href = "mailto:mariotravassosdev@protonmail.com")}
 		/>
 	</div>
