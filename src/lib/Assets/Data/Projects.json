@@ -36,9 +36,8 @@
 		{
 			"title": "Atlas of Anatomical Pathology",
 			"description": [
-				"An online Atlas of Anatomical Pathology.",
-				"An educative tool made for a Veterinary Medicine University teacher.",
-				"A WIP"
+				"An online Atlas of Anatomical Pathology. Still a WIP.",
+				"An educative tool made for a Veterinary Medicine teacher."
 			],
 			"imgName": "atlas",
 			"tags": ["Web"],

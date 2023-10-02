@@ -4,6 +4,7 @@
 	import { theme } from "../../../utils/stores";
 
 	import TextGroup from "../Text/TextGroup.svelte";
+	import Tag from "../Tags/Tag.svelte";
 
 	let themeVal: number;
 	theme.subscribe((value) => {
@@ -42,11 +43,13 @@
 		: 'r'} from-accent{themeVal} from-60% to-background2 rounded-{onRight ? 'r' : 'l'}-lg"
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
+	<!-- bg image -->
 	<img
 		class="z-0 absolute inset-0 w-full opacity-30"
 		src={`./projects/${projectData.imgName}.jpg`}
 		alt={projectData.imgName}
 	/>
+	<!-- front -->
 	<div class="z-10 peer flex items-center w-full {onRight ? 'slider-left' : 'slider-right'}">
 		<div
 			class="w-full"
@@ -57,11 +60,12 @@
 			<TextGroup
 				title={projectData.title}
 				showBar={false}
-				titleSize="2xl"
+				titleSize="3xl"
 				align={onRight ? "left" : "right"}
 			/>
 		</div>
 	</div>
+	<!-- back -->
 	<a
 		href={projectData.projectURL}
 		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-8 {onRight
@@ -72,19 +76,26 @@
 	>
 		<div class={onRight ? "fade-in-right" : "fade-in-left"}>
 			<TextGroup
-				title={projectData.title}
 				paragraphs={projectData.description}
 				showBar={false}
 				titleSize="2xl"
 				align={onRight ? "right" : "left"}
 			/>
+			<div class="mt-2 flex {onRight ? 'flex-row-reverse' : 'flex-row'}">
+				{#each projectData.tags as content}
+					<Tag {content} />
+				{/each}
+				{#each projectData.techs as content}
+					<Tag {content} isTech={true} />
+				{/each}
+			</div>
 		</div>
 	</a>
 </li>
 
 <style>
 	.project {
-		/* Could have defined the height with tailwind, but here we avoid having to deal with multiple magic values, as tailwind doesn't compile classNames generated dynamically (without safelisting) */
+		/* Could have defined the height with tailwind, but here we avoid having to deal with multiple magic values, as tailwind doesn't compile classNames generated dynamically (without safelisting - which I don't want to bloat up further) */
 		width: calc(var(--width-percent) * 1%);
 		height: calc(var(--project-height-px) * 1px);
 	}
