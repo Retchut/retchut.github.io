@@ -28,6 +28,9 @@
 	if (titleSize.match(/^(xs|sm|base|lg|[2-9]?xl)$/g) === null) titleSize = "6xl";
 	export let align: string = "left";
 	if (!["left", "center", "right"].includes(align)) align = "left";
+
+	if ([title, subtitle].every((v) => v === "") && paragraphs.length === 0)
+		console.warn("empty TextGroup");
 </script>
 
 {#if title !== ""}
