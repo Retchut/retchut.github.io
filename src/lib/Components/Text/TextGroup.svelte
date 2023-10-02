@@ -1,11 +1,9 @@
 <!--
 @component
 	This component consists of a text group.
-	It consists of, at the very least, a title and separator.
-	An optional subtitle can be provided as a prop, which will be rendered below the title.
-	An array of paragraphs can be provided as a prop as well, which will be rendered after the separator.
+	It consists of, a title, subtitle, separator and paragraphs, rendered in this order.
 
-		@param title - string - title of the group
+		@param title - string - title of the group (optional)
 		@param subtitle - string - subtitle of the group (optional)
 		@param paragraphs - string[] - array of paragraph strings to be rendered below the separator
 		@param showBar - boolean - true if the bar is supposed to be shown. true by default
@@ -22,7 +20,7 @@
 		themeVal = value;
 	});
 
-	export let title: string = "Default Title";
+	export let title: string = "";
 	export let subtitle: string = "";
 	export let paragraphs: string[] = [];
 	export let showBar: boolean = true;
@@ -32,7 +30,9 @@
 	if (!["left", "center", "right"].includes(align)) align = "left";
 </script>
 
-<h1 class="text-{titleSize} pb-4 text-{align}">{title}</h1>
+{#if title !== ""}
+	<h1 class="text-{titleSize} pb-4 text-{align}">{title}</h1>
+{/if}
 
 {#if subtitle !== ""}
 	<h2 class="text-xl pb-6 text-{align}">{subtitle}</h2>
