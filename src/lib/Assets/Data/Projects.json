@@ -1,0 +1,66 @@
+{
+	"title": "Projects",
+	"projects": [
+		{
+			"title": "Arch Quick Setup",
+			"description": [
+				"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
+				"Just clone the repo and run the script, and you'll have my workstation up and running."
+			],
+			"imgName": "arch-quick-setup",
+			"tags": ["Utility"],
+			"techs": ["Bash", "Linux"],
+			"projectURL": "https://github.com/Retchut/arch-quick-setup"
+		},
+		{
+			"title": "Portfolio Website",
+			"description": [
+				"Repository holding this website's code.",
+				"Serves as a little archive of what I'm up to."
+			],
+			"imgName": "website",
+			"tags": ["Web"],
+			"techs": ["Svelte", "Tailwind", "CSS"],
+			"projectURL": "https://github.com/Retchut/portfolio"
+		},
+		{
+			"title": "VR A-Frame Explorer",
+			"description": [
+				"Project focused on both exploring the generation of photo-realistic 3D models based on real places, and on the development of a platform to explore these models on."
+			],
+			"imgName": "vr-aframe-explorer",
+			"tags": ["Web", "VR"],
+			"techs": ["A-Frame", "Meshroom", "Express"],
+			"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
+		},
+		{
+			"title": "Atlas of Anatomical Pathology",
+			"description": [
+				"An online Atlas of Anatomical Pathology. Still a WIP.",
+				"An educative tool made for a Veterinary Medicine teacher."
+			],
+			"imgName": "atlas",
+			"tags": ["Web"],
+			"techs": ["React", "Tailwind", "Express", "MongoDB"],
+			"projectURL": "https://github.com/Retchut/atlas"
+		},
+		{
+			"title": "More over at my github",
+			"description": ["You can find some other projects of mine, interests, among other things."],
+			"imgName": "github",
+			"tags": [],
+			"techs": [],
+			"projectURL": "https://github.com/Retchut/"
+		},
+		{
+			"title": "Shifteam",
+			"description": [
+				"Shifteam empowers managers to effortlessly craft highly efficient schedules, allowing them to allocate more time to prioritize other essential responsibilities. Bolstering an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
+			],
+			"imgName": "shifteam",
+			"tags": ["Web"],
+			"techs": ["React", "Tailwind", "Django"],
+			"projectURL": "https://www.shifteam.pt"
+		}
+	]
+}
