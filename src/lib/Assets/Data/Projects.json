@@ -18,7 +18,7 @@
 				"Repository holding this website's code.",
 				"Serves as a little archive of what I'm up to."
 			],
-			"imgName": "atlas",
+			"imgName": "website",
 			"tags": ["Web"],
 			"techs": ["Svelte", "Tailwind", "CSS"],
 			"projectURL": "https://github.com/Retchut/portfolio"
@@ -28,7 +28,7 @@
 			"description": [
 				"Project focused on both exploring the generation of photo-realistic 3D models based on real places, and on the development of a platform to explore these models on."
 			],
-			"imgName": "atlas",
+			"imgName": "vr-aframe-explorer",
 			"tags": ["Web", "VR"],
 			"techs": ["A-Frame", "Meshroom", "Express"],
 			"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
@@ -48,7 +48,7 @@
 		{
 			"title": "More over at my github",
 			"description": ["You can find some other projects of mine, interests, among other things."],
-			"imgName": "atlas",
+			"imgName": "github5",
 			"tags": [],
 			"techs": [],
 			"projectURL": "https://github.com/Retchut/"
@@ -58,7 +58,7 @@
 			"description": [
 				"Shifteam empowers managers to effortlessly craft highly efficient schedules, allowing them to allocate more time to prioritize other essential responsibilities. Bolstering an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
 			],
-			"imgName": "atlas",
+			"imgName": "shifteam",
 			"tags": ["Web"],
 			"techs": ["React", "Tailwind", "Django"],
 			"projectURL": "https://www.shifteam.pt"
