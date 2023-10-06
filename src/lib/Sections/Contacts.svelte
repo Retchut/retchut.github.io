@@ -17,7 +17,9 @@
 
 <PageSection>
 	<div class="text-white flex flex-col">
-		<TextGroup {title} {paragraphs} align="center" />
+		<header>
+			<TextGroup {title} {paragraphs} align="center" />
+		</header>
 		<Button
 			class="mx-auto my-4 p-4"
 			text={contactBtnTxt}
