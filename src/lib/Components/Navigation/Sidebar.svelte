@@ -4,13 +4,13 @@
 	It contains navigation links to multiple sections of the webpage.
 -->
 <script lang="ts">
-	import { getSections, handleScroll } from "../../../utils/scrollToSection";
+	import { getSections } from "../../../utils/scrollToSection";
 
-	import Button from "../Button/Button.svelte";
+	import Triangle from "../Button/Triangle.svelte";
 </script>
 
 <aside class="fixed bottom-4 right-4 flex flex-col">
 	{#each getSections() as section}
-		<Button class="my-1 py-1 px-2" action={() => handleScroll(section)} text={section.toString()} />
+		<Triangle {section} />
 	{/each}
 </aside>
