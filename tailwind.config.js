@@ -3,7 +3,7 @@ export default {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	safelist: [
 		{
-			pattern: /(bg|text|border|from|to)-(background|accent.)/,
+			pattern: /(bg|text|border(-b|-t)?|from|to)-(background|accent.)/,
 			variants: ["hover"]
 		},
 		{

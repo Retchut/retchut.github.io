@@ -31,7 +31,7 @@
 	};
 </script>
 
-<p class="text-base pb-1 text-{align}">
+<p class="text-lg pb-1 text-{align}">
 	{#each parsedParagraph as token}
 		{@const tokenStart = token.slice(0, 2)}
 		{@const tokenEnd = token.slice(-2)}
