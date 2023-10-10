@@ -21,8 +21,8 @@
 	class="relative my-2 w-8 h-8 overflow-visible"
 	on:click={() => handleScroll(section)}
 >
-	<div class="absolute outer border-b-accent{themeVal}"></div>
-	<div class="absolute inner border-b-background2"></div>
+	<div class="absolute outer border-t-accent{themeVal}"></div>
+	<div class="absolute inner border-t-background2"></div>
 </button>
 
 <style>
@@ -32,16 +32,16 @@
 	}
 
 	.outer {
-		top: 5px;
+		bottom: 5px;
 		left: 3px;
 		@apply border-solid border-x-transparent;
-		border-width: 0px 13px 21px;
+		border-width: 21px 13px 0px;
 	}
 
 	.inner {
-		top: 9px;
+		bottom: 9px;
 		left: 8px;
 		@apply border-solid border-x-transparent;
-		border-width: 0px 8px 15px;
+		border-width: 15px 8px 0px;
 	}
 </style>
