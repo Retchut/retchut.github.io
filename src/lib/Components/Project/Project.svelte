@@ -1,15 +1,9 @@
 <script lang="ts">
 	import type { ProjectData } from "../../../types/Project";
 
-	import { theme } from "../../../utils/stores";
-
+	import GradientTransition from "./GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
 	import Tag from "../Tags/Tag.svelte";
-
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	export let projectData: ProjectData = {
 		title: "",
@@ -38,11 +32,10 @@
 </script>
 
 <li
-	class="project flex relative color-fade-anim overflow-hidden bg-gradient-to-{onRight
-		? 'l'
-		: 'r'} from-accent{themeVal} from-60% to-background2 rounded-{onRight ? 'r' : 'l'}-lg"
+	class="project flex relative color-fade-anim overflow-hidden rounded-{onRight ? 'r' : 'l'}-lg"
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
 >
+	<GradientTransition {onRight} />
 	<!-- bg image -->
 	<img
 		class="z-0 absolute inset-0 w-full opacity-30"
