@@ -31,7 +31,7 @@
 </script>
 
 <article
-	class="color-fade-anim mx-8 index{index} bg-accent{themeVal} text-background flex justify-center items-center min-h-[350px] rounded-lg relative"
+	class="color-fade-anim mx-8 index{index} bg-accent{themeVal} text-background flex justify-center items-center min-h-[450px] rounded-lg relative"
 >
 	<!-- Card Front -->
 	<header class="flex flex-col w-full h-full justify-center peer">
