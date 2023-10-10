@@ -1,3 +1,9 @@
+<!--
+@component
+	This component consists of a couple of gradients which will be transitioned between depending on the currently active theme. The only reason this exists is because no browser supports transitions between gradient states.
+
+		@param onRight - boolean - true if the Project (parent) is on the right side of the projects grid (affects the gradients' direction)
+-->
 <script lang="ts">
 	import { get } from "svelte/store";
 	import { theme } from "../../../utils/stores";

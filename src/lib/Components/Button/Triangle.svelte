@@ -1,3 +1,9 @@
+<!--
+@component
+	This component consists of the navigation triangle buttons.
+
+		@param section - number - the section this item will scroll to when interacted with
+-->
 <script lang="ts">
 	import { theme, websiteSection } from "../../../utils/stores";
 

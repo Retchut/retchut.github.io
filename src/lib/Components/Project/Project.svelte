@@ -1,3 +1,10 @@
+<!--
+@component
+	This component renders a project element. It consists of a (actually multiple) gradient background(s), a background image, some text, and some other text that is only displayed when hovered.
+
+		@param gridID - number - number of the item on the projects grid
+		@param projectData - ProjectData - holds the data which will be displayed on this element
+-->
 <script lang="ts">
 	import type { ProjectData } from "../../../types/Project";
 
