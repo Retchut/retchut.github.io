@@ -52,45 +52,17 @@
 	$: updateGradients(themeVal);
 </script>
 
-<div
-	style="--anim-duration-ms:{animDurationMS};"
-	bind:this={gradients[0]}
-	class:fade-in={visibleGradients[0]}
-	class:fade-out={!visibleGradients[0]}
-	class="opacity-0 w-full h-full absolute bg-gradient-to-{onRight
-		? 'l'
-		: 'r'} from-accent0 from-60% to-background2"
-></div>
-
-<div
-	style="--anim-duration-ms:{animDurationMS};"
-	bind:this={gradients[1]}
-	class:fade-in={visibleGradients[1]}
-	class:fade-out={!visibleGradients[1]}
-	class="opacity-0 w-full h-full absolute bg-gradient-to-{onRight
-		? 'l'
-		: 'r'} from-accent1 from-60% to-background2"
-></div>
-
-<div
-	style="--anim-duration-ms:{animDurationMS};"
-	bind:this={gradients[2]}
-	class:fade-in={visibleGradients[2]}
-	class:fade-out={!visibleGradients[2]}
-	class="opacity-0 w-full h-full absolute bg-gradient-to-{onRight
-		? 'l'
-		: 'r'} from-accent2 from-60% to-background2"
-></div>
-
-<div
-	style="--anim-duration-ms:{animDurationMS};"
-	bind:this={gradients[3]}
-	class:fade-in={visibleGradients[3]}
-	class:fade-out={!visibleGradients[3]}
-	class="opacity-0 w-full h-full absolute bg-gradient-to-{onRight
-		? 'l'
-		: 'r'} from-accent3 from-60% to-background2"
-></div>
+{#each [0, 1, 2, 3] as t}
+	<div
+		style="--anim-duration-ms:{animDurationMS};"
+		bind:this={gradients[t]}
+		class:fade-in={visibleGradients[t]}
+		class:fade-out={!visibleGradients[t]}
+		class="opacity-0 w-full h-full absolute bg-gradient-to-{onRight
+			? 'l'
+			: 'r'} from-accent{t} from-60% to-background2"
+	></div>
+{/each}
 
 <style>
 	@keyframes toInvisible {
