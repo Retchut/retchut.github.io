@@ -21,7 +21,7 @@
 			"imgName": "website",
 			"tags": ["Web"],
 			"techs": ["Svelte", "Tailwind", "CSS"],
-			"projectURL": "https://github.com/Retchut/portfolio"
+			"projectURL": "https://github.com/Retchut/retchut.github.io"
 		},
 		{
 			"title": "VR A-Frame Explorer",
