@@ -38,6 +38,10 @@
 	--scheme3accent3: #737681;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 p,
 h1,
 h2,
