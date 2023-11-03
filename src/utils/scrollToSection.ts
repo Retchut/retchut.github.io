@@ -15,7 +15,7 @@ function scrollToSection(num: number): void {
 	window.scrollTo({
 		top: num * PAGE_OFFSET,
 		left: 0,
-		behavior: "smooth"
+		behavior: "smooth",
 	});
 	websiteSection.update((_value) => num);
 }
