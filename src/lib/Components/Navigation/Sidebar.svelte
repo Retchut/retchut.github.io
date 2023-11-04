@@ -9,7 +9,7 @@
 	import Triangle from "../Button/Triangle.svelte";
 </script>
 
-<aside class="fixed bottom-4 right-4 flex flex-col">
+<aside class="z-30 fixed bottom-4 right-4 flex flex-col">
 	{#each getSections() as section}
 		<Triangle {section} />
 	{/each}
