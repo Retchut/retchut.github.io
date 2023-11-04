@@ -8,7 +8,11 @@
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
+	import { handleScroll, scrollToSection } from "./utils/scrolling";
+
 	import "./app.css";
+
+	scrollToSection(0);
 </script>
 
 <main class="w-screen bg-background2">
@@ -24,7 +28,7 @@
 	</div>
 </main>
 
-<!-- <svelte:window on:scroll={() => handleScroll(null)} /> -->
+<svelte:window on:scroll={() => handleScroll()} />
 
 <style>
 </style>

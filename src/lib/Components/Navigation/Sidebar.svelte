@@ -4,7 +4,7 @@
 	It contains navigation links to multiple sections of the webpage.
 -->
 <script lang="ts">
-	import { getSections } from "../../../utils/scrollToSection";
+	import { getSections } from "../../../utils/scrolling";
 
 	import Triangle from "../Button/Triangle.svelte";
 </script>
