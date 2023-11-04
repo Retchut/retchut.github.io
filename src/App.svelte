@@ -10,12 +10,23 @@
 
 	import { handleScroll, scrollToSection } from "./utils/scrolling";
 
+	import { scrollSnap } from "./utils/stores";
+
 	import "./app.css";
 
 	scrollToSection(0);
+
+	let snapping: boolean;
+	scrollSnap.subscribe((value) => {
+		snapping = value;
+	});
 </script>
 
-<main class="w-screen bg-background2">
+<main
+	class="bg-background2 w-screen h-screen overflow-y-scroll snap-mandatory {snapping
+		? 'snap-y'
+		: 'snap-none'}"
+>
 	<Navbar />
 	<Sidebar />
 	<ThemePicker />
