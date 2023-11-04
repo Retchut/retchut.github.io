@@ -32,7 +32,8 @@
 	bind:this={mainEl}
 	class="bg-background2 w-screen h-screen overflow-y-scroll snap-mandatory {snapping
 		? 'snap-y'
-		: 'snap-none'}"
+		: 'snap-none'}
+		{snapping ? 'hide-scrollbar' : ''}"
 	on:scroll={() => handleScroll()}
 >
 	<Navbar />
@@ -48,4 +49,13 @@
 </main>
 
 <style>
+	.hide-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.hide-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 </style>
