@@ -20,18 +20,7 @@ function scrollToSection(num: number): void {
 	websiteSection.update((_value) => num);
 }
 
-const getSectionOffset = (currentSection: number): number => {
-	const scrollY = window.scrollY;
-	if (scrollY > currentSection * PAGE_OFFSET) {
-		return 1;
-	} else if (scrollY < currentSection * PAGE_OFFSET) {
-		return -1;
-	} else {
-		return 0;
-	}
-};
-
-function handleScroll(targetSection: number | null): void {
+function handleScroll(targetSection: number): void {
 	const currentSection = get(websiteSection);
 
 	// snap to section if on scroll cooldown
@@ -42,13 +31,10 @@ function handleScroll(targetSection: number | null): void {
 
 	onScrollCooldown = true;
 
-	const nextSection =
-		targetSection !== null ? targetSection : currentSection + getSectionOffset(currentSection);
-
-	if (nextSection !== currentSection) {
+	if (targetSection !== currentSection) {
 		// scroll events shouldn't be fired upwards from section 0, or downwards from the last section, but we're still checking just in case
-		if (SECTIONS.includes(nextSection)) {
-			scrollToSection(nextSection);
+		if (SECTIONS.includes(targetSection)) {
+			scrollToSection(targetSection);
 		} else {
 			scrollToSection(currentSection);
 		}
