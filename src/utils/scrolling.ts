@@ -3,6 +3,13 @@ import { websiteSection } from "./stores";
 
 const PAGE_OFFSET: number = window.innerHeight;
 const SECTIONS: number[] = [0, 1, 2, 3, 4];
+const SCROLL_EL_MISSING_ERR = "Scrolling element not set.";
+
+let scrollingEl: HTMLElement;
+
+function setScrollingElement(el: HTMLElement) {
+	scrollingEl = el;
+}
 
 function getSections(): number[] {
 	return SECTIONS;
@@ -12,13 +19,16 @@ function updateSection(newSection: number) {
 	websiteSection.update((_value) => newSection);
 }
 
-function getWindowSection() {
-	const posInDocument: number = window.scrollY || window.pageYOffset;
-	return Math.round(posInDocument / PAGE_OFFSET);
+function getScrollPos() {
+	if (scrollingEl === null) {
+		console.error(SCROLL_EL_MISSING_ERR);
+		return 0;
+	}
+	return Math.round(scrollingEl.scrollTop / PAGE_OFFSET);
 }
 
 function smoothScroll(section: number): void {
-	window.scrollTo({
+	scrollingEl.scrollTo({
 		top: section * PAGE_OFFSET,
 		left: 0,
 		behavior: "smooth",
@@ -27,6 +37,10 @@ function smoothScroll(section: number): void {
 }
 
 function scrollToSection(targetSection: number): void {
+	if (scrollingEl === null) {
+		console.error(SCROLL_EL_MISSING_ERR);
+		return;
+	}
 	const currentSection = get(websiteSection);
 
 	if (targetSection !== currentSection) {
@@ -41,8 +55,8 @@ function scrollToSection(targetSection: number): void {
 
 function handleScroll() {
 	const currentSection = get(websiteSection);
-	const realSection = getWindowSection();
+	const realSection = getScrollPos();
 	if (realSection !== currentSection) updateSection(realSection);
 }
 
-export { getSections, scrollToSection, handleScroll };
+export { setScrollingElement, getSections, scrollToSection, handleScroll };
