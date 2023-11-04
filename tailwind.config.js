@@ -4,20 +4,20 @@ export default {
 	safelist: [
 		{
 			pattern: /(bg|text|border(-b|-t)?|from|to)-(background|accent.)/,
-			variants: ["hover"]
+			variants: ["hover"],
 		},
 		{
-			pattern: /text-(left|center|right)/
+			pattern: /text-(left|center|right)/,
 		},
 		{
-			pattern: /xs|sm|base|lg|[2-9]?xl/
+			pattern: /xs|sm|base|lg|[2-9]?xl/,
 		},
 		{
-			pattern: /rounded-(l|r)-lg/
+			pattern: /rounded-(l|r)-lg/,
 		},
 		{
-			pattern: /bg-gradient-to-(l|r)/
-		}
+			pattern: /bg-gradient-to-(l|r)/,
+		},
 	],
 	theme: {
 		extend: {
@@ -42,14 +42,14 @@ export default {
 				scheme3accent0: "var(--scheme3accent0)",
 				scheme3accent1: "var(--scheme3accent1)",
 				scheme3accent2: "var(--scheme3accent2)",
-				scheme3accent3: "var(--scheme3accent3)"
+				scheme3accent3: "var(--scheme3accent3)",
 			},
 			fontFamily: {
 				oswald: ["Oswald", "sans-serif"],
 				"roboto-condensed": ["Roboto Condensed", "sans-serif"],
-				"babas-neue": ["Bebas Neue", "sans-serif"]
-			}
-		}
+				"babas-neue": ["Bebas Neue", "sans-serif"],
+			},
+		},
 	},
-	plugins: []
+	plugins: [],
 };

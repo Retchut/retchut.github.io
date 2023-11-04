@@ -7,7 +7,7 @@
 <script lang="ts">
 	import { theme, websiteSection } from "../../../utils/stores";
 
-	import { handleScroll } from "../../../utils/scrollToSection";
+	import { scrollToSection } from "../../../utils/scrolling";
 
 	export let section: number = 0;
 
@@ -25,7 +25,7 @@
 <button
 	class:rotate={selected}
 	class="relative my-2 w-8 h-8 overflow-visible"
-	on:click={() => handleScroll(section)}
+	on:click={() => scrollToSection(section)}
 >
 	<div class="absolute outer border-t-accent{themeVal}"></div>
 	<div class="absolute inner border-t-background2"></div>
