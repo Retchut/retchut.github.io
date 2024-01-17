@@ -22,9 +22,21 @@
 		snapping = value;
 	});
 
+	let smallScreen: boolean = true;
+	const checkScreenSize = () => {
+		// default tailwind breakpoints:
+		// sm - 640px
+		// md - 768px
+		// lg - 1024px
+		// xl - 1280px
+		// 2x - 1536px
+		smallScreen = window.innerWidth < 768;
+	};
+
 	onMount(() => {
 		setScrollingElement(mainEl);
 		scrollToSection(0);
+		checkScreenSize();
 	});
 </script>
 
@@ -36,9 +48,11 @@
 		{snapping ? 'hide-scrollbar' : ''}"
 	on:scroll={() => handleScroll()}
 >
-	<Navbar />
-	<Sidebar />
-	<ThemePicker />
+	{#if !smallScreen}
+		<Navbar />
+		<Sidebar />
+		<ThemePicker />
+	{/if}
 	<div class="flex flex-col">
 		<Hero />
 		<About />
@@ -47,6 +61,8 @@
 		<Contacts />
 	</div>
 </main>
+
+<svelte:window on:resize={checkScreenSize} />
 
 <style>
 	.hide-scrollbar::-webkit-scrollbar {

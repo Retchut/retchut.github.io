@@ -10,10 +10,13 @@
 	export let heroSection: boolean = false;
 
 	const outerClass =
-		"h-screen flex items-center overflow-hidden" + (heroSection ? " bg-background" : "");
+		"h-screen flex justify-center items-center overflow-hidden" +
+		(heroSection ? " bg-background" : "");
 	const innerClass =
-		"mx-auto flex flex-col justify-center h-[85vh] " +
-		(heroSection ? "w-[800px] relative" : "w-[1300px]");
+		"flex justify-center " +
+		(heroSection
+			? "mx-auto relative flex-row items-center w-auto"
+			: "mx-12 2xl:mx-0 flex-col w-[1300px]");
 </script>
 
 <section class={outerClass}>

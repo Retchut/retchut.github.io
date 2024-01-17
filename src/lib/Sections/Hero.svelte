@@ -16,7 +16,9 @@
 </script>
 
 <PageSection heroSection={true}>
-	<header class="ml-28 z-10 max-w-[400px] flex flex-col text-main">
+	<header
+		class="px-4 w-screen mx-auto sm:ml-14 md:w-[640px] z-10 flex flex-col justify-center text-main"
+	>
 		<TextGroup {title} {subtitle} {paragraphs} />
 		<Button
 			class="w-fit px-6 py-4 mt-4"
@@ -27,7 +29,7 @@
 	<img
 		src="/profile.jpg"
 		alt="My portrait"
-		class="absolute bottom-24 right-12 z-0 max-h-[600px] rounded-sm"
+		class="absolute right-10 sm:right-36 md:-right-4 z-0 max-h-[300px] sm:max-h-[450px] md:max-h-[600px] rounded-sm"
 	/>
 </PageSection>
 
