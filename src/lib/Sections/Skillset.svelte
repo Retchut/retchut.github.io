@@ -3,35 +3,35 @@
 	This component is the webpage's Skillset section.
 -->
 <script lang="ts">
-	import type { CardData } from "../../types/Card";
+	import type { SkillData } from "../../types/Skill";
 
-	import Card from "../Components/Card/Card.svelte";
+	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
+	import Skill from "../Components/Skill/Skill.svelte";
 
 	import sectionData from "../Assets/Data/Skillset.json";
-	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
+	import { buildRows } from "../../utils/arrayFilters";
 
 	const title: string = sectionData["title"] ?? "DefaultTitle";
-	const cards: CardData[] = sectionData["cards"] ?? [
+	const skills: SkillData[] = sectionData["skills"] ?? [
 		{
-			frontData: {
-				title: ["Default", "Title"],
-				subtitle: "This is a subtitle"
-			},
-			backData: {
-				technologies: ["placeholder"]
-			}
-		}
+			title: "Default Title",
+			description: "This is a subtitle",
+			technologies: ["placeholder"],
+		},
 	];
+	const skillRows: SkillData[][] = buildRows(skills, 2);
 </script>
 
 <ShowcaseSection {title}>
-	<div class="flex justify-center">
-		<div class="w-[80%] grid grid-cols-3 divide-background2 divide-x divide-y-0 relative">
-			{#each cards as cardData, index}
-				<Card frontData={cardData.frontData} backData={cardData.backData} {index} />
-			{/each}
-		</div>
-	</div>
+	<ul class="w-full px-12">
+		{#each skillRows as skillRow, r}
+			<div class="my-8 flex gap-8">
+				{#each skillRow as skillData, c}
+					<Skill {skillData} gridID={r * 2 + c} />
+				{/each}
+			</div>
+		{/each}
+	</ul>
 </ShowcaseSection>
 
 <style>

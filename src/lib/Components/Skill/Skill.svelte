@@ -6,19 +6,17 @@
 		@param projectData - ProjectData - holds the data which will be displayed on this element
 -->
 <script lang="ts">
-	import type { ProjectData } from "../../../types/Project";
+	import type { SkillData } from "../../../types/Skill";
 
-	import GradientTransition from "../Skill/GradientTransition.svelte";
+	import GradientTransition from "./GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
-	import Tag from "../Tags/Tag.svelte";
 
-	export let projectData: ProjectData = {
+	import { splitArray } from "../../../utils/arrayFilters";
+
+	export let skillData: SkillData = {
 		title: "",
-		description: [""],
-		imgName: "",
-		tags: [""],
-		techs: [""],
-		projectURL: "",
+		description: "",
+		technologies: [""],
 	};
 
 	export let gridID: number = 0;
@@ -36,6 +34,8 @@
 	const toggleShowVisibility: () => void = () => {
 		hideFront = !hideFront;
 	};
+
+	const technologyRows: string[][] = splitArray(skillData.technologies, 2);
 </script>
 
 <li
@@ -44,11 +44,11 @@
 >
 	<GradientTransition {onRight} />
 	<!-- bg image -->
-	<img
+	<!-- <img
 		class="z-0 absolute inset-0 w-full opacity-30"
-		src={`./projects/${projectData.imgName}.jpg`}
-		alt={projectData.imgName}
-	/>
+		src={`./projects/${skillData.imgName}.jpg`}
+		alt={skillData.imgName}
+	/> -->
 	<!-- front -->
 	<div class="z-10 peer flex items-center w-full {onRight ? 'slider-left' : 'slider-right'}">
 		<div
@@ -58,7 +58,7 @@
 			class:return={!hideFront}
 		>
 			<TextGroup
-				title={projectData.title}
+				title={skillData.title}
 				showBar={false}
 				titleSize="3xl"
 				align={onRight ? "left" : "right"}
@@ -66,31 +66,36 @@
 		</div>
 	</div>
 	<!-- back -->
-	<a
-		href={projectData.projectURL}
-		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-8 {onRight
+	<button
+		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {onRight
 			? 'slider-left'
 			: 'slider-right'}"
 		on:mouseenter={toggleShowVisibility}
 		on:mouseleave={toggleShowVisibility}
 	>
-		<div class={onRight ? "fade-in-right" : "fade-in-left"}>
-			<TextGroup
-				paragraphs={projectData.description}
+		<div class="w-full max-h-full {onRight ? 'fade-in-right' : 'fade-in-left'}">
+			<!-- <TextGroup
+				paragraphs={[skillData.description]}
 				showBar={false}
 				titleSize="2xl"
 				align={onRight ? "right" : "left"}
-			/>
-			<div class="mt-2 flex {onRight ? 'flex-row-reverse' : 'flex-row'}">
-				{#each projectData.tags as content}
-					<Tag {content} />
-				{/each}
-				{#each projectData.techs as content}
-					<Tag {content} isTech={true} />
-				{/each}
-			</div>
+			/> -->
+			{#each technologyRows as technologyRow}
+				<div class="h-1/2 flex items-center {onRight ? 'flex-row-reverse' : 'flex-row'}">
+					{#each technologyRow as technologyName}
+						<img
+							src={`./skills/${technologyName}.png`}
+							alt={technologyName}
+							class="px-3 h-2/3 w-auto"
+						/>
+					{/each}
+				</div>
+			{/each}
+			<!-- {#each skillData.technologies as imgName}
+				<img src={`./skills/${imgName}.png`} alt={imgName} class="h-full px-3" />
+			{/each} -->
 		</div>
-	</a>
+	</button>
 </li>
 
 <style>

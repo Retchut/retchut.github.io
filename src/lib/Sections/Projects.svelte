@@ -15,6 +15,8 @@
 	const projects: ProjectData[] = sectionData["projects"] ?? [];
 
 	const projectRows: ProjectData[][] = buildRows(projects, 2);
+	console.log("projects");
+	console.log(projects);
 </script>
 
 <ShowcaseSection {title}>

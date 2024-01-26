@@ -1,39 +1,29 @@
 {
 	"title": "Skillset",
-	"cards": [
+	"skills": [
 		{
-			"frontData": {
-				"title": ["Computer Graphics &", " Game Development"],
-				"subtitle": "Breathing Life into Pixels"
-			},
-			"backData": { "technologies": ["threejs", "aframe", "unity", "godot", "blender"] }
+			"title": "Front-End Web Development",
+			"description": "Crafting Digital Canvases",
+			"technologies": [
+				"react",
+				"svelte",
+				"tailwind",
+				"bootstrap",
+				"typescript",
+				"javascript",
+				"css",
+				"html"
+			]
 		},
 		{
-			"frontData": {
-				"title": ["Front-End", "Web Development"],
-				"subtitle": "Crafting Digital Canvases"
-			},
-			"backData": {
-				"technologies": [
-					"react",
-					"svelte",
-					"typescript",
-					"javascript",
-					"tailwind",
-					"bootstrap",
-					"css",
-					"html"
-				]
-			}
+			"title": "Computer Graphics & Game Development",
+			"description": "Breathing Life into Pixels",
+			"technologies": ["threejs", "aframe", "unity", "godot", "blender"]
 		},
 		{
-			"frontData": {
-				"title": ["Back-end", "Web Development"],
-				"subtitle": "Sculpting Digital Foundations"
-			},
-			"backData": {
-				"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
-			}
+			"title": "Back-end Web Development",
+			"description": "Sculpting Digital Foundations",
+			"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
 		}
 	]
 }

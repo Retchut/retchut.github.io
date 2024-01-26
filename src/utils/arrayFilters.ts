@@ -12,4 +12,10 @@ function buildRows<T extends number | string | object>(data: T[], colNum: number
 	return rows;
 }
 
-export { buildRows };
+function splitArray<T extends number | string | object>(data: T[], num: number): T[][] {
+	const middle = Math.ceil(data.length / num);
+
+	return [data.slice(0, middle), data.slice(middle)];
+}
+
+export { buildRows, splitArray };
