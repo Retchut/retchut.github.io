@@ -2,8 +2,8 @@
 	"title": "Skillset",
 	"skills": [
 		{
-			"title": "Front-End Web Development",
-			"description": "Crafting Digital Canvases",
+			"title": "Front-end Web Development",
+			"description": "Designing Digital Canvases",
 			"technologies": [
 				"react",
 				"svelte",
@@ -16,14 +16,29 @@
 			]
 		},
 		{
-			"title": "Computer Graphics & Game Development",
-			"description": "Breathing Life into Pixels",
-			"technologies": ["threejs", "aframe", "unity", "godot", "blender"]
+			"title": "Back-end Web Development",
+			"description": "Engineering Digital Foundations",
+			"technologies": ["laravel", "php", "prisma", "express", "mongodb", "sql", "mariadb", "nodejs"]
 		},
 		{
-			"title": "Back-end Web Development",
-			"description": "Sculpting Digital Foundations",
-			"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
+			"title": "Game Development",
+			"description": "Crafting Virtual Realities",
+			"technologies": ["unity", "unrealengine", "godot", "xrtoolkit", "cplusplus", "csharp"]
+		},
+		{
+			"title": "Computer Graphics",
+			"description": "Breathing Life into Pixels",
+			"technologies": ["webgl", "threejs", "aframe", "opencv", "opengl", "vulkan", "glslhlsl"]
+		},
+		{
+			"title": "Miscellaneous",
+			"description": "My Swiss Army Knife",
+			"technologies": ["git", "linux", "bash", "python", "c", "java"]
+		},
+		{
+			"title": "3D Modeling & Visualization",
+			"description": "Making Sculptures of Reality",
+			"technologies": ["meshroom", "nerf", "gaussiansplatting", "instantmeshes", "blender", "maya"]
 		}
 	]
 }
