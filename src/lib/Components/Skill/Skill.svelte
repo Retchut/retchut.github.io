@@ -52,7 +52,7 @@
 	<!-- front -->
 	<div class="z-10 peer flex items-center w-full {onRight ? 'slider-left' : 'slider-right'}">
 		<div
-			class="w-full"
+			class="w-full {onRight ? 'pr-6' : 'pl-6'}"
 			class:hide-left={onRight && hideFront}
 			class:hide-right={!onRight && hideFront}
 			class:return={!hideFront}
@@ -62,7 +62,7 @@
 				subtitle={skillData.description}
 				showBar={false}
 				titleSize="3xl"
-				align={onRight ? "left" : "right"}
+				align={onRight ? "right" : "left"}
 				subtitlePadding={false}
 			/>
 		</div>
