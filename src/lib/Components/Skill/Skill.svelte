@@ -59,6 +59,7 @@
 		>
 			<TextGroup
 				title={skillData.title}
+				subtitle={skillData.description}
 				showBar={false}
 				titleSize="3xl"
 				align={onRight ? "left" : "right"}
