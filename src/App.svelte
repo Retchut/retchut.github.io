@@ -11,7 +11,12 @@
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
 	import { scrollSnap } from "./utils/stores";
-	import { setScrollingElement, handleScroll, scrollToSection } from "./utils/scrolling";
+	import {
+		setScrollingElement,
+		setSectionOffsets,
+		handleScroll,
+		scrollToSection,
+	} from "./utils/scrolling";
 
 	import "./app.css";
 
@@ -35,8 +40,12 @@
 
 	onMount(() => {
 		setScrollingElement(mainEl);
-		scrollToSection(0);
+		scrollToSection(0); // sections are initialized to 0 so this causes no issue
 		checkScreenSize();
+		// we wait 1 sec after mounting in case the styles have not yet been loaded in, as the user is unlikely to scroll within this timeframe
+		setTimeout(() => {
+			setSectionOffsets();
+		}, 1000);
 	});
 </script>
 

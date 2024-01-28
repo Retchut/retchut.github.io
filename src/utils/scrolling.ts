@@ -1,14 +1,25 @@
 import { get } from "svelte/store";
 import { websiteSection } from "./stores";
 
-const PAGE_OFFSET: number = window.innerHeight;
+const SCREEN_HEIGHT: number = window.innerHeight;
 const SECTIONS: number[] = [0, 1, 2, 3, 4];
 const SCROLL_EL_MISSING_ERR = "Scrolling element not set.";
+
+// the offset of each section from the top of the page - required because the project section is not the same height as the screen
+const sectionOffsets: number[] = Array(SECTIONS.length).fill(0);
 
 let scrollingEl: HTMLElement;
 
 function setScrollingElement(el: HTMLElement) {
 	scrollingEl = el;
+}
+
+function setSectionOffsets() {
+	const sections = document.querySelectorAll("section");
+	for (let i = 0; i < sections.length; i++) {
+		const section = sections[i];
+		sectionOffsets[i] = section.offsetTop;
+	}
 }
 
 function getSections(): number[] {
@@ -24,12 +35,26 @@ function getScrollPos() {
 		console.error(SCROLL_EL_MISSING_ERR);
 		return 0;
 	}
-	return Math.round(scrollingEl.scrollTop / PAGE_OFFSET);
+
+	const scrollPosition = scrollingEl.scrollTop;
+	for (let i = 0; i < sectionOffsets.length; i++) {
+		const sectionStart = sectionOffsets[i];
+		const sectionEnd = sectionOffsets[i + 1] ?? sectionStart + SCREEN_HEIGHT; // the last section is the same height as the screen
+
+		if (scrollPosition < sectionStart || scrollPosition > sectionEnd) continue;
+
+		const midpoint = sectionStart + (sectionEnd - sectionStart) / 2;
+
+		return scrollPosition < midpoint ? i : i + 1;
+	}
+
+	console.error("Couldn't update scroll position");
+	return 0;
 }
 
 function smoothScroll(section: number): void {
 	scrollingEl.scrollTo({
-		top: section * PAGE_OFFSET,
+		top: sectionOffsets[section],
 		left: 0,
 		behavior: "smooth",
 	});
@@ -59,4 +84,4 @@ function handleScroll() {
 	if (realSection !== currentSection) updateSection(realSection);
 }
 
-export { setScrollingElement, getSections, scrollToSection, handleScroll };
+export { setScrollingElement, setSectionOffsets, getSections, scrollToSection, handleScroll };

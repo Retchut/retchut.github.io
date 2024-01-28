@@ -5,7 +5,8 @@
 <script lang="ts">
 	import type { ProjectData } from "../../types/Project";
 
-	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
+	import PageSection from "../Components/Layout/PageSection.svelte";
+	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Project from "../Components/Project/Project.svelte";
 
 	import sectionData from "../Assets/Data/Projects.json";
@@ -15,21 +16,24 @@
 	const projects: ProjectData[] = sectionData["projects"] ?? [];
 
 	const projectRows: ProjectData[][] = buildRows(projects, 2);
-	console.log("projects");
-	console.log(projects);
 </script>
 
-<ShowcaseSection {title}>
-	<ul class="w-full px-12">
-		{#each projectRows as projectRow, r}
-			<div class="my-8 flex gap-8">
-				{#each projectRow as projectData, c}
-					<Project {projectData} gridID={r * 2 + c} />
-				{/each}
-			</div>
-		{/each}
-	</ul>
-</ShowcaseSection>
+<PageSection screenHeight={false}>
+	<div id="projectsSection" class="py-[12.5%]">
+		<header class=" w-full text-main">
+			<TextGroup {title} titleSize="5axl" />
+		</header>
+		<ul class="w-full px-12">
+			{#each projectRows as projectRow, r}
+				<div class="my-8 flex gap-8">
+					{#each projectRow as projectData, c}
+						<Project {projectData} gridID={r * 2 + c} />
+					{/each}
+				</div>
+			{/each}
+		</ul>
+	</div>
+</PageSection>
 
 <style>
 </style>

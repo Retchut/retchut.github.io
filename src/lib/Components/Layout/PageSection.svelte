@@ -5,13 +5,16 @@
 	The content is injected using svelte's <slot> element
 		
 		@param heroSection - boolean - true if this section is the hero section (first) of the website. false by default
+		@param screenHeight - boolean - true if this section takes up the full height of the screen. true by default
 -->
 <script lang="ts">
 	export let heroSection: boolean = false;
+	export let screenHeight: boolean = true;
 
 	const outerClass =
-		"h-screen flex justify-center items-center overflow-hidden" +
-		(heroSection ? " bg-background" : "");
+		"flex justify-center items-center overflow-hidden" +
+		(heroSection ? " bg-background" : "") +
+		(screenHeight && " h-screen");
 	const innerClass =
 		"flex justify-center " +
 		(heroSection
