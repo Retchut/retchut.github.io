@@ -1,9 +1,9 @@
 <!--
 @component
-	This component renders a project element. It consists of a (actually multiple) gradient background(s), a background image, some text, and some other text that is only displayed when hovered.
+	This component renders a skill element. It consists of a (actually multiple) gradient background(s), a background image, some text, and some other text that is only displayed when hovered.
 
-		@param gridID - number - number of the item on the projects grid
-		@param projectData - ProjectData - holds the data which will be displayed on this element
+		@param gridID - number - number of the item on the skills grid
+		@param skillData - skillData - holds the data which will be displayed on this element
 -->
 <script lang="ts">
 	import type { SkillData } from "../../../types/Skill";
@@ -24,10 +24,10 @@
 	const WIDTH_PERCENTS: number[] = [57, 43, 50, 50, 43, 57];
 	const widthPercent: number = WIDTH_PERCENTS[gridID];
 	const afterPaddingPX: number = 70;
-	const projectHeightPX: number = 150;
+	const skillHeightPX: number = 150;
 	const onRight: boolean = Boolean(gridID % 2); // for readibility's sake
 
-	// control visibility of project face content
+	// control visibility of skill face content
 	// Note to self: this is done via javascript, because we cannot handle the visibility of elements
 	//					which are not the subsequent siblings of another element we are hovering hover
 	let hideFront: boolean = false;
@@ -39,14 +39,14 @@
 </script>
 
 <li
-	class="project flex relative color-fade-anim overflow-hidden rounded-{onRight ? 'r' : 'l'}-lg"
-	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --project-height-px:{projectHeightPX}"
+	class="skill flex relative color-fade-anim overflow-hidden rounded-{onRight ? 'r' : 'l'}-lg"
+	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --skill-height-px:{skillHeightPX}"
 >
 	<GradientTransition {onRight} />
 	<!-- bg image -->
 	<!-- <img
 		class="z-0 absolute inset-0 w-full opacity-30"
-		src={`./projects/${skillData.imgName}.jpg`}
+		src={`./skills/${skillData.imgName}.jpg`}
 		alt={skillData.imgName}
 	/> -->
 	<!-- front -->
@@ -101,10 +101,10 @@
 </li>
 
 <style>
-	.project {
+	.skill {
 		/* Could have defined the height with tailwind, but here we avoid having to deal with multiple magic values, as tailwind doesn't compile classNames generated dynamically (without safelisting - which I don't want to bloat up further) */
 		width: calc(var(--width-percent) * 1%);
-		height: calc(var(--project-height-px) * 1px);
+		height: calc(var(--skill-height-px) * 1px);
 	}
 
 	.slider-right {
@@ -120,20 +120,20 @@
 		position: absolute;
 		content: "";
 		width: calc(var(--after-width-px) * 1px);
-		height: 100%; /* always --project-height-px pixels anyways*/
+		height: 100%; /* always --skill-height-px pixels anyways*/
 		background-color: transparent;
 		top: 0;
 	}
 
 	.slider-right::after {
 		right: 0;
-		border-top: calc(var(--project-height-px) * 1px) solid transparent;
+		border-top: calc(var(--skill-height-px) * 1px) solid transparent;
 		border-right: calc(var(--after-width-px) * 1px) solid var(--background2);
 	}
 
 	.slider-left::after {
 		left: 0;
-		border-bottom: calc(var(--project-height-px) * 1px) solid transparent;
+		border-bottom: calc(var(--skill-height-px) * 1px) solid transparent;
 		border-left: calc(var(--after-width-px) * 1px) solid var(--background2);
 	}
 
