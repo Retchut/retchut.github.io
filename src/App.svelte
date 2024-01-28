@@ -35,7 +35,7 @@
 
 	onMount(() => {
 		setScrollingElement(mainEl);
-		scrollToSection(2);
+		scrollToSection(0);
 		checkScreenSize();
 	});
 </script>
