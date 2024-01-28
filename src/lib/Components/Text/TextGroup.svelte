@@ -28,6 +28,7 @@
 	if (titleSize.match(/^(xs|sm|base|lg|[2-9]?xl)$/g) === null) titleSize = "6xl";
 	export let align: string = "left";
 	if (!["left", "center", "right"].includes(align)) align = "left";
+	export let subtitlePadding: boolean = true;
 
 	if ([title, subtitle].every((v) => v === "") && paragraphs.length === 0)
 		console.warn("empty TextGroup");
@@ -38,7 +39,7 @@
 {/if}
 
 {#if subtitle !== ""}
-	<h2 class="text-xl pb-6 text-{align}">{subtitle}</h2>
+	<h2 class="text-xl {subtitlePadding && 'pb-6'} text-{align}">{subtitle}</h2>
 {/if}
 
 {#if showBar}

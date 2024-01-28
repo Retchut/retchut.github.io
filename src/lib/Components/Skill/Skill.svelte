@@ -63,6 +63,7 @@
 				showBar={false}
 				titleSize="3xl"
 				align={onRight ? "left" : "right"}
+				subtitlePadding={false}
 			/>
 		</div>
 	</div>
