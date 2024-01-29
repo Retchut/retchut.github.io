@@ -5,11 +5,15 @@
 		@param toRight - boolean - true if the transition is from the left to the right
 -->
 <script lang="ts">
+	// imports
 	import { get } from "svelte/store";
+
 	import { theme } from "../../../utils/stores";
 
+	// props
 	export let toRight: boolean = false;
 
+	// component code
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;

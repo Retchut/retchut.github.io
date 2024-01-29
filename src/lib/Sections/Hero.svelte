@@ -3,12 +3,14 @@
 	This component is the webpage's Hero section.
 -->
 <script lang="ts">
+	// imports
 	import PageSection from "../Components/Layout/PageSection.svelte";
 	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Button from "../Components/Button/Button.svelte";
 
 	import sectionData from "../Assets/Data/Hero.json";
 
+	// component code
 	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
 	const subtitle: string = sectionData["subtitle"] ?? "DefaultSubtitleTxt";
 	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];

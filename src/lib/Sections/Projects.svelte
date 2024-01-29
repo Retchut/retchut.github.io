@@ -3,6 +3,7 @@
 	This component is the webpage's Projects section.
 -->
 <script lang="ts">
+	// imports
 	import type { ProjectData } from "../../types/Project";
 	import type { CardData } from "../../types/Card";
 
@@ -13,6 +14,7 @@
 
 	import sectionData from "../Assets/Data/Projects.json";
 
+	// component code
 	const title: string = sectionData["title"] ?? "DefaultTitle";
 	const projects: ProjectData[] = sectionData["projects"] ?? [];
 	const gitCardData: CardData = sectionData["gitCard"] ?? {};

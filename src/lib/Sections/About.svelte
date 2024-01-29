@@ -3,11 +3,13 @@
 	This component is the webpage's About section.
 -->
 <script lang="ts">
+	// imports
 	import PageSection from "../Components/Layout/PageSection.svelte";
 	import TextGroup from "../Components/Text/TextGroup.svelte";
 
 	import sectionData from "../Assets/Data/About.json";
 
+	// component code
 	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
 	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];
 

@@ -3,14 +3,15 @@
 	This component is the webpage's Contacts section.
 -->
 <script lang="ts">
-	import { theme } from "../../utils/stores";
-
+	// imports
 	import PageSection from "../Components/Layout/PageSection.svelte";
 	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Button from "../Components/Button/Button.svelte";
 
+	import { theme } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Contact.json";
 
+	// component code
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;

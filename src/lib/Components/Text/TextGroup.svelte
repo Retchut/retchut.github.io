@@ -14,26 +14,31 @@
 		@param paragraphBullets - boolean - true if the paragraphs are bulleted. false by default
 -->
 <script lang="ts">
-	import { theme } from "../../../utils/stores";
-
+	// imports
 	import StyledParagraph from "../../Components/Text/StyledParagraph.svelte";
 
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
+	import { theme } from "../../../utils/stores";
 
+	// props
 	export let title: string = "";
 	export let subtitle: string = "";
 	export let paragraphs: string[] = [];
 	export let showBar: boolean = true;
 	export let titleSize: string = "6xl";
-	if (titleSize.match(/^(xs|sm|base|lg|[2-9]?xl)$/g) === null) titleSize = "6xl";
 	export let align: string = "left";
-	if (!["left", "center", "right"].includes(align)) align = "left";
 	export let titlePadding: boolean = true;
 	export let subtitlePadding: boolean = true;
 	export let paragraphBullets: boolean = false;
+
+	// component code
+	let themeVal: number;
+	theme.subscribe((value) => {
+		themeVal = value;
+	});
+
+	if (titleSize.match(/^(xs|sm|base|lg|[2-9]?xl)$/g) === null) titleSize = "6xl";
+
+	if (!["left", "center", "right"].includes(align)) align = "left";
 
 	if ([title, subtitle].every((v) => v === "") && paragraphs.length === 0)
 		console.warn("empty TextGroup");

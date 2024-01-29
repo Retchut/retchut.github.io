@@ -6,6 +6,7 @@
 		@param skillData - SkillData - holds the data which will be displayed on this element
 -->
 <script lang="ts">
+	// imports
 	import type { SkillData } from "../../../types/Skill";
 
 	import GradientTransition from "../GradientTransition/GradientTransition.svelte";
@@ -13,6 +14,7 @@
 
 	import { splitArray } from "../../../utils/arrayFilters";
 
+	// props
 	export let skillData: SkillData = {
 		title: "",
 		description: "",
@@ -21,6 +23,7 @@
 
 	export let gridID: number = 0;
 
+	// component code
 	const WIDTH_PERCENTS: number[] = [57, 43, 50, 50, 43, 57];
 	const widthPercent: number = WIDTH_PERCENTS[gridID];
 	const afterPaddingPX: number = 70;

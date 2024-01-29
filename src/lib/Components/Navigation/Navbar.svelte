@@ -4,13 +4,13 @@
 	It contains the webpage badge and navigation links.
 -->
 <script lang="ts">
-	import { get } from "svelte/store";
-
+	// imports
 	import Button from "../Button/Button.svelte";
 
 	import { theme, scrollSnap } from "../../../utils/stores";
 	import { scrollToSection } from "../../../utils/scrolling";
 
+	// component code
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;

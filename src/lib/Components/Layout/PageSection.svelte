@@ -8,9 +8,11 @@
 		@param screenHeight - boolean - true if this section takes up the full height of the screen. true by default
 -->
 <script lang="ts">
+	// props
 	export let heroSection: boolean = false;
 	export let screenHeight: boolean = true;
 
+	// component code
 	const outerClass =
 		"flex justify-center items-center overflow-hidden" +
 		(heroSection ? " bg-background" : "") +

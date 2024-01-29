@@ -3,6 +3,7 @@
 	This component is the webpage's Skillset section.
 -->
 <script lang="ts">
+	// imports
 	import type { SkillData } from "../../types/Skill";
 
 	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
@@ -11,6 +12,7 @@
 	import sectionData from "../Assets/Data/Skillset.json";
 	import { buildRows } from "../../utils/arrayFilters";
 
+	// component code
 	const title: string = sectionData["title"] ?? "DefaultTitle";
 	const skills: SkillData[] = sectionData["skills"] ?? [
 		{

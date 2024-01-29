@@ -7,11 +7,13 @@
 		@param cardData - CardData - data of the card to be displayed
 -->
 <script lang="ts">
+	// imports
 	import type { CardData } from "../../../types/Card";
 
 	import GradientTransition from "../GradientTransition/GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
 
+	// props
 	export let cardData: CardData = {
 		frontTitle: "Default Title",
 		backSubtitle: "Default subtitle",
@@ -19,6 +21,7 @@
 		url: "www.example.com",
 	};
 
+	// component code
 	// control visibility of skill face content
 	// Note to self: this is done via javascript, because we cannot handle the visibility of elements
 	//					which are not the subsequent siblings of another element we are hovering hover

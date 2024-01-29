@@ -11,10 +11,13 @@
 		@param bulletted - boolean - defines whether or not the paragraph is preceded by a bullet. Defaults to false if no value was provided
 -->
 <script lang="ts">
+	// props
 	export let content: string = "Default paragraph content";
 	export let align: string = "left";
-	if (!["left", "center", "right"].includes(align)) align = "left";
 	export let bulletted: boolean = false;
+
+	// component code
+	if (!["left", "center", "right"].includes(align)) align = "left";
 
 	// Note to self:
 	//	sadly can't use capturing groups to make sure we capture the same start and end,

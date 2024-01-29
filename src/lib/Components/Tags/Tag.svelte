@@ -9,15 +9,18 @@
 		@param isTech - boolean - true if the Tag represents a technology. false by default
 -->
 <script lang="ts">
+	// imports
 	import { theme } from "../../../utils/stores";
 
+	// props
+	export let content: string = "DefaultTag";
+	export let isTech: boolean = false;
+
+	// component code
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
 	});
-
-	export let content: string = "DefaultTag";
-	export let isTech: boolean = false;
 </script>
 
 <p

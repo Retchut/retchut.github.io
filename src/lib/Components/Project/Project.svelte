@@ -5,11 +5,13 @@
 		@param projectData - ProjectData - holds the data which will be displayed on this element
 -->
 <script lang="ts">
+	// imports
 	import type { ProjectData } from "../../../types/Project";
 
 	import TextGroup from "../Text/TextGroup.svelte";
 	import Tag from "../Tags/Tag.svelte";
 
+	// props
 	export let projectData: ProjectData = {
 		title: "",
 		description: [""],

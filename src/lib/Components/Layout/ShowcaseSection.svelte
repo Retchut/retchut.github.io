@@ -8,9 +8,11 @@
 		@param title - string - Title of this ShowcaseSection
 -->
 <script lang="ts">
+	// imports
 	import PageSection from "./PageSection.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
 
+	// props
 	export let title: string = "DefaultTitle";
 </script>
 

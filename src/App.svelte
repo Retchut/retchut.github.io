@@ -1,4 +1,5 @@
 <script lang="ts">
+	// imports
 	import { onMount } from "svelte";
 
 	import Navbar from "./lib/Components/Navigation/Navbar.svelte";
@@ -11,15 +12,11 @@
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
 	import { scrollSnap } from "./utils/stores";
-	import {
-		setScrollingElement,
-		setSectionOffsets,
-		handleScroll,
-		scrollToSection,
-	} from "./utils/scrolling";
+	import { setScrollingElement, handleScroll, scrollToSection } from "./utils/scrolling";
 
 	import "./app.css";
 
+	// component code
 	let mainEl: HTMLElement;
 
 	let snapping: boolean;
