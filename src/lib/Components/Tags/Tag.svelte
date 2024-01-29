@@ -21,7 +21,7 @@
 </script>
 
 <p
-	class="mx-1 px-2 py-1 border-background2 border-2 rounded-full color-fade-anim text-background {isTech
+	class="mx-1 px-2 py-1 rounded-full color-fade-anim text-background {isTech
 		? `bg-accent${(themeVal + 2) % 4}`
 		: `bg-accent${(themeVal + 1) % 4}`}"
 >
