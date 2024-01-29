@@ -28,6 +28,7 @@
 	if (titleSize.match(/^(xs|sm|base|lg|[2-9]?xl)$/g) === null) titleSize = "6xl";
 	export let align: string = "left";
 	if (!["left", "center", "right"].includes(align)) align = "left";
+	export let titlePadding: boolean = true;
 	export let subtitlePadding: boolean = true;
 	export let descriptionBullets: boolean = false;
 
@@ -36,7 +37,7 @@
 </script>
 
 {#if title !== ""}
-	<h1 class="text-{titleSize} pb-4 text-{align}">{title}</h1>
+	<h1 class="text-{titleSize} {titlePadding && 'pb-4'} text-{align}">{title}</h1>
 {/if}
 
 {#if subtitle !== ""}

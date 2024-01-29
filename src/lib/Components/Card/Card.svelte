@@ -9,61 +9,65 @@
 		@param index - number - number used to calculate the margin of the card.
 -->
 <script lang="ts">
-	import type { FrontData, BackData } from "../../../types/Card";
+	import type { CardData } from "../../../types/Card";
 
-	import { buildRows } from "../../../utils/arrayFilters";
+	import GradientTransition from "../Skill/GradientTransition.svelte";
+	import TextGroup from "../Text/TextGroup.svelte";
+
 	import { theme } from "../../../utils/stores";
 
-	export let frontData: FrontData = {
-		title: ["Default", "Title"],
-		subtitle: "Default subtitle"
+	export let cardData: CardData = {
+		frontTitle: "Default Title",
+		backSubtitle: "Default subtitle",
+		coverImgName: "placeholder",
+		url: "www.example.com",
 	};
-
-	export let backData: BackData = { technologies: ["tech1", "tech2"] };
-	export let index: number = 0;
 
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
 	});
 
-	const technologyRows = buildRows(backData.technologies, 3);
+	// control visibility of skill face content
+	// Note to self: this is done via javascript, because we cannot handle the visibility of elements
+	//					which are not the subsequent siblings of another element we are hovering hover
+	let hideFront: boolean = false;
+	const toggleShowVisibility: () => void = () => {
+		hideFront = !hideFront;
+	};
 </script>
 
-<article
-	class="color-fade-anim mx-8 index{index} bg-accent{themeVal} text-background flex justify-center items-center min-h-[450px] rounded-lg relative"
->
-	<!-- Card Front -->
-	<header class="flex flex-col w-full h-full justify-center peer">
-		{#each frontData.title as paragraph}
-			<h3 class="text-3xl text-center">{paragraph}</h3>
-		{/each}
-		<h2 class="mt-4 text-lg text-center">{frontData.subtitle}</h2>
+<article class="flex relative color-fade-anim overflow-hidden rounded-lg h-[150px]">
+	<GradientTransition onRight={false} />
+	<!-- bg image -->
+	<img
+		class="z-0 absolute inset-0 w-full opacity-30"
+		src={`./banners/${cardData.coverImgName}.jpg`}
+		alt={cardData.coverImgName + " banner"}
+	/>
+	<header class="z-10 peer flex items-center w-full">
+		<div class="w-full pl-6" class:hide-left={hideFront} class:return={!hideFront}>
+			<TextGroup
+				title={cardData.frontTitle}
+				titlePadding={false}
+				showBar={false}
+				titleSize="3xl"
+				align="left"
+			/>
+		</div>
 	</header>
-	<!-- Card Back -->
-	<div
-		class="hidden peer-hover:flex hover:flex flex-col justify-center items-center w-full h-full absolute top-0 left-0 rounded-lg bg-accent{themeVal} p-16"
+	<!-- back -->
+	<a
+		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-6 fade-in-left"
+		on:mouseenter={toggleShowVisibility}
+		on:mouseleave={toggleShowVisibility}
+		href={cardData.url}
 	>
-		{#each technologyRows as srcRow}
-			<div class="my-2 fade-in-top flex justify-center items-center">
-				{#each srcRow as src}
-					<div class="mx-1 w-[70px]">
-						<img src={`./cards/${src}.png`} alt={src} />
-					</div>
-				{/each}
-			</div>
-		{/each}
-	</div>
+		<TextGroup
+			subtitle={cardData.backSubtitle}
+			subtitlePadding={false}
+			showBar={false}
+			align="left"
+		/>
+	</a>
 </article>
-
-<style>
-	.index0,
-	.index2 {
-		margin-top: 3rem;
-		margin-bottom: 0rem;
-	}
-	.index1 {
-		margin-top: 0rem;
-		margin-bottom: 2rem;
-	}
-</style>

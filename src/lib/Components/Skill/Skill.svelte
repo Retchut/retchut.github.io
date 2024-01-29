@@ -136,22 +136,4 @@
 		border-bottom: calc(var(--skill-height-px) * 1px) solid transparent;
 		border-left: calc(var(--after-width-px) * 1px) solid var(--background2);
 	}
-
-	.hide-left {
-		transition: 500ms;
-		opacity: 0;
-		transform: translateX(-100px);
-	}
-
-	.hide-right {
-		transition: 500ms;
-		opacity: 0;
-		transform: translateX(100px);
-	}
-
-	.return {
-		transition: 500ms;
-		opacity: 1;
-		transform: translateX(0px);
-	}
 </style>

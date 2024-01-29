@@ -1,13 +1,10 @@
 {
 	"title": "Projects",
 	"gitCard": {
-		"title": "More over at my github",
-		"description": ["You can find some other projects of mine, interests, among other things."],
-		"imgName": "github",
-		"contributions": [],
-		"tags": [""],
-		"techs": [""],
-		"projectURL": "https://github.com/Retchut/"
+		"frontTitle": "More over at my github",
+		"backSubtitle": "You can find some other projects of mine, interests, among other things.",
+		"coverImgName": "github",
+		"url": "https://github.com/Retchut/"
 	},
 	"projects": [
 		{
