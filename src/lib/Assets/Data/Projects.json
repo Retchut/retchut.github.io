@@ -1,5 +1,13 @@
 {
 	"title": "Projects",
+	"gitCard": {
+		"title": "More over at my github",
+		"description": ["You can find some other projects of mine, interests, among other things."],
+		"imgName": "github",
+		"tags": [""],
+		"techs": [""],
+		"projectURL": "https://github.com/Retchut/"
+	},
 	"projects": [
 		{
 			"title": "Arch Quick Setup",
@@ -43,14 +51,6 @@
 			"tags": ["Web"],
 			"techs": ["React", "Tailwind", "Express", "MongoDB"],
 			"projectURL": "https://github.com/Retchut/atlas"
-		},
-		{
-			"title": "More over at my github",
-			"description": ["You can find some other projects of mine, interests, among other things."],
-			"imgName": "github",
-			"tags": [],
-			"techs": [],
-			"projectURL": "https://github.com/Retchut/"
 		},
 		{
 			"title": "Shifteam",

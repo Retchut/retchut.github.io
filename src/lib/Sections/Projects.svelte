@@ -10,12 +10,12 @@
 	import Project from "../Components/Project/Project.svelte";
 
 	import sectionData from "../Assets/Data/Projects.json";
-	import { buildRows } from "../../utils/arrayFilters";
 
 	const title: string = sectionData["title"] ?? "DefaultTitle";
 	const projects: ProjectData[] = sectionData["projects"] ?? [];
-
-	const projectRows: ProjectData[][] = buildRows(projects, 2);
+	const gitCardData: ProjectData = sectionData["gitCard"] ?? {};
+	console.log(projects[0]);
+	console.log(gitCardData);
 </script>
 
 <PageSection screenHeight={false}>
@@ -23,14 +23,11 @@
 		<header class=" w-full text-main">
 			<TextGroup {title} titleSize="5axl" />
 		</header>
-		<ul class="w-full px-12">
-			{#each projectRows as projectRow, r}
-				<div class="my-8 flex gap-8">
-					{#each projectRow as projectData, c}
-						<Project {projectData} gridID={r * 2 + c} />
-					{/each}
-				</div>
+		<ul class="w-full px-12 flex flex-col gap-8">
+			{#each projects as projectData, i}
+				<Project {projectData} flipped={Boolean(i % 2)} />
 			{/each}
+			<Project projectData={gitCardData} />
 		</ul>
 	</div>
 </PageSection>
