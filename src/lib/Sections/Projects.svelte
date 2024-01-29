@@ -16,8 +16,6 @@
 	const title: string = sectionData["title"] ?? "DefaultTitle";
 	const projects: ProjectData[] = sectionData["projects"] ?? [];
 	const gitCardData: CardData = sectionData["gitCard"] ?? {};
-	console.log(projects[0]);
-	console.log(gitCardData);
 </script>
 
 <PageSection screenHeight={false}>
