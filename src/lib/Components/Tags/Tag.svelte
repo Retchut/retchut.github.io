@@ -24,7 +24,7 @@
 </script>
 
 <p
-	class="mx-1 px-2 py-1 rounded-full color-fade-anim text-background break-keep {isTech
+	class="mx-1 px-2 py-1 my-1 rounded-full color-fade-anim text-background break-keep {isTech
 		? `bg-accent${(themeVal + 2) % 4}`
 		: `bg-accent${(themeVal + 1) % 4}`}"
 >

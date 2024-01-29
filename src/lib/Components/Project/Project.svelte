@@ -44,13 +44,15 @@
 			</div>
 		{/if}
 		<div class="flex items-center">
-			<span class="text-lg pr-2">Tags:</span>
-			{#each projectData.tags as content}
-				<Tag {content} />
-			{/each}
-			{#each projectData.techs as content}
-				<Tag {content} isTech={true} />
-			{/each}
+			<p class="text-lg pr-2">Tags:</p>
+			<div class="flex flex-wrap">
+				{#each projectData.tags as content}
+					<Tag {content} />
+				{/each}
+				{#each projectData.techs as content}
+					<Tag {content} isTech={true} />
+				{/each}
+			</div>
 		</div>
 	</div>
 </li>
