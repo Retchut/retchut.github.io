@@ -5,8 +5,11 @@
 -->
 <script lang="ts">
 	import { get } from "svelte/store";
-	import { theme, scrollSnap } from "../../../utils/stores";
+
 	import Button from "../Button/Button.svelte";
+
+	import { theme, scrollSnap } from "../../../utils/stores";
+	import { scrollToSection } from "../../../utils/scrolling";
 
 	let themeVal: number;
 	theme.subscribe((value) => {
@@ -21,7 +24,11 @@
 
 <div class="fixed z-30 w-full">
 	<nav class="flex justify-between items-center px-16 py-8">
-		<h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">MÁRIO TRAVASSOS</h1>
+		<button on:click={() => scrollToSection(0)}
+			><h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">
+				MÁRIO TRAVASSOS
+			</h1></button
+		>
 		<Button
 			class="py-2 px-4"
 			action={() => scrollSnap.update((value) => !value)}
