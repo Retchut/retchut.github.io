@@ -26,7 +26,7 @@
 			<TextGroup {title} titleSize="5axl" />
 		</header>
 		<ul class="w-full px-20 flex flex-col gap-12">
-			{#each projects as projectData, i}
+			{#each projects as projectData}
 				<Project {projectData} />
 			{/each}
 			<Card cardData={gitCardData} />
