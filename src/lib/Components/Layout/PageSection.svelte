@@ -18,10 +18,8 @@
 		(heroSection ? " bg-background" : "") +
 		(screenHeight && " h-screen");
 	const innerClass =
-		"flex justify-center " +
-		(heroSection
-			? "mx-auto relative flex-row items-center w-auto"
-			: "mx-12 2xl:mx-0 flex-col w-[1300px]");
+		"flex justify-center mx-12 2xl:mx-0 " +
+		(heroSection ? "relative flex-row items-center w-auto" : "flex-col w-[80%] lg:w-[1300px]");
 </script>
 
 <section class={outerClass}>

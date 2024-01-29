@@ -25,7 +25,7 @@
 		<header class=" w-full text-main">
 			<TextGroup {title} titleSize="5axl" />
 		</header>
-		<ul class="w-full px-20 flex flex-col gap-12">
+		<ul class="w-full px-4 2xl:px-20 flex flex-col gap-12">
 			{#each projects as projectData}
 				<Project {projectData} />
 			{/each}

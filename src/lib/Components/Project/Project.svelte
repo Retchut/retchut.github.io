@@ -25,7 +25,7 @@
 
 <li class="flex flex-col md:flex-row gap-8 md:gap-y-0">
 	<img
-		class="w-full md:w-1/3 self-start aspect-square object-contain rounded-md"
+		class="w-full md:w-1/3 max-w-[300px] self-center md:self-start aspect-square object-contain rounded-md"
 		src={`./projects/${projectData.imgName}-hd.jpg`}
 		alt={projectData.imgName}
 	/>
