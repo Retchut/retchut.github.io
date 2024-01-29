@@ -21,7 +21,7 @@
 </script>
 
 <PageSection screenHeight={false}>
-	<div class="pt-[12.5%] pb-[180px]">
+	<div class="pt-[12.5%] pb-[400px]">
 		<header class=" w-full text-main">
 			<TextGroup {title} titleSize="5axl" />
 		</header>
