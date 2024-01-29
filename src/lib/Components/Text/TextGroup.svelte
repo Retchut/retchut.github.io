@@ -29,6 +29,7 @@
 	export let align: string = "left";
 	if (!["left", "center", "right"].includes(align)) align = "left";
 	export let subtitlePadding: boolean = true;
+	export let descriptionBullets: boolean = false;
 
 	if ([title, subtitle].every((v) => v === "") && paragraphs.length === 0)
 		console.warn("empty TextGroup");
@@ -48,7 +49,7 @@
 
 {#if paragraphs.length !== 0}
 	{#each paragraphs as content}
-		<StyledParagraph {content} {align} />
+		<StyledParagraph bulletted={descriptionBullets} {content} {align} />
 	{/each}
 {/if}
 

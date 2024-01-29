@@ -7,12 +7,14 @@
 	- ||label[www.example.com]|| - [label](https://www.example.com)
 
 		@param content - string - string to be parsed and displayed
-		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided.
+		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided
+		@param align - boolean - defines whether or not the paragraph is preceded by a bullet. Defaults to false if no value was provided
 -->
 <script lang="ts">
 	export let content: string = "Default paragraph content";
 	export let align: string = "left";
 	if (!["left", "center", "right"].includes(align)) align = "left";
+	export let bulletted: boolean = false;
 
 	// Note to self:
 	//	sadly can't use capturing groups to make sure we capture the same start and end,
@@ -32,6 +34,9 @@
 </script>
 
 <p class="text-lg pb-1 text-{align}">
+	{#if bulletted}
+		•
+	{/if}
 	{#each parsedParagraph as token}
 		{@const tokenStart = token.slice(0, 2)}
 		{@const tokenEnd = token.slice(-2)}
