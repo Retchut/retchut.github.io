@@ -24,6 +24,7 @@
 		snapping = value;
 	});
 
+	// this controls whether the navbar, sidebar and themepicker are shown
 	let smallScreen: boolean = true;
 	const checkScreenSize = () => {
 		// default tailwind breakpoints:
