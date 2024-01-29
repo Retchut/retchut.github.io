@@ -27,7 +27,7 @@
 <PageSection>
 	<div class="text-white relative">
 		<div class="z-10 flex flex-col relative">
-			<header>
+			<header class="mx-auto max-w-[150px] sm:max-w-[300px] lg:max-w-none">
 				<TextGroup {title} {paragraphs} align="center" />
 			</header>
 			<Button
