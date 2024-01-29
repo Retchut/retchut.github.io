@@ -22,14 +22,14 @@
 	};
 </script>
 
-<li class="flex gap-x-8">
+<li class="flex flex-col md:flex-row gap-8 md:gap-y-0">
 	<!-- bg image -->
 	<img
-		class="w-1/3 self-start aspect-square object-contain rounded-md"
+		class="w-full md:w-1/3 self-start aspect-square object-contain rounded-md"
 		src={`./projects/${projectData.imgName}-hd.jpg`}
 		alt={projectData.imgName}
 	/>
-	<div class="w-2/3 flex flex-col text-main gap-6">
+	<div class="w-full md:w-2/3 flex flex-col text-main gap-6">
 		<div>
 			<TextGroup title={projectData.title} titleSize="5xl" paragraphs={projectData.description} />
 		</div>
