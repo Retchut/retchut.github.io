@@ -8,7 +8,7 @@
 
 		@param content - string - string to be parsed and displayed
 		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided
-		@param align - boolean - defines whether or not the paragraph is preceded by a bullet. Defaults to false if no value was provided
+		@param bulletted - boolean - defines whether or not the paragraph is preceded by a bullet. Defaults to false if no value was provided
 -->
 <script lang="ts">
 	export let content: string = "Default paragraph content";

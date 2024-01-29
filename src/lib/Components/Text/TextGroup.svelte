@@ -9,6 +9,9 @@
 		@param showBar - boolean - true if the bar is supposed to be shown. true by default
 		@param titleSize - string - possible values: "xs", "sm", "base", "lg", "xl", "(2-9)xl". Defaults to 6xl if no value, or an incorrect value was provided.
 		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided.
+		@param titlePadding - boolean - set to false to remove the title padding. true by default
+		@param subtitlePadding - boolean - set to false to remove the subtitle padding. true by default
+		@param paragraphBullets - boolean - true if the paragraphs are bulleted. false by default
 -->
 <script lang="ts">
 	import { theme } from "../../../utils/stores";
@@ -30,7 +33,7 @@
 	if (!["left", "center", "right"].includes(align)) align = "left";
 	export let titlePadding: boolean = true;
 	export let subtitlePadding: boolean = true;
-	export let descriptionBullets: boolean = false;
+	export let paragraphBullets: boolean = false;
 
 	if ([title, subtitle].every((v) => v === "") && paragraphs.length === 0)
 		console.warn("empty TextGroup");
@@ -50,7 +53,7 @@
 
 {#if paragraphs.length !== 0}
 	{#each paragraphs as content}
-		<StyledParagraph bulletted={descriptionBullets} {content} {align} />
+		<StyledParagraph bulletted={paragraphBullets} {content} {align} />
 	{/each}
 {/if}
 

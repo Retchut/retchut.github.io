@@ -4,17 +4,13 @@
 	The front of the card consists of some paragraphs of descriptive text.
 	The back of the card consists of a collection images split in 3 columns.
 
-		@param frontText - string[] - array of paragraph strings that comprise the front of the card
-		@param backImages - string[] - array of strings consisting of the image names (inside the public/cards/ directory) that comprise the back of the card
-		@param index - number - number used to calculate the margin of the card.
+		@param cardData - CardData - data of the card to be displayed
 -->
 <script lang="ts">
 	import type { CardData } from "../../../types/Card";
 
-	import GradientTransition from "../Skill/GradientTransition.svelte";
+	import GradientTransition from "../GradientTransition/GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
-
-	import { theme } from "../../../utils/stores";
 
 	export let cardData: CardData = {
 		frontTitle: "Default Title",
@@ -22,11 +18,6 @@
 		coverImgName: "placeholder",
 		url: "www.example.com",
 	};
-
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	// control visibility of skill face content
 	// Note to self: this is done via javascript, because we cannot handle the visibility of elements
@@ -38,7 +29,7 @@
 </script>
 
 <article class="flex relative color-fade-anim overflow-hidden rounded-lg h-[150px]">
-	<GradientTransition onRight={false} />
+	<GradientTransition toRight={false} />
 	<!-- bg image -->
 	<img
 		class="z-0 absolute inset-0 w-full opacity-30"

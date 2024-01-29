@@ -3,12 +3,12 @@
 	This component renders a skill element. It consists of a (actually multiple) gradient background(s), a background image, some text, and some other text that is only displayed when hovered.
 
 		@param gridID - number - number of the item on the skills grid
-		@param skillData - skillData - holds the data which will be displayed on this element
+		@param skillData - SkillData - holds the data which will be displayed on this element
 -->
 <script lang="ts">
 	import type { SkillData } from "../../../types/Skill";
 
-	import GradientTransition from "./GradientTransition.svelte";
+	import GradientTransition from "../GradientTransition/GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
 
 	import { splitArray } from "../../../utils/arrayFilters";
@@ -42,7 +42,7 @@
 	class="skill flex relative color-fade-anim overflow-hidden rounded-{onRight ? 'r' : 'l'}-lg"
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --skill-height-px:{skillHeightPX}"
 >
-	<GradientTransition {onRight} />
+	<GradientTransition toRight={onRight} />
 	<!-- bg image -->
 	<!-- <img
 		class="z-0 absolute inset-0 w-full opacity-30"
