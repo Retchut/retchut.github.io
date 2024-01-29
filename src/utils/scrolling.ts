@@ -7,6 +7,7 @@ const SCROLL_EL_MISSING_ERR = "Scrolling element not set.";
 
 // the offset of each section from the top of the page - required because the project section is not the same height as the screen
 const sectionOffsets: number[] = Array(SECTIONS.length).fill(0);
+let sectionOffsetsLoaded: boolean = false;
 
 let scrollingEl: HTMLElement;
 
@@ -20,6 +21,7 @@ function setSectionOffsets() {
 		const section = sections[i];
 		sectionOffsets[i] = section.offsetTop;
 	}
+	sectionOffsetsLoaded = true;
 }
 
 function getSections(): number[] {
@@ -48,7 +50,9 @@ function getScrollPos() {
 		return scrollPosition < midpoint ? i : i + 1;
 	}
 
+	// this means section offsets were not correctly loaded
 	console.error("Couldn't update scroll position");
+	sectionOffsetsLoaded = false;
 	return 0;
 }
 
@@ -79,6 +83,7 @@ function scrollToSection(targetSection: number): void {
 }
 
 function handleScroll() {
+	if (!sectionOffsetsLoaded) setSectionOffsets();
 	const currentSection = get(websiteSection);
 	const realSection = getScrollPos();
 	if (realSection !== currentSection) updateSection(realSection);

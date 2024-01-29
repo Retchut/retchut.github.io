@@ -42,10 +42,6 @@
 		setScrollingElement(mainEl);
 		scrollToSection(0); // sections are initialized to 0 so this causes no issue
 		checkScreenSize();
-		// we wait 1 sec after mounting in case the styles have not yet been loaded in, as the user is unlikely to scroll within this timeframe
-		setTimeout(() => {
-			setSectionOffsets();
-		}, 2000);
 	});
 </script>
 
