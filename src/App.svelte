@@ -25,6 +25,7 @@
 
 	// component code
 	let mainEl: HTMLElement;
+	let firstRender: boolean = true;
 
 	// this controls whether snapping to sections is enabled or disabled
 	let snapping: boolean;
@@ -40,9 +41,10 @@
 	let hideControls: boolean;
 	currentBreakpoint.subscribe((value) => {
 		hideControls = value == "sm" || value == "xs";
-		if (hideControls) {
+		if (!firstRender && hideControls) {
 			scrollSnap.set(false);
 		}
+		firstRender = false;
 	});
 
 	const updateBreakpoint = () => {
