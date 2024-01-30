@@ -52,4 +52,19 @@
 		@apply border-solid border-x-transparent;
 		border-width: 15px 8px 0px;
 	}
+
+	/* Test squares */
+	.outer-square {
+		bottom: 0px;
+		left: 0px;
+		@apply border-solid;
+		border-width: 24px;
+	}
+
+	.inner-square {
+		bottom: 6px;
+		left: 6px;
+		@apply border-solid;
+		border-width: 18px;
+	}
 </style>
