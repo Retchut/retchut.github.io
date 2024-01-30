@@ -11,6 +11,7 @@
 		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided.
 		@param titlePadding - boolean - set to false to remove the title padding. true by default
 		@param subtitlePadding - boolean - set to false to remove the subtitle padding. true by default
+		@param paragraphsPadding - boolean - set to false to remove the paragraphs padding. true by default
 		@param paragraphBullets - boolean - true if the paragraphs are bulleted. false by default
 		@param blendTitle - boolean - true if the title text will be blended with the background. false by default
 -->
@@ -29,6 +30,7 @@
 	export let align: string = "left";
 	export let titlePadding: boolean = true;
 	export let subtitlePadding: boolean = true;
+	export let paragraphsPadding: boolean = true;
 	export let paragraphBullets: boolean = false;
 	export let blendTitle: boolean = false;
 
@@ -64,7 +66,12 @@
 
 {#if paragraphs.length !== 0}
 	{#each paragraphs as content}
-		<StyledParagraph bulletted={paragraphBullets} {content} {align} />
+		<StyledParagraph
+			bulletted={paragraphBullets}
+			{content}
+			{align}
+			bottomPadding={paragraphsPadding}
+		/>
 	{/each}
 {/if}
 
@@ -83,7 +90,7 @@
 	}
 
 	.blend-text {
-		/* mix-blend-mode: difference; */
 		mix-blend-mode: difference;
+		/* mix-blend-mode: exclusion; */
 	}
 </style>
