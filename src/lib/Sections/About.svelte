@@ -21,7 +21,6 @@
 	let smallBreakpoint: boolean = true;
 	currentBreakpoint.subscribe((value) => {
 		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
-		console.log(value);
 	});
 </script>
 

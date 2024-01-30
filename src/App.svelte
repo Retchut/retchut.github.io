@@ -12,7 +12,12 @@
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
 	import { scrollSnap, currentBreakpoint } from "./utils/stores";
-	import { setScrollingElement, handleScroll, scrollToSection } from "./utils/scrolling";
+	import {
+		setScrollingElement,
+		setOffsetsLoaded,
+		handleScroll,
+		scrollToSection,
+	} from "./utils/scrolling";
 	import { getCurrentBreakpoint } from "./utils/responsivity";
 
 	import "./app.css";
@@ -34,12 +39,14 @@
 
 	const updateBreakpoint = () => {
 		currentBreakpoint.update((_value) => getCurrentBreakpoint());
+		// changes in the breakpoint require the section offsets to be recalculated, as some sections might grow in size
+		setOffsetsLoaded(false);
 	};
 
 	onMount(() => {
 		setScrollingElement(mainEl);
-		scrollToSection(0); // sections are initialized to 0 so this causes no issue
 		updateBreakpoint();
+		scrollToSection(0); // sections are initialized to 0 so this causes no issue
 	});
 </script>
 

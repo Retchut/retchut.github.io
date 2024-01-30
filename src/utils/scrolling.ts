@@ -15,13 +15,17 @@ function setScrollingElement(el: HTMLElement) {
 	scrollingEl = el;
 }
 
-function setSectionOffsets() {
+function setOffsetsLoaded(bool: boolean) {
+	sectionOffsetsLoaded = bool;
+}
+
+function reloadSectionOffsets() {
 	const sections = document.querySelectorAll("section");
 	for (let i = 0; i < sections.length; i++) {
 		const section = sections[i];
 		sectionOffsets[i] = section.offsetTop;
 	}
-	sectionOffsetsLoaded = true;
+	setOffsetsLoaded(true);
 }
 
 function getSections(): number[] {
@@ -52,7 +56,7 @@ function getScrollPos() {
 
 	// this means section offsets were not correctly loaded
 	console.error("Couldn't update scroll position");
-	sectionOffsetsLoaded = false;
+	setOffsetsLoaded(false);
 	return 0;
 }
 
@@ -70,6 +74,9 @@ function scrollToSection(targetSection: number): void {
 		console.error(SCROLL_EL_MISSING_ERR);
 		return;
 	}
+
+	reloadSectionOffsets();
+
 	const currentSection = get(websiteSection);
 
 	if (targetSection !== currentSection) {
@@ -83,10 +90,17 @@ function scrollToSection(targetSection: number): void {
 }
 
 function handleScroll() {
-	if (!sectionOffsetsLoaded) setSectionOffsets();
+	if (!sectionOffsetsLoaded) reloadSectionOffsets();
 	const currentSection = get(websiteSection);
 	const realSection = getScrollPos();
 	if (realSection !== currentSection) updateSection(realSection);
 }
 
-export { setScrollingElement, setSectionOffsets, getSections, scrollToSection, handleScroll };
+export {
+	setScrollingElement,
+	setOffsetsLoaded,
+	reloadSectionOffsets,
+	getSections,
+	scrollToSection,
+	handleScroll,
+};
