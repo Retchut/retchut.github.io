@@ -32,8 +32,6 @@
 		// check if [label, url, emptystr] wasn't returned
 		if (splitContent.length !== 3) return ["", ""];
 
-		console.log(splitContent);
-
 		return splitContent.slice(0, 2);
 	};
 </script>
