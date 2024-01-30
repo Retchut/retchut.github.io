@@ -70,7 +70,7 @@
 			: 'slider-right'}"
 	>
 		<div
-			class="w-full {smallBreakpoint ? 'pl-6' : onRight ? 'pr-6' : 'pl-6'}"
+			class="w-full {smallBreakpoint ? '' : onRight ? 'pr-6' : 'pl-6'}"
 			class:hide-left={onRight && hideFront}
 			class:hide-right={!onRight && hideFront}
 			class:return={!hideFront}
