@@ -19,6 +19,7 @@
 		title: "",
 		description: "",
 		technologies: [""],
+		bannerImg: "placeholder",
 	};
 
 	// this value controls the gradient transition direction, where and how big the dent in the container is, among other things
@@ -55,11 +56,11 @@
 >
 	<GradientTransition toRight={smallBreakpoint ? false : onRight} />
 	<!-- bg image -->
-	<!-- <img
+	<img
 		class="z-0 absolute inset-0 w-full opacity-30"
-		src={`./skills/${skillData.imgName}.jpg`}
-		alt={skillData.imgName}
-	/> -->
+		src={`./banners/${skillData.bannerImg}.jpg`}
+		alt={skillData.title}
+	/>
 	<!-- front -->
 	<div
 		class="z-10 peer flex items-center w-full {smallBreakpoint
