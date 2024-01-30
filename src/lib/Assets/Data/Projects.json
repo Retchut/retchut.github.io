@@ -41,6 +41,58 @@
 			"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
 		},
 		{
+			"title": "Lucky Lapin",
+			"description": [
+				"Second place entry for ||Fabamaq[www.fabamaq.com/en]||'s ||Invictus Game Jam[invictvs.fabamaq.com/en]||.",
+				"In this game, you control a rabbit on a quest for vengeance against a tyrannical casino owner, who kidnapped your family in order to sell their rabbit legs to unsuspecting gamblers.",
+				"The game was designed and developed to run on Fabamaq's in-house slot machines, taking advantage of their hardware, lights and sound systems."
+			],
+			"imgName": "luckylapin",
+			"contributions": [
+				"Actively participated in design decisions",
+				"Implemented the connectivity between the game and the slot machine's hardware",
+				"Developed and tweaked some of the game's mechanics"
+			],
+			"tags": ["Game Dev", "Networking"],
+			"techs": ["Unity", "Websockets", "Linux"],
+			"projectURL": "https://retchut.itch.io/lucky-lapin"
+		},
+		{
+			"title": "Miasma",
+			"description": [
+				"Final project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
+				"In this high-octane movement-based game, players take control of an amnesiac android, and must run, jump and air-strafe their way out of a facility filled with deadly traps and enemies, while trying to piece back together their memories.",
+				"A demo video of the game can be found ||here[youtu.be/FEsYICmPof8?si=qzDJRhfsSXkZtmkS]||."
+			],
+			"imgName": "miasma",
+			"contributions": [
+				"Performed game design related tasks",
+				"Implemented of some of the game weapon mechanics",
+				"Recorded, sampled and edited sound effects and music for the game",
+				"Performed some minor rigging and editing of test assets for the game"
+			],
+			"tags": ["Game Dev", "Sound Design"],
+			"techs": ["Unity", "Blender", "FMOD", "Reaper"],
+			"projectURL": "https://jfbaltazar.itch.io/miasma"
+		},
+		{
+			"title": "FEUP Hell",
+			"description": [
+				"Preliminary project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
+				"In this game, players try to last for as long as they can against an endless horde of undead cubes, in a stage reminiscent of FEUP's installations, with the help of a wide variety of weapons and perks!",
+				"A demo video of the game can be found ||here[youtu.be/B-S8YoB5miI?si=83otXu-ipS1gXJKy]||."
+			],
+			"imgName": "feuphell",
+			"contributions": [
+				"Performed game design related tasks",
+				"Performed general development of the game",
+				"3D model gathering and cleanup"
+			],
+			"tags": ["Game Dev"],
+			"techs": ["Unity", "Blender"],
+			"projectURL": "https://retchut.itch.io/feup-hell"
+		},
+		{
 			"title": "Atlas of Anatomical Pathology",
 			"description": [
 				"An online Atlas of Anatomical Pathology. Still a WIP.",
