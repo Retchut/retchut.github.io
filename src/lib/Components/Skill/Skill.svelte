@@ -21,7 +21,11 @@
 		technologies: [""],
 	};
 
+	// this value controls the gradient transition direction, where and how big the dent in the container is, among other things
+	// it is ignored when the viewport is small enough
 	export let gridID: number = 0;
+	// controls whether the skill is a simple card-like component or a prettier one
+	export let smallBreakpoint: boolean = false;
 
 	// component code
 	const WIDTH_PERCENTS: number[] = [57, 43, 50, 50, 43, 57];
@@ -42,10 +46,14 @@
 </script>
 
 <li
-	class="skill flex relative color-fade-anim overflow-hidden rounded-{onRight ? 'r' : 'l'}-lg"
+	class="skill flex relative color-fade-anim overflow-hidden rounded{smallBreakpoint
+		? ''
+		: onRight
+		? '-r'
+		: '-l'}-lg"
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --skill-height-px:{skillHeightPX}"
 >
-	<GradientTransition toRight={onRight} />
+	<GradientTransition toRight={smallBreakpoint ? false : onRight} />
 	<!-- bg image -->
 	<!-- <img
 		class="z-0 absolute inset-0 w-full opacity-30"
@@ -53,9 +61,15 @@
 		alt={skillData.imgName}
 	/> -->
 	<!-- front -->
-	<div class="z-10 peer flex items-center w-full {onRight ? 'slider-left' : 'slider-right'}">
+	<div
+		class="z-10 peer flex items-center w-full {smallBreakpoint
+			? ''
+			: onRight
+			? 'slider-left'
+			: 'slider-right'}"
+	>
 		<div
-			class="w-full {onRight ? 'pr-6' : 'pl-6'}"
+			class="w-full {smallBreakpoint ? 'pl-6' : onRight ? 'pr-6' : 'pl-6'}"
 			class:hide-left={onRight && hideFront}
 			class:hide-right={!onRight && hideFront}
 			class:return={!hideFront}
@@ -65,20 +79,28 @@
 				subtitle={skillData.description}
 				showBar={false}
 				titleSize="3xl"
-				align={onRight ? "right" : "left"}
+				align={smallBreakpoint ? "center" : onRight ? "right" : "left"}
 				subtitlePadding={false}
 			/>
 		</div>
 	</div>
 	<!-- back -->
 	<button
-		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {onRight
+		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {smallBreakpoint
+			? ''
+			: onRight
 			? 'slider-left'
 			: 'slider-right'}"
 		on:mouseenter={toggleShowVisibility}
 		on:mouseleave={toggleShowVisibility}
 	>
-		<div class="w-full max-h-full {onRight ? 'fade-in-right' : 'fade-in-left'}">
+		<div
+			class="w-full max-h-full flex flex-col justify-center {smallBreakpoint
+				? 'fade-in-top'
+				: onRight
+				? 'fade-in-right'
+				: 'fade-in-left'}"
+		>
 			<!-- <TextGroup
 				paragraphs={[skillData.description]}
 				showBar={false}
@@ -86,7 +108,13 @@
 				align={onRight ? "right" : "left"}
 			/> -->
 			{#each technologyRows as technologyRow}
-				<div class="h-1/2 flex items-center {onRight ? 'flex-row-reverse' : 'flex-row'}">
+				<div
+					class="h-1/3 sm:h-1/2 flex items-center {smallBreakpoint
+						? 'justify-center'
+						: onRight
+						? 'flex-row-reverse'
+						: 'flex-row'}"
+				>
 					{#each technologyRow as technologyName}
 						<img
 							src={`./skills/${technologyName}.png`}
