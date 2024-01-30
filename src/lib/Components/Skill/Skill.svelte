@@ -102,12 +102,6 @@
 				? 'fade-in-right'
 				: 'fade-in-left'}"
 		>
-			<!-- <TextGroup
-				paragraphs={[skillData.description]}
-				showBar={false}
-				titleSize="2xl"
-				align={onRight ? "right" : "left"}
-			/> -->
 			{#each technologyRows as technologyRow}
 				<div
 					class="h-1/3 sm:h-1/2 flex items-center {smallBreakpoint
@@ -125,9 +119,6 @@
 					{/each}
 				</div>
 			{/each}
-			<!-- {#each skillData.technologies as imgName}
-				<img src={`./skills/${imgName}.png`} alt={imgName} class="h-full px-3" />
-			{/each} -->
 		</div>
 	</button>
 </li>
