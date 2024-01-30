@@ -37,10 +37,10 @@
 	// TODO: refactor PageSection into a reactive page section, as it is used in About, Projects and Skillset in the exact same way
 	// TODO: pass list of breakpoints to each section and let them decide whether they should be snapped or not (passing down the list into PageSection, which handles the snapping)
 	// this controls whether the navbar, sidebar and themepicker are shown
-	let hideSideControls: boolean;
+	let hideControls: boolean;
 	currentBreakpoint.subscribe((value) => {
-		hideSideControls = value == "sm" || value == "xs";
-		if (hideSideControls) {
+		hideControls = value == "sm" || value == "xs";
+		if (hideControls) {
 			scrollSnap.set(false);
 		}
 	});
@@ -66,8 +66,8 @@
 		{snapping ? 'hide-scrollbar' : ''}"
 	on:scroll={() => handleScroll()}
 >
-	{#if !hideSideControls}
-		<Navbar />
+	<Navbar hideSnapControls={hideControls} />
+	{#if !hideControls}
 		<Sidebar />
 		<ThemePicker />
 	{/if}
