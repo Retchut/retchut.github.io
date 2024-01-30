@@ -117,3 +117,21 @@ button {
 .fade-in-top {
 	animation: fadeInTop 500ms;
 }
+
+.hide-left {
+	transition: 500ms;
+	opacity: 0;
+	transform: translateX(-100px);
+}
+
+.hide-right {
+	transition: 500ms;
+	opacity: 0;
+	transform: translateX(100px);
+}
+
+.return {
+	transition: 500ms;
+	opacity: 1;
+	transform: translateX(0px);
+}

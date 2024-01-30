@@ -4,10 +4,12 @@
 	It allows changing the accent color of the webpage.
 -->
 <script lang="ts">
-	import { theme } from "../../../utils/stores";
-
+	// imports
 	import Button from "../Button/Button.svelte";
 
+	import { theme } from "../../../utils/stores";
+
+	// component code
 	const changeTheme = (newVal: number) => {
 		theme.update((_value) => newVal);
 	};

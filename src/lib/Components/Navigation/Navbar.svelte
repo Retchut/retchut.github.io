@@ -2,12 +2,20 @@
 @component
 	This component is the webpage's Navbar.
 	It contains the webpage badge and navigation links.
+
+		@param hideSnapControls - boolean - true if the section controls will be hidden. false by default
 -->
 <script lang="ts">
-	import { get } from "svelte/store";
-	import { theme, scrollSnap } from "../../../utils/stores";
+	// imports
 	import Button from "../Button/Button.svelte";
 
+	import { theme, scrollSnap } from "../../../utils/stores";
+	import { scrollToSection } from "../../../utils/scrolling";
+
+	// props
+	export let hideSnapControls: boolean = false;
+
+	// component code
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
@@ -21,12 +29,18 @@
 
 <div class="fixed z-30 w-full">
 	<nav class="flex justify-between items-center px-16 py-8">
-		<h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">MÁRIO TRAVASSOS</h1>
-		<Button
-			class="py-2 px-4"
-			action={() => scrollSnap.update((value) => !value)}
-			text={`Scroll hijacking ${snapping ? "enabled" : "disabled"}`}
-		/>
+		<button on:click={() => scrollToSection(0)}
+			><h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">
+				MÁRIO TRAVASSOS
+			</h1></button
+		>
+		{#if !hideSnapControls}
+			<Button
+				class="py-2 px-4"
+				action={() => scrollSnap.update((value) => !value)}
+				text={`${snapping ? "Disable" : "Enable"} scroll hijacking`}
+			/>
+		{/if}
 		<!-- <div class="bg-background px-3 py-4 rounded-full">
 			<div class="space-y-2">
 				{#each Array(3) as _i}

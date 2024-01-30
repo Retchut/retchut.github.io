@@ -1,15 +1,8 @@
-interface FrontData {
-	title: string[];
-	subtitle: string;
-}
-
-interface BackData {
-	technologies: string[];
-}
-
 interface CardData {
-	frontData: FrontData;
-	backData: BackData;
+	frontTitle: string;
+	backSubtitle: string;
+	coverImgName: string;
+	url: string;
 }
 
-export { CardData, FrontData, BackData };
+export { CardData };

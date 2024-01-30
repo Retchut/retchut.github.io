@@ -5,12 +5,14 @@
 		@param section - number - the section this item will scroll to when interacted with
 -->
 <script lang="ts">
+	// imports
 	import { theme, websiteSection } from "../../../utils/stores";
-
 	import { scrollToSection } from "../../../utils/scrolling";
 
+	// props
 	export let section: number = 0;
 
+	// component code
 	let themeVal!: number;
 	theme.subscribe((value) => {
 		themeVal = value;
@@ -49,5 +51,20 @@
 		left: 8px;
 		@apply border-solid border-x-transparent;
 		border-width: 15px 8px 0px;
+	}
+
+	/* Test squares */
+	.outer-square {
+		bottom: 0px;
+		left: 0px;
+		@apply border-solid;
+		border-width: 24px;
+	}
+
+	.inner-square {
+		bottom: 6px;
+		left: 6px;
+		@apply border-solid;
+		border-width: 18px;
 	}
 </style>

@@ -7,11 +7,18 @@
 	- ||label[www.example.com]|| - [label](https://www.example.com)
 
 		@param content - string - string to be parsed and displayed
-		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided.
+		@param align - string - possible values: "left", "right", "center". Defaults to left if no value, or an incorrect value were provided
+		@param bottomPadding - boolean - defines whether or not the paragraph has padding in the bottom. Defaults to true if no value was provided
+		@param bulletted - boolean - defines whether or not the paragraph is preceded by a bullet. Defaults to false if no value was provided
 -->
 <script lang="ts">
+	// props
 	export let content: string = "Default paragraph content";
 	export let align: string = "left";
+	export let bottomPadding: boolean = true;
+	export let bulletted: boolean = false;
+
+	// component code
 	if (!["left", "center", "right"].includes(align)) align = "left";
 
 	// Note to self:
@@ -31,7 +38,10 @@
 	};
 </script>
 
-<p class="text-lg pb-1 text-{align}">
+<p class="text-lg {bottomPadding && 'pb-1'} text-{align}">
+	{#if bulletted}
+		•
+	{/if}
 	{#each parsedParagraph as token}
 		{@const tokenStart = token.slice(0, 2)}
 		{@const tokenEnd = token.slice(-2)}
@@ -43,7 +53,7 @@
 			<span class="italic">{content}</span>
 		{:else if tokenStart === "||" && tokenEnd === "||"}
 			{@const textLinkPair = getTextLinkPair(content)}
-			<a href={"https://" + textLinkPair[1]}>{textLinkPair[0]}</a>
+			<a class="underline" href={"https://" + textLinkPair[1]}>{textLinkPair[0]}</a>
 		{:else}
 			{token}
 		{/if}

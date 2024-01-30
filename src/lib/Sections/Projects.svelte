@@ -3,31 +3,42 @@
 	This component is the webpage's Projects section.
 -->
 <script lang="ts">
+	// imports
 	import type { ProjectData } from "../../types/Project";
+	import type { CardData } from "../../types/Card";
 
-	import ShowcaseSection from "../Components/Layout/ShowcaseSection.svelte";
+	import PageSection from "../Components/Layout/PageSection.svelte";
+	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Project from "../Components/Project/Project.svelte";
+	import Card from "../Components/Card/Card.svelte";
 
+	import { scrollSnap } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Projects.json";
-	import { buildRows } from "../../utils/arrayFilters";
 
+	// component code
 	const title: string = sectionData["title"] ?? "DefaultTitle";
 	const projects: ProjectData[] = sectionData["projects"] ?? [];
+	const gitCardData: CardData = sectionData["gitCard"] ?? {};
 
-	const projectRows: ProjectData[][] = buildRows(projects, 2);
+	let snapping: boolean;
+	scrollSnap.subscribe((value) => {
+		snapping = value;
+	});
 </script>
 
-<ShowcaseSection {title}>
-	<ul class="w-full px-12">
-		{#each projectRows as projectRow, r}
-			<div class="my-8 flex gap-8">
-				{#each projectRow as projectData, c}
-					<Project {projectData} gridID={r * 2 + c} />
-				{/each}
-			</div>
-		{/each}
-	</ul>
-</ShowcaseSection>
+<PageSection screenHeight={false}>
+	<div class="pt-[12.5%] {snapping ? 'pb-[400px]' : ''}">
+		<header class=" w-full text-main">
+			<TextGroup {title} titleSize="5axl" />
+		</header>
+		<ul class="w-full px-4 2xl:px-20 flex flex-col gap-12">
+			{#each projects as projectData}
+				<Project {projectData} />
+			{/each}
+			<Card cardData={gitCardData} />
+		</ul>
+	</div>
+</PageSection>
 
 <style>
 </style>
