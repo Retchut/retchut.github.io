@@ -38,7 +38,7 @@
 			<Button
 				class="py-2 px-4"
 				action={() => scrollSnap.update((value) => !value)}
-				text={`Scroll hijacking ${snapping ? "enabled" : "disabled"}`}
+				text={`${snapping ? "Disable" : "Enable"} scroll hijacking`}
 			/>
 		{/if}
 		<!-- <div class="bg-background px-3 py-4 rounded-full">
