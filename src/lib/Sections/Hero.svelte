@@ -9,6 +9,7 @@
 	import Button from "../Components/Button/Button.svelte";
 
 	import sectionData from "../Assets/Data/Hero.json";
+	import { scrollToSection } from "../../utils/scrolling";
 
 	// component code
 	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
@@ -22,11 +23,7 @@
 		class="px-4 w-screen mx-auto sm:ml-14 md:w-[640px] z-10 flex flex-col justify-center text-main"
 	>
 		<TextGroup {title} {subtitle} {paragraphs} />
-		<Button
-			class="w-fit px-6 py-4 mt-4"
-			text={contact}
-			action={() => console.warn("TODO: head to contact page")}
-		/>
+		<Button class="w-fit px-6 py-4 mt-4" text={contact} action={() => scrollToSection(4)} />
 	</header>
 	<img
 		src="/profile.jpg"
