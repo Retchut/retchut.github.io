@@ -9,6 +9,7 @@
 	import PageSection from "../Components/Layout/PageSection.svelte";
 	import TextGroup from "../Components/Text/TextGroup.svelte";
 
+	import { scrollSnap } from "../../utils/stores";
 	import sectionData from "../Assets/Data/About.json";
 
 	// component code
@@ -22,12 +23,19 @@
 	currentBreakpoint.subscribe((value) => {
 		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
 	});
+
+	let snapping: boolean;
+	scrollSnap.subscribe((value) => {
+		snapping = value;
+	});
 </script>
 
 <PageSection screenHeight={!smallBreakpoint}>
 	<div
 		class="py-[12.5%] {smallBreakpoint
-			? 'pb-[400px]'
+			? snapping
+				? 'pb-[400px]'
+				: ''
 			: ''} flex flex-col items-center gap-y-8 lg:gap-y-0 lg:items-start lg:flex-row lg:justify-between"
 	>
 		<header class="w-full lg:w-1/3 text-main">
