@@ -32,6 +32,8 @@
 		// check if [label, url, emptystr] wasn't returned
 		if (splitContent.length !== 3) return ["", ""];
 
+		console.log(splitContent);
+
 		return splitContent.slice(0, 2);
 	};
 </script>
@@ -51,7 +53,7 @@
 			<span class="italic">{content}</span>
 		{:else if tokenStart === "||" && tokenEnd === "||"}
 			{@const textLinkPair = getTextLinkPair(content)}
-			<a href={"https://" + textLinkPair[1]}>{textLinkPair[0]}</a>
+			<a class="underline" href={"https://" + textLinkPair[1]}>{textLinkPair[0]}</a>
 		{:else}
 			{token}
 		{/if}
