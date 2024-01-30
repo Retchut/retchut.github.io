@@ -2,14 +2,18 @@
 @component
 	This component consists of a couple of gradients which will be transitioned between depending on the currently active theme. The only reason this exists is because no browser supports transitions between gradient states.
 
-		@param onRight - boolean - true if the Project (parent) is on the right side of the projects grid (affects the gradients' direction)
+		@param toRight - boolean - true if the transition is from the left to the right
 -->
 <script lang="ts">
+	// imports
 	import { get } from "svelte/store";
+
 	import { theme } from "../../../utils/stores";
 
-	export let onRight: boolean = false;
+	// props
+	export let toRight: boolean = false;
 
+	// component code
 	let themeVal: number;
 	theme.subscribe((value) => {
 		themeVal = value;
@@ -47,7 +51,7 @@
 		class:opacity-100={visibleGradients[t]}
 		class:fade-out={!visibleGradients[t]}
 		class:opacity-0={!visibleGradients[t]}
-		class="w-full h-full absolute bg-gradient-to-{onRight
+		class="w-full h-full absolute bg-gradient-to-{toRight
 			? 'l'
 			: 'r'} from-accent{t} from-60% to-background2"
 	></div>

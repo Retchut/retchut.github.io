@@ -9,8 +9,10 @@
 		@param overrideTheme - boolean - true if the button ignores the current theme of the webpage. false by default
 -->
 <script lang="ts" ?>
+	// imports
 	import { theme } from "../../../utils/stores";
 
+	// props
 	// class is a reserved keyword so we need this little workaround
 	let classParam: string = "";
 	export { classParam as class };
@@ -18,6 +20,7 @@
 	export let text: string = "default text";
 	export let overrideTheme: boolean = false;
 
+	// component code
 	let themeVal!: number;
 	theme.subscribe((value) => {
 		themeVal = value;

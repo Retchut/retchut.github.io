@@ -4,9 +4,10 @@
 	It contains navigation links to multiple sections of the webpage.
 -->
 <script lang="ts">
-	import { getSections } from "../../../utils/scrolling";
-
+	// imports
 	import Triangle from "../Button/Triangle.svelte";
+
+	import { getSections } from "../../../utils/scrolling";
 </script>
 
 <aside class="z-30 fixed bottom-4 right-4 flex flex-col">

@@ -1,39 +1,59 @@
 {
 	"title": "Skillset",
-	"cards": [
+	"skills": [
 		{
-			"frontData": {
-				"title": ["Computer Graphics &", " Game Development"],
-				"subtitle": "Breathing Life into Pixels"
-			},
-			"backData": { "technologies": ["threejs", "aframe", "unity", "godot", "blender"] }
+			"title": "Front-end Web Development",
+			"description": "Designing Digital Canvases",
+			"technologies": [
+				"react",
+				"svelte",
+				"tailwind",
+				"bootstrap",
+				"typescript",
+				"javascript",
+				"css",
+				"html"
+			],
+			"bannerImg": "frontend"
 		},
 		{
-			"frontData": {
-				"title": ["Front-End", "Web Development"],
-				"subtitle": "Crafting Digital Canvases"
-			},
-			"backData": {
-				"technologies": [
-					"react",
-					"svelte",
-					"typescript",
-					"javascript",
-					"tailwind",
-					"bootstrap",
-					"css",
-					"html"
-				]
-			}
+			"title": "Back-end Web Development",
+			"description": "Engineering Digital Foundations",
+			"technologies": [
+				"laravel",
+				"php",
+				"prisma",
+				"express",
+				"mongodb",
+				"sql",
+				"mariadb",
+				"nodejs"
+			],
+			"bannerImg": "backend"
 		},
 		{
-			"frontData": {
-				"title": ["Back-end", "Web Development"],
-				"subtitle": "Sculpting Digital Foundations"
-			},
-			"backData": {
-				"technologies": ["laravel", "php", "express", "nodejs", "mongodb", "sql", "mariadb"]
-			}
+			"title": "Game Development",
+			"description": "Crafting Virtual Realities",
+			"technologies": ["unity", "unrealengine", "godot", "xrtoolkit", "cplusplus", "csharp"],
+			"bannerImg": "gamedev"
+		},
+		{
+			"title": "Computer Graphics",
+			"description": "Breathing Life into Pixels",
+			"technologies": ["webgl", "threejs", "aframe", "opencv", "opengl", "vulkan", "glslhlsl"],
+			"bannerImg": "cg"
+		},
+		{
+			"title": "Miscellaneous",
+			"description": "My Swiss Army Knife",
+			"technologies": ["git", "linux", "bash", "python", "c", "java"],
+			"bannerImg": "misc"
+		},
+		{
+			"title": "3D Modeling & Visualization",
+			"description": "Making Sculptures of Reality",
+			"technologies": ["meshroom", "nerf", "gaussiansplatting", "instantmeshes", "blender", "maya"],
+			"bannerImg": "modeling"
 		}
 	]
 }
