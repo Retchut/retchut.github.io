@@ -12,6 +12,7 @@
 		@param titlePadding - boolean - set to false to remove the title padding. true by default
 		@param subtitlePadding - boolean - set to false to remove the subtitle padding. true by default
 		@param paragraphBullets - boolean - true if the paragraphs are bulleted. false by default
+		@param blendTitle - boolean - true if the title text will be blended with the background. false by default
 -->
 <script lang="ts">
 	// imports
@@ -29,6 +30,7 @@
 	export let titlePadding: boolean = true;
 	export let subtitlePadding: boolean = true;
 	export let paragraphBullets: boolean = false;
+	export let blendTitle: boolean = false;
 
 	// component code
 	let themeVal: number;
@@ -45,11 +47,15 @@
 </script>
 
 {#if title !== ""}
-	<h1 class="text-{titleSize} {titlePadding && 'pb-4'} text-{align}">{title}</h1>
+	<h1 class="text-{titleSize} {titlePadding && 'pb-4'} text-{align} {blendTitle && 'blend-text'}">
+		{title}
+	</h1>
 {/if}
 
 {#if subtitle !== ""}
-	<h2 class="text-xl {subtitlePadding && 'pb-6'} text-{align}">{subtitle}</h2>
+	<h2 class="text-xl {subtitlePadding && 'pb-6'} text-{align}">
+		{subtitle}
+	</h2>
 {/if}
 
 {#if showBar}
@@ -74,5 +80,10 @@
 
 	.bar-right {
 		margin-left: auto;
+	}
+
+	.blend-text {
+		/* mix-blend-mode: difference; */
+		mix-blend-mode: difference;
 	}
 </style>
