@@ -14,6 +14,7 @@
 	import { scrollSnap, currentBreakpoint } from "./utils/stores";
 	import {
 		setScrollingElement,
+		reloadSectionOffsets,
 		setOffsetsLoaded,
 		handleScroll,
 		scrollToSection,
@@ -29,6 +30,8 @@
 	let snapping: boolean;
 	scrollSnap.subscribe((value) => {
 		snapping = value;
+		// changing snapping requires the section offsets to be recalculated, as it disables some extra padding on the bottom of the sections
+		reloadSectionOffsets();
 	});
 
 	// TODO: refactor PageSection into a reactive page section, as it is used in About, Projects and Skillset in the exact same way
@@ -41,7 +44,7 @@
 
 	const updateBreakpoint = () => {
 		currentBreakpoint.update((_value) => getCurrentBreakpoint());
-		// changes in the breakpoint require the section offsets to be recalculated, as some sections might grow in size
+		// changes in the breakpoint require the section offsets to be recalculated in the next scroll, as some sections might grow in size
 		setOffsetsLoaded(false);
 	};
 
