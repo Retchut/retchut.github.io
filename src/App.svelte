@@ -40,6 +40,9 @@
 	let hideSideControls: boolean;
 	currentBreakpoint.subscribe((value) => {
 		hideSideControls = value == "sm" || value == "xs";
+		if (hideSideControls) {
+			scrollSnap.set(false);
+		}
 	});
 
 	const updateBreakpoint = () => {
