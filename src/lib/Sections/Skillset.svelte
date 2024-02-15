@@ -10,7 +10,7 @@
 	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Skill from "../Components/Skill/Skill.svelte";
 
-	import { scrollSnap, currentBreakpoint } from "../../utils/stores";
+	import { currentBreakpoint } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Skillset.json";
 	import { buildRows } from "../../utils/arrayFilters";
 
@@ -29,16 +29,11 @@
 		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
 	});
 
-	let snapping: boolean;
-	scrollSnap.subscribe((value) => {
-		snapping = value;
-	});
-
 	const skillRows: SkillData[][] = buildRows(skills, 2);
 </script>
 
 <PageSection screenHeight={!smallBreakpoint}>
-	<div class="py-[12.5%] {smallBreakpoint ? (snapping ? 'pb-[400px]' : '') : ''}">
+	<div class="py-[12.5%]">
 		<header class=" w-full text-main">
 			<TextGroup {title} titleSize="5axl" />
 		</header>
