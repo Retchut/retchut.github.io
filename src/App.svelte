@@ -25,6 +25,9 @@
 	// component code
 	let mainEl: HTMLElement;
 
+	// defined by the Projects.svelte component
+	let preserveGalleryWidth: () => void;
+
 	// TODO: refactor PageSection into a reactive page section, as it is used in About, Projects and Skillset in the exact same way
 	// this controls whether the navbar, sidebar and themepicker are shown
 	let hideControls: boolean;
@@ -59,25 +62,14 @@
 		<Hero />
 		<About />
 		<Skillset />
-		<Projects />
+		<Projects bind:preserveGalleryWidth />
 		<Contacts />
 	</div>
 </main>
 
-<svelte:window on:resize={updateBreakpoint} />
-
-<style>
-	/*
-	.hide-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
-	*/
-
-	/* Hide scrollbar for IE/Edge and Firefox, respectively */
-	/*
-	.hide-scrollbar {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
-	*/
-</style>
+<svelte:window
+	on:resize={() => {
+		updateBreakpoint();
+		preserveGalleryWidth();
+	}}
+/>

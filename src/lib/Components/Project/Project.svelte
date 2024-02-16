@@ -31,7 +31,7 @@
 	/>
 	<div class="w-full md:w-2/3 flex flex-col text-main gap-6">
 		<div>
-			<TextGroup title={projectData.title} titleSize="5xl" paragraphs={projectData.description} />
+			<TextGroup title={projectData.title} titleSize="4xl" paragraphs={projectData.description} />
 		</div>
 		{#if projectData.contributions.length > 0}
 			<div>

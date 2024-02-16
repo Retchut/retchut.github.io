@@ -6,132 +6,138 @@
 		"coverImgName": "github",
 		"url": "https://github.com/Retchut/"
 	},
-	"projects": [
-		{
-			"title": "Shifteam",
-			"description": [
-				"Shifteam empowers managers to effortlessly craft efficient schedules, allowing them to allocate more time to prioritize essential responsibilities. With an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
-			],
-			"contributions": [
-				"I was the bridge between the design team and the development team, actively participating in the application's UI and UX design",
-				"Directed the design implementation on the back-office application",
-				"Developed and performed refactoring tasks on multiple UI components of the back-office application",
-				"Single-handedly implemented the design for the company's brand website"
-			],
-			"imgName": "shifteam",
-			"tags": ["Web"],
-			"techs": ["React", "Tailwind", "Django"],
-			"projectURL": "https://www.shifteam.pt"
-		},
-		{
-			"title": "VR A-Frame Explorer",
-			"description": [
-				"Project focused on both exploring the generation of photo-realistic 3D models based on real places, and on the development of a platform to explore these models on."
-			],
-			"imgName": "vr-aframe-explorer",
-			"contributions": [
-				"Captured a dataset of images for the model generation",
-				"Generated models based on the image dataset with photogrammetry, and in real time with LiDAR technology",
-				"Developed a WebXR platform to view and explore the models on",
-				"Ported some of Felix Mariotto's three-mesh-ui library to A-Frame, in order to help with UI creation",
-				"Developed a simple web server to host and serve our models, and allow uploading custom models"
-			],
-			"tags": ["Web", "XR"],
-			"techs": ["A-Frame", "Meshroom", "Express", "Vite", "Photogrammetry", "LiDAR"],
-			"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
-		},
-		{
-			"title": "Lucky Lapin",
-			"description": [
-				"Second place entry for ||Fabamaq[www.fabamaq.com/en]||'s ||Invictus Game Jam[invictvs.fabamaq.com/en]||.",
-				"In this game, you control a rabbit on a quest for vengeance against a tyrannical casino owner, who kidnapped your family in order to sell their rabbit legs to unsuspecting gamblers.",
-				"The game was designed and developed to run on Fabamaq's in-house slot machines, taking advantage of their hardware, lights and sound systems."
-			],
-			"imgName": "luckylapin",
-			"contributions": [
-				"Actively participated in design decisions",
-				"Implemented the connectivity between the game and the slot machine's hardware",
-				"Developed and tweaked some of the game's mechanics"
-			],
-			"tags": ["Game Dev", "Networking"],
-			"techs": ["Unity", "Websockets", "Linux"],
-			"projectURL": "https://retchut.itch.io/lucky-lapin"
-		},
-		{
-			"title": "Miasma",
-			"description": [
-				"Final project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
-				"In this high-octane movement-based game, players take control of an amnesiac android, and must run, jump and air-strafe their way out of a facility filled with deadly traps and enemies, while trying to piece back together their memories.",
-				"A demo video of the game can be found ||here[youtu.be/FEsYICmPof8?si=qzDJRhfsSXkZtmkS]||."
-			],
-			"imgName": "miasma",
-			"contributions": [
-				"Performed game design related tasks",
-				"Implemented of some of the game weapon mechanics",
-				"Recorded, sampled and edited sound effects and music for the game",
-				"Performed some minor rigging and editing of test assets for the game"
-			],
-			"tags": ["Game Dev", "Sound Design"],
-			"techs": ["Unity", "Blender", "FMOD", "Reaper"],
-			"projectURL": "https://jfbaltazar.itch.io/miasma"
-		},
-		{
-			"title": "FEUP Hell",
-			"description": [
-				"Preliminary project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
-				"In this game, players try to last for as long as they can against an endless horde of undead cubes, in a stage reminiscent of FEUP's installations, with the help of a wide variety of weapons and perks!",
-				"A demo video of the game can be found ||here[youtu.be/B-S8YoB5miI?si=83otXu-ipS1gXJKy]||."
-			],
-			"imgName": "feuphell",
-			"contributions": [
-				"Performed game design related tasks",
-				"Performed general development of the game",
-				"3D model gathering and cleanup"
-			],
-			"tags": ["Game Dev"],
-			"techs": ["Unity", "Blender"],
-			"projectURL": "https://retchut.itch.io/feup-hell"
-		},
-		{
-			"title": "Atlas of Anatomical Pathology",
-			"description": [
-				"An online Atlas of Anatomical Pathology. Still a WIP.",
-				"An educative tool made for a Veterinary Medicine teacher."
-			],
-			"imgName": "atlas",
-			"contributions": [
-				"Designed the interface and UI",
-				"Developed the front-end application, implementing the design",
-				"Developed a web server to host and serve the application content",
-				"Host, perform maintenance and updates on the server and content, among other DevOps tasks"
-			],
-			"tags": ["Web"],
-			"techs": ["React", "Tailwind", "Express", "MongoDB"],
-			"projectURL": "https://github.com/Retchut/atlas"
-		},
-		{
-			"title": "Portfolio Website",
-			"description": [
-				"Repository holding this website's code.",
-				"Serves as a little archive of what I'm up to."
-			],
-			"contributions": ["Designed the interface and UI", "Implemented the design"],
-			"imgName": "website",
-			"tags": ["Web"],
-			"techs": ["Svelte", "Tailwind", "CSS", "Vite"],
-			"projectURL": "https://github.com/Retchut/retchut.github.io"
-		},
-		{
-			"title": "Arch Quick Setup",
-			"description": [
-				"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
-				"Just clone the repo and run the script, and you'll have my workstation up and running."
-			],
-			"contributions": [],
-			"imgName": "arch-quick-setup",
-			"tags": ["Utility"],
-			"techs": ["Bash", "Linux"],
-			"projectURL": "https://github.com/Retchut/arch-quick-setup"
-		}
-	]
+	"projects": {
+		"webDev": [
+			{
+				"title": "Shifteam",
+				"description": [
+					"Shifteam empowers managers to effortlessly craft efficient schedules, allowing them to allocate more time to prioritize essential responsibilities. With an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
+				],
+				"contributions": [
+					"I was the bridge between the design team and the development team, actively participating in the application's UI and UX design",
+					"Directed the design implementation on the back-office application",
+					"Developed and performed refactoring tasks on multiple UI components of the back-office application",
+					"Single-handedly implemented the design for the company's brand website"
+				],
+				"imgName": "shifteam",
+				"tags": ["Web"],
+				"techs": ["React", "Tailwind", "Django"],
+				"projectURL": "https://www.shifteam.pt"
+			},
+			{
+				"title": "Atlas of Anatomical Pathology",
+				"description": [
+					"An online Atlas of Anatomical Pathology. Still a WIP.",
+					"An educative tool made for a Veterinary Medicine teacher."
+				],
+				"imgName": "atlas",
+				"contributions": [
+					"Designed the interface and UI",
+					"Developed the front-end application, implementing the design",
+					"Developed a web server to host and serve the application content",
+					"Host, perform maintenance and updates on the server and content, among other DevOps tasks"
+				],
+				"tags": ["Web"],
+				"techs": ["React", "Tailwind", "Express", "MongoDB"],
+				"projectURL": "https://github.com/Retchut/atlas"
+			},
+			{
+				"title": "Portfolio Website",
+				"description": [
+					"Repository holding this website's code.",
+					"Serves as a little archive of what I'm up to."
+				],
+				"contributions": ["Designed the interface and UI", "Implemented the design"],
+				"imgName": "website",
+				"tags": ["Web"],
+				"techs": ["Svelte", "Tailwind", "CSS", "Vite"],
+				"projectURL": "https://github.com/Retchut/retchut.github.io"
+			}
+		],
+		"xrCG": [
+			{
+				"title": "VR A-Frame Explorer",
+				"description": [
+					"Project focused on both exploring the generation of photo-realistic 3D models based on real places, and on the development of a platform to explore these models on."
+				],
+				"imgName": "vr-aframe-explorer",
+				"contributions": [
+					"Captured a dataset of images for the model generation",
+					"Generated models based on the image dataset with photogrammetry, and in real time with LiDAR technology",
+					"Developed a WebXR platform to view and explore the models on",
+					"Ported some of Felix Mariotto's three-mesh-ui library to A-Frame, in order to help with UI creation",
+					"Developed a simple web server to host and serve our models, and allow uploading custom models"
+				],
+				"tags": ["XR", "Web"],
+				"techs": ["A-Frame", "Meshroom", "Express", "Vite", "Photogrammetry", "LiDAR"],
+				"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
+			}
+		],
+		"gameDev": [
+			{
+				"title": "Lucky Lapin",
+				"description": [
+					"Second place entry for ||Fabamaq[www.fabamaq.com/en]||'s ||Invictus Game Jam[invictvs.fabamaq.com/en]||.",
+					"In this game, you control a rabbit on a quest for vengeance against a tyrannical casino owner, who kidnapped your family in order to sell their rabbit legs to unsuspecting gamblers.",
+					"The game was designed and developed to run on Fabamaq's in-house slot machines, taking advantage of their hardware, lights and sound systems."
+				],
+				"imgName": "luckylapin",
+				"contributions": [
+					"Actively participated in design decisions",
+					"Implemented the connectivity between the game and the slot machine's hardware",
+					"Developed and tweaked some of the game's mechanics"
+				],
+				"tags": ["Game Dev", "Networking"],
+				"techs": ["Unity", "Websockets", "Linux"],
+				"projectURL": "https://retchut.itch.io/lucky-lapin"
+			},
+			{
+				"title": "Miasma",
+				"description": [
+					"Final project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
+					"In this high-octane movement-based game, players take control of an amnesiac android, and must run, jump and air-strafe their way out of a facility filled with deadly traps and enemies, while trying to piece back together their memories.",
+					"A demo video of the game can be found ||here[youtu.be/FEsYICmPof8?si=qzDJRhfsSXkZtmkS]||."
+				],
+				"imgName": "miasma",
+				"contributions": [
+					"Performed game design related tasks",
+					"Implemented of some of the game weapon mechanics",
+					"Recorded, sampled and edited sound effects and music for the game",
+					"Performed some minor rigging and editing of test assets for the game"
+				],
+				"tags": ["Game Dev", "Sound Design"],
+				"techs": ["Unity", "Blender", "FMOD", "Reaper"],
+				"projectURL": "https://jfbaltazar.itch.io/miasma"
+			},
+			{
+				"title": "FEUP Hell",
+				"description": [
+					"Preliminary project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
+					"In this game, players try to last for as long as they can against an endless horde of undead cubes, in a stage reminiscent of FEUP's installations, with the help of a wide variety of weapons and perks!",
+					"A demo video of the game can be found ||here[youtu.be/B-S8YoB5miI?si=83otXu-ipS1gXJKy]||."
+				],
+				"imgName": "feuphell",
+				"contributions": [
+					"Performed game design related tasks",
+					"Performed general development of the game",
+					"3D model gathering and cleanup"
+				],
+				"tags": ["Game Dev"],
+				"techs": ["Unity", "Blender"],
+				"projectURL": "https://retchut.itch.io/feup-hell"
+			},
+			{
+				"title": "Arch Quick Setup",
+				"description": [
+					"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
+					"Just clone the repo and run the script, and you'll have my workstation up and running."
+				],
+				"contributions": [],
+				"imgName": "arch-quick-setup",
+				"tags": ["Utility"],
+				"techs": ["Bash", "Linux"],
+				"projectURL": "https://github.com/Retchut/arch-quick-setup"
+			}
+		]
+	}
 }
