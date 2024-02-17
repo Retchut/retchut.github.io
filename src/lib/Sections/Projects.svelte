@@ -14,7 +14,7 @@
 	import Project from "../Components/Project/Project.svelte";
 	import Card from "../Components/Card/Card.svelte";
 
-	import { theme } from "../../utils/stores";
+	import { theme, currentBreakpoint } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Projects.json";
 
 	// component code
@@ -33,14 +33,23 @@
 		themeVal = value;
 	});
 
+	let smallBreakpoint: boolean = true;
+	currentBreakpoint.subscribe((value) => {
+		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
+	});
+
 	let galleryEl: HTMLElement;
 	let selectorEl: HTMLElement;
 	let smallTabEl: HTMLElement;
 	let galleryWidth: number;
-	let tabSelectorWidth: number[] = [0, 0, 0];
+	let selectorBarWidths: number[] = [0, 0, 0];
+	let selectorBarHeights: number[] = [0, 0, 0];
+	let selectorBarPadding: number = 16;
+	let selectorHeight: number;
 	let smallTabSize: number = 0;
 	let visibleProjTab: number = 0;
-	const selectorBarSize: number = 64; // w-16 is 4rem which is 64px
+	const selectorBarWidth: number = 64; // w-16 is 4rem which is 64px
+	const selectorBarHeight: number = 20; // w-16 is 1.25rem which is 20px
 
 	onMount(() => {
 		updateGalleryWidth();
@@ -54,11 +63,13 @@
 
 	const updateGalleryWidth = () => {
 		galleryWidth = galleryEl.clientWidth;
+		selectorHeight = selectorEl.clientHeight;
 		smallTabSize = smallTabEl.scrollHeight;
 		for (let i = 0; i < selectorEl.children.length; i++) {
-			tabSelectorWidth[i] = selectorEl.children[i].clientWidth;
+			selectorBarWidths[i] = selectorEl.children[i].clientWidth;
+			selectorBarHeights[i] = selectorEl.children[i].clientHeight;
 		}
-		console.log(tabSelectorWidth);
+		console.log(selectorBarWidths);
 	};
 
 	export const preserveGalleryWidth = () => {
@@ -91,25 +102,54 @@
 
 		<div class="text-main px-4">
 			<!-- Selector -->
-			<div>
-				<div bind:this={selectorEl} class="peer flex justify-between">
+			<div class="flex {smallBreakpoint ? 'flex-row-reverse' : 'flex-col'}">
+				<div
+					bind:this={selectorEl}
+					class="flex {smallBreakpoint ? 'flex-col grow' : 'flex-row'} justify-between"
+				>
 					{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
-						<button class="" on:click={() => galleryScrollTo(index)}>
-							<TextGroup {title} titleSize="5xl" align="center" showBar={false} />
+						<button on:click={() => galleryScrollTo(index)}>
+							<TextGroup
+								{title}
+								titleSize="5xl"
+								align={smallBreakpoint ? "left" : "center"}
+								showBar={false}
+							/>
 						</button>
 					{/each}
 				</div>
-				<hr
-					style="--start-translate-x:{(tabSelectorWidth[0] - selectorBarSize) /
-						2}px;--middle-translate-x:{(galleryWidth - selectorBarSize) /
-						2}px; --end-translate-x:{galleryWidth - (tabSelectorWidth[0] + selectorBarSize) / 2}px;"
-					class="w-16 border-accent{themeVal} border-2 rounded-full mb-6 color-fade-anim {visibleProjTab ===
-					0
-						? 'translate-start'
-						: visibleProjTab === 1
-						? 'translate-middle'
-						: 'translate-end'}"
-				/>
+				{#if smallBreakpoint}
+					<div
+						style="--start-translate-y:{(selectorBarHeights[0] -
+							selectorBarHeight -
+							selectorBarPadding / 2) /
+							2}px;--middle-translate-y:{(selectorHeight -
+							selectorBarHeight -
+							selectorBarPadding / 2) /
+							2}px; --end-translate-y:{selectorHeight -
+							(selectorBarHeights[2] + selectorBarHeight) / 2 -
+							selectorBarPadding / 2}px;"
+						class="h-5 w-1 bg-accent{themeVal} rounded-full mr-2 color-fade-anim {visibleProjTab ===
+						0
+							? 'translate-y-start'
+							: visibleProjTab === 1
+							? 'translate-y-middle'
+							: 'translate-y-end'}"
+					></div>
+				{:else}
+					<hr
+						style="--start-translate-x:{(selectorBarWidths[0] - selectorBarWidth) /
+							2}px;--middle-translate-x:{(galleryWidth - selectorBarWidth) /
+							2}px; --end-translate-x:{galleryWidth -
+							(selectorBarWidths[2] + selectorBarWidth) / 2}px;"
+						class="w-16 border-accent{themeVal} border-2 rounded-full mb-6 color-fade-anim {visibleProjTab ===
+						0
+							? 'translate-x-start'
+							: visibleProjTab === 1
+							? 'translate-x-middle'
+							: 'translate-x-end'}"
+					/>
+				{/if}
 			</div>
 			<!-- Gallery thingy -->
 			<div
@@ -161,15 +201,27 @@
 		max-height: calc(var(--small-tab-size) * 1px);
 	}
 
-	.translate-start {
+	.translate-x-start {
 		transform: translateX(var(--start-translate-x));
 	}
 
-	.translate-middle {
+	.translate-x-middle {
 		transform: translateX(var(--middle-translate-x));
 	}
 
-	.translate-end {
+	.translate-x-end {
 		transform: translateX(var(--end-translate-x));
+	}
+
+	.translate-y-start {
+		transform: translateY(var(--start-translate-y));
+	}
+
+	.translate-y-middle {
+		transform: translateY(var(--middle-translate-y));
+	}
+
+	.translate-y-end {
+		transform: translateY(var(--end-translate-y));
 	}
 </style>
