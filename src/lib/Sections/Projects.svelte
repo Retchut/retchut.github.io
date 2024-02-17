@@ -14,7 +14,7 @@
 	import Project from "../Components/Project/Project.svelte";
 	import Card from "../Components/Card/Card.svelte";
 
-	import { currentBreakpoint } from "../../utils/stores";
+	import { theme } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Projects.json";
 
 	// component code
@@ -28,11 +28,17 @@
 	const gitCardData: CardData = sectionData["gitCard"] ?? {};
 
 	// component code
+	let themeVal: number;
+	theme.subscribe((value) => {
+		themeVal = value;
+	});
+
 	let galleryEl: HTMLElement;
 	let smallTabEl: HTMLElement;
 	let galleryWidth: number;
 	let smallTabSize: number = 0;
 	let visibleProjTab: number = 0;
+	const selectorBarSize: number = 64; // w-16 is 4rem which is 64px
 
 	onMount(() => {
 		updateGalleryWidth();
@@ -64,6 +70,8 @@
 		});
 		visibleProjTab = section;
 	};
+
+	// let translateX: number = 0;
 </script>
 
 <PageSection screenHeight={false}>
@@ -74,12 +82,29 @@
 
 		<div class="text-main">
 			<!-- Selector -->
-			<div class="flex justify-between">
-				{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
-					<button on:click={() => galleryScrollTo(index)}>
-						<TextGroup {title} titleSize="5xl" align="center" />
-					</button>
-				{/each}
+			<div>
+				<div class="peer flex justify-between">
+					{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
+						<button class="" on:click={() => galleryScrollTo(index)}>
+							<TextGroup {title} titleSize="5xl" align="center" showBar={false} />
+						</button>
+					{/each}
+				</div>
+				<!-- <TextGroupBar
+					align={visibleProjTab === 0 ? "left" : visibleProjTab === 1 ? "center" : "right"}
+				/> -->
+				<!-- <TextGroupBar class={visibleProjTab === 0 ? "translate-x-10" : visibleProjTab === 1 ? "center" : "right"} /> -->
+
+				<hr
+					style="--middle-translate-x:{(galleryWidth - selectorBarSize) /
+						2}px; --end-translate-x:{galleryWidth - selectorBarSize}px;"
+					class="w-16 border-accent{themeVal} border-2 rounded-full mb-6 color-fade-anim {visibleProjTab ===
+					0
+						? 'translate-x-0'
+						: visibleProjTab === 1
+						? 'translate-middle'
+						: 'translate-end'}"
+				/>
 			</div>
 			<!-- Gallery thingy -->
 			<div
@@ -129,5 +154,13 @@
 <style>
 	.crop-to-small-tab {
 		max-height: calc(var(--small-tab-size) * 1px);
+	}
+
+	.translate-middle {
+		transform: translateX(var(--middle-translate-x));
+	}
+
+	.translate-end {
+		transform: translateX(var(--end-translate-x));
 	}
 </style>
