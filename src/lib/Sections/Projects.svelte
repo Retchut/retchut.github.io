@@ -34,8 +34,10 @@
 	});
 
 	let galleryEl: HTMLElement;
+	let selectorEl: HTMLElement;
 	let smallTabEl: HTMLElement;
 	let galleryWidth: number;
+	let tabSelectorWidth: number[] = [0, 0, 0];
 	let smallTabSize: number = 0;
 	let visibleProjTab: number = 0;
 	const selectorBarSize: number = 64; // w-16 is 4rem which is 64px
@@ -43,13 +45,20 @@
 	onMount(() => {
 		updateGalleryWidth();
 		galleryScrollTo(0);
-		console.log(galleryWidth);
 	});
+
+	// this is very iffy, only exists to recalculate the first offset of the projects tab selector - it's very unlikely that the user will have reached projects section in 1 second, so this will go unnoticed
+	setTimeout(() => {
+		updateGalleryWidth();
+	}, 1000);
 
 	const updateGalleryWidth = () => {
 		galleryWidth = galleryEl.clientWidth;
 		smallTabSize = smallTabEl.scrollHeight;
-		console.log(galleryWidth, smallTabSize);
+		for (let i = 0; i < selectorEl.children.length; i++) {
+			tabSelectorWidth[i] = selectorEl.children[i].clientWidth;
+		}
+		console.log(tabSelectorWidth);
 	};
 
 	export const preserveGalleryWidth = () => {
@@ -82,25 +91,21 @@
 
 		<div class="text-main px-4">
 			<!-- Selector -->
-			<div class="">
-				<div class="peer flex justify-between">
+			<div>
+				<div bind:this={selectorEl} class="peer flex justify-between">
 					{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
 						<button class="" on:click={() => galleryScrollTo(index)}>
 							<TextGroup {title} titleSize="5xl" align="center" showBar={false} />
 						</button>
 					{/each}
 				</div>
-				<!-- <TextGroupBar
-					align={visibleProjTab === 0 ? "left" : visibleProjTab === 1 ? "center" : "right"}
-				/> -->
-				<!-- <TextGroupBar class={visibleProjTab === 0 ? "translate-x-10" : visibleProjTab === 1 ? "center" : "right"} /> -->
-
 				<hr
-					style="--middle-translate-x:{(galleryWidth - selectorBarSize) /
-						2}px; --end-translate-x:{galleryWidth - selectorBarSize}px;"
+					style="--start-translate-x:{(tabSelectorWidth[0] - selectorBarSize) /
+						2}px;--middle-translate-x:{(galleryWidth - selectorBarSize) /
+						2}px; --end-translate-x:{galleryWidth - (tabSelectorWidth[0] + selectorBarSize) / 2}px;"
 					class="w-16 border-accent{themeVal} border-2 rounded-full mb-6 color-fade-anim {visibleProjTab ===
 					0
-						? 'translate-x-0'
+						? 'translate-start'
 						: visibleProjTab === 1
 						? 'translate-middle'
 						: 'translate-end'}"
@@ -154,6 +159,10 @@
 <style>
 	.crop-to-small-tab {
 		max-height: calc(var(--small-tab-size) * 1px);
+	}
+
+	.translate-start {
+		transform: translateX(var(--start-translate-x));
 	}
 
 	.translate-middle {
