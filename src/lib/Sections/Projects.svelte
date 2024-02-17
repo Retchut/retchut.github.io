@@ -99,7 +99,7 @@
 			<TextGroup {title} titleSize="6xl" />
 		</header>
 
-		<div class="text-main px-4">
+		<div class="text-main 2xl:px-4">
 			<!-- Selector -->
 			<div class="flex {smallBreakpoint ? 'flex-row-reverse justify-center' : 'flex-col'}">
 				<div
@@ -157,8 +157,7 @@
 				style="--small-tab-size:{smallTabSize};"
 			>
 				<ul
-					class="px-4 2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab ===
-					0
+					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 0
 						? ''
 						: 'crop-to-small-tab'}"
 				>
@@ -168,8 +167,7 @@
 				</ul>
 				<ul
 					bind:this={smallTabEl}
-					class="px-4 2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab ===
-					1
+					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 1
 						? ''
 						: 'crop-to-small-tab'}"
 				>
@@ -178,8 +176,7 @@
 					{/each}
 				</ul>
 				<ul
-					class="px-4 2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab ===
-					2
+					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 2
 						? ''
 						: 'crop-to-small-tab'}"
 				>
@@ -188,7 +185,7 @@
 					{/each}
 				</ul>
 			</div>
-			<div class="px-4 2xl:px-20 text-black">
+			<div class="2xl:px-20 text-black">
 				<Card cardData={gitCardData} />
 			</div>
 		</div>
