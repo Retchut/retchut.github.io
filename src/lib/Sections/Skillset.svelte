@@ -34,10 +34,10 @@
 
 <PageSection screenHeight={!smallBreakpoint}>
 	<div class="py-[12.5%]">
-		<header class=" w-full text-main">
+		<header class="w-full text-main">
 			<TextGroup {title} titleSize="6xl" />
 		</header>
-		<ul class="w-full px-12">
+		<ul class="w-full 2xl:px-12">
 			<!-- Display all skills in a column on small screens -->
 			{#if smallBreakpoint}
 				{#each skills as skillData}
