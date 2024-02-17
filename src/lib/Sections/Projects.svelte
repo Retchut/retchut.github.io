@@ -80,9 +80,9 @@
 			<TextGroup {title} titleSize="6xl" />
 		</header>
 
-		<div class="text-main">
+		<div class="text-main px-4">
 			<!-- Selector -->
-			<div>
+			<div class="">
 				<div class="peer flex justify-between">
 					{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
 						<button class="" on:click={() => galleryScrollTo(index)}>
