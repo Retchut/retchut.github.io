@@ -69,7 +69,6 @@
 			selectorBarWidths[i] = selectorEl.children[i].clientWidth;
 			selectorBarHeights[i] = selectorEl.children[i].clientHeight;
 		}
-		console.log(selectorBarWidths);
 	};
 
 	export const preserveGalleryWidth = () => {
@@ -102,10 +101,10 @@
 
 		<div class="text-main px-4">
 			<!-- Selector -->
-			<div class="flex {smallBreakpoint ? 'flex-row-reverse' : 'flex-col'}">
+			<div class="flex {smallBreakpoint ? 'flex-row-reverse justify-center' : 'flex-col'}">
 				<div
 					bind:this={selectorEl}
-					class="flex {smallBreakpoint ? 'flex-col grow' : 'flex-row'} justify-between"
+					class="flex {smallBreakpoint ? 'flex-col' : 'flex-row'} justify-between"
 				>
 					{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
 						<button on:click={() => galleryScrollTo(index)}>
