@@ -25,7 +25,7 @@
 </script>
 
 <PageSection>
-	<div class="flex h-full justify-center items-center">
+	<div class="flex h-full justify-center items-center pt-12">
 		<div class="text-white h-[70%] w-[80%] p-8 relative">
 			<div class="z-0 absolute inset-0 m-auto h-full w-full">
 				<div class="{boxStyling} -inset-4 border-accent{themeVal}"></div>
