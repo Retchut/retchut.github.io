@@ -28,10 +28,10 @@
 	<div
 		class="py-[12.5%] flex flex-col items-center gap-y-8 lg:gap-y-0 lg:items-start lg:flex-row lg:justify-between"
 	>
-		<header class="w-full mt-8 lg:w-1/3 text-main">
+		<header class="w-full lg:w-5/12 text-main">
 			<TextGroup {title} {paragraphs} />
 		</header>
-		<div class="w-full mt-8 lg:w-1/2 self-end flex flex-col text-main">
+		<div class="w-full lg:w-1/2 self-end flex flex-col text-main">
 			<div class="grow flex justify-center lg:justify-end items-start mb-8">
 				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
 			</div>
