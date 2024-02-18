@@ -57,13 +57,13 @@
 	<GradientTransition toRight={smallBreakpoint ? false : onRight} />
 	<!-- bg image -->
 	<img
-		class="z-0 absolute inset-0 w-full opacity-30"
+		class="absolute inset-0 w-full opacity-30"
 		src={`./banners/${skillData.bannerImg}.jpg`}
 		alt={skillData.title}
 	/>
 	<!-- front -->
 	<div
-		class="z-10 peer flex items-center w-full {smallBreakpoint
+		class="peer flex items-center w-full {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'
@@ -87,7 +87,7 @@
 	</div>
 	<!-- back -->
 	<button
-		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {smallBreakpoint
+		class="absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'

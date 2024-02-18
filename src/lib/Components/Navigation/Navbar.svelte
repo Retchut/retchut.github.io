@@ -15,7 +15,7 @@
 	});
 </script>
 
-<div class="fixed z-30 w-full">
+<div class="fixed bg-background z-20 w-full">
 	<nav class="flex justify-between items-center px-16 py-8">
 		<button on:click={() => scrollToSection(0)}
 			><h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">

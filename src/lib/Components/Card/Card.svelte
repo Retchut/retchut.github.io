@@ -35,11 +35,11 @@
 	<GradientTransition toRight={false} />
 	<!-- bg image -->
 	<img
-		class="z-0 absolute inset-0 w-full opacity-30"
+		class="absolute inset-0 w-full opacity-30"
 		src={`./banners/${cardData.coverImgName}.jpg`}
 		alt={cardData.coverImgName + " banner"}
 	/>
-	<header class="z-10 peer flex items-center w-full">
+	<header class="peer flex items-center w-full">
 		<div class="w-full pl-6" class:hide-left={hideFront} class:return={!hideFront}>
 			<TextGroup
 				title={cardData.frontTitle}
@@ -52,7 +52,7 @@
 	</header>
 	<!-- back -->
 	<a
-		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-6 fade-in-left"
+		class="absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-6 fade-in-left"
 		on:mouseenter={toggleShowVisibility}
 		on:mouseleave={toggleShowVisibility}
 		href={cardData.url}
