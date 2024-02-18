@@ -5,7 +5,7 @@
 -->
 <script lang="ts">
 	// imports
-	import { theme } from "../../../utils/stores";
+	import { theme, currentBreakpoint } from "../../../utils/stores";
 	import { scrollToSection } from "../../../utils/scrolling";
 
 	// component code
@@ -13,10 +13,17 @@
 	theme.subscribe((value) => {
 		themeVal = value;
 	});
+
+	let smallBreakpoint: boolean = true;
+	currentBreakpoint.subscribe((value) => {
+		smallBreakpoint = value == "xs" || value == "sm";
+	});
 </script>
 
-<div class="fixed bg-background z-20 w-full">
-	<nav class="flex justify-between items-center px-16 py-8">
+<div class="fixed bg-background {smallBreakpoint ? 'z-40' : 'z-20'} w-full">
+	<nav
+		class="flex {smallBreakpoint ? 'justify-center' : 'justify-between'} items-center px-16 py-8"
+	>
 		<button on:click={() => scrollToSection(0)}
 			><h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">
 				MÁRIO TRAVASSOS
