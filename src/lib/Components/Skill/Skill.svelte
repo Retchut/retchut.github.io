@@ -64,8 +64,8 @@
 		alt={skillData.title}
 	/>
 	<!-- front -->
-	<div
-		class="flex items-center w-full {smallBreakpoint
+	<button
+		class="cursor-default flex items-center w-full {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'
@@ -88,10 +88,10 @@
 				subtitlePadding={false}
 			/>
 		</div>
-	</div>
+	</button>
 	<!-- back -->
 	<button
-		class="absolute top-0 left-0 {hideBack
+		class="cursor-default absolute top-0 left-0 {hideBack
 			? 'hidden'
 			: 'flex'} w-full h-full flex-col justify-center px-2 {smallBreakpoint
 			? ''
