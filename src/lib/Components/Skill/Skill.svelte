@@ -39,8 +39,10 @@
 	// Note to self: this is done via javascript, because we cannot handle the visibility of elements
 	//					which are not the subsequent siblings of another element we are hovering hover
 	let hideFront: boolean = false;
-	const toggleShowVisibility: () => void = () => {
+	let hideBack: boolean = true;
+	const toggleCardVisibility: () => void = () => {
 		hideFront = !hideFront;
+		hideBack = !hideBack;
 	};
 
 	const technologyRows: string[][] = splitArray(skillData.technologies, 2);
@@ -63,11 +65,13 @@
 	/>
 	<!-- front -->
 	<div
-		class="peer flex items-center w-full {smallBreakpoint
+		class="flex items-center w-full {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'
 			: 'slider-right'}"
+		on:mouseenter={toggleCardVisibility}
+		on:mouseleave={toggleCardVisibility}
 	>
 		<div
 			class="w-full {smallBreakpoint ? '' : onRight ? 'pr-6' : 'pl-6'}"
@@ -87,13 +91,15 @@
 	</div>
 	<!-- back -->
 	<button
-		class="absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {smallBreakpoint
+		class="absolute top-0 left-0 {hideBack
+			? 'hidden'
+			: 'flex'} w-full h-full flex-col justify-center px-2 {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'
 			: 'slider-right'}"
-		on:mouseenter={toggleShowVisibility}
-		on:mouseleave={toggleShowVisibility}
+		on:mouseenter={toggleCardVisibility}
+		on:mouseleave={toggleCardVisibility}
 	>
 		<div
 			class="w-full max-h-full flex flex-col justify-center {smallBreakpoint
