@@ -6,4 +6,5 @@ export interface ProjectData {
 	tags: string[];
 	techs: string[];
 	projectURL: string;
+	projectButtonText: string;
 }

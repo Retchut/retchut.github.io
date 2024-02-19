@@ -23,6 +23,7 @@
 				"imgName": "oportocine",
 				"tags": ["Web"],
 				"techs": ["Figma", "React", "Bootstrap"],
+				"projectButtonText": "",
 				"projectURL": ""
 			},
 			{
@@ -39,6 +40,7 @@
 				"imgName": "shifteam",
 				"tags": ["Web"],
 				"techs": ["React", "Tailwind", "Django"],
+				"projectButtonText": "Check out the project",
 				"projectURL": "https://www.shifteam.pt"
 			},
 			{
@@ -56,6 +58,7 @@
 				],
 				"tags": ["Web"],
 				"techs": ["React", "Tailwind", "Express", "MongoDB"],
+				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/atlas"
 			},
 			{
@@ -68,6 +71,7 @@
 				"imgName": "website",
 				"tags": ["Web"],
 				"techs": ["Svelte", "Tailwind", "CSS", "Vite"],
+				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/retchut.github.io"
 			}
 		],
@@ -87,6 +91,7 @@
 				],
 				"tags": ["XR", "Web"],
 				"techs": ["A-Frame", "Meshroom", "Express", "Vite", "Photogrammetry", "LiDAR"],
+				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
 			}
 		],
@@ -106,6 +111,7 @@
 				],
 				"tags": ["Game Dev", "Networking"],
 				"techs": ["Unity", "Websockets", "Linux"],
+				"projectButtonText": "Play the game",
 				"projectURL": "https://retchut.itch.io/lucky-lapin"
 			},
 			{
@@ -124,6 +130,7 @@
 				],
 				"tags": ["Game Dev", "Sound Design"],
 				"techs": ["Unity", "Blender", "FMOD", "Reaper"],
+				"projectButtonText": "Play the game",
 				"projectURL": "https://jfbaltazar.itch.io/miasma"
 			},
 			{
@@ -141,6 +148,7 @@
 				],
 				"tags": ["Game Dev"],
 				"techs": ["Unity", "Blender"],
+				"projectButtonText": "Play the game",
 				"projectURL": "https://retchut.itch.io/feup-hell"
 			}
 		]
