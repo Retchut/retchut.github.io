@@ -9,6 +9,23 @@
 	"projects": {
 		"webDev": [
 			{
+				"title": "Oportocine Website",
+				"description": [
+					"I am currently designing and developing a website for a portuguese script writer.",
+					"My goal is fully understanding the client's vision, and ensuring that the final product becomes a true reflection of their narrative process and creativity."
+				],
+				"contributions": [
+					"Designing the user interface alongside the client",
+					"Architecturing the system and developing the full-stack application",
+					"Deploying and maintaining the server and application",
+					"Smoothening the client's workflow by developing a custom CMS for the website's content management"
+				],
+				"imgName": "oportocine",
+				"tags": ["Web"],
+				"techs": ["Figma", "React", "Bootstrap"],
+				"projectURL": ""
+			},
+			{
 				"title": "Shifteam",
 				"description": [
 					"Shifteam empowers managers to effortlessly craft efficient schedules, allowing them to allocate more time to prioritize essential responsibilities. With an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
@@ -125,18 +142,6 @@
 				"tags": ["Game Dev"],
 				"techs": ["Unity", "Blender"],
 				"projectURL": "https://retchut.itch.io/feup-hell"
-			},
-			{
-				"title": "Arch Quick Setup",
-				"description": [
-					"Some scripts and files to make setting up my OS on a fresh install just the way I like it.",
-					"Just clone the repo and run the script, and you'll have my workstation up and running."
-				],
-				"contributions": [],
-				"imgName": "arch-quick-setup",
-				"tags": ["Utility"],
-				"techs": ["Bash", "Linux"],
-				"projectURL": "https://github.com/Retchut/arch-quick-setup"
 			}
 		]
 	}
