@@ -11,10 +11,9 @@
 	import Projects from "./lib/Sections/Projects.svelte";
 	import Contacts from "./lib/Sections/Contacts.svelte";
 
-	import { scrollSnap, currentBreakpoint } from "./utils/stores";
+	import { currentBreakpoint } from "./utils/stores";
 	import {
 		setScrollingElement,
-		reloadSectionOffsets,
 		setOffsetsLoaded,
 		handleScroll,
 		scrollToSection,
@@ -25,26 +24,15 @@
 
 	// component code
 	let mainEl: HTMLElement;
-	let firstRender: boolean = true;
 
-	// this controls whether snapping to sections is enabled or disabled
-	let snapping: boolean;
-	scrollSnap.subscribe((value) => {
-		snapping = value;
-		// changing snapping requires the section offsets to be recalculated, as it disables some extra padding on the bottom of the sections
-		reloadSectionOffsets();
-	});
+	// defined by the Projects.svelte component
+	let preserveGalleryWidth: () => void;
 
 	// TODO: refactor PageSection into a reactive page section, as it is used in About, Projects and Skillset in the exact same way
-	// TODO: pass list of breakpoints to each section and let them decide whether they should be snapped or not (passing down the list into PageSection, which handles the snapping)
 	// this controls whether the navbar, sidebar and themepicker are shown
 	let hideControls: boolean;
 	currentBreakpoint.subscribe((value) => {
 		hideControls = value == "sm" || value == "xs";
-		if (!firstRender && hideControls) {
-			scrollSnap.set(false);
-		}
-		firstRender = false;
 	});
 
 	const updateBreakpoint = () => {
@@ -62,13 +50,10 @@
 
 <main
 	bind:this={mainEl}
-	class="bg-background2 w-screen h-screen overflow-y-scroll snap-mandatory {snapping
-		? 'snap-y'
-		: 'snap-none'}
-		{snapping ? 'hide-scrollbar' : ''}"
+	class="bg-background2 w-screen h-screen overflow-y-scroll"
 	on:scroll={() => handleScroll()}
 >
-	<Navbar hideSnapControls={hideControls} />
+	<Navbar />
 	{#if !hideControls}
 		<Sidebar />
 		<ThemePicker />
@@ -77,21 +62,14 @@
 		<Hero />
 		<About />
 		<Skillset />
-		<Projects />
+		<Projects bind:preserveGalleryWidth />
 		<Contacts />
 	</div>
 </main>
 
-<svelte:window on:resize={updateBreakpoint} />
-
-<style>
-	.hide-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
-
-	/* Hide scrollbar for IE, Edge and Firefox */
-	.hide-scrollbar {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
-	}
-</style>
+<svelte:window
+	on:resize={() => {
+		updateBreakpoint();
+		preserveGalleryWidth();
+	}}
+/>

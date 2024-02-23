@@ -36,7 +36,8 @@ function updateSection(newSection: number) {
 	websiteSection.update((_value) => newSection);
 }
 
-function getScrollPos() {
+// I don't like the argument being an enum type. TODO: change it to a callback function which performs the comparison
+function getRealSection(criteria: "end" | "middle") {
 	if (scrollingEl === null) {
 		console.error(SCROLL_EL_MISSING_ERR);
 		return 0;
@@ -49,9 +50,10 @@ function getScrollPos() {
 
 		if (scrollPosition < sectionStart || scrollPosition > sectionEnd) continue;
 
-		const midpoint = sectionStart + (sectionEnd - sectionStart) / 2;
+		const comparisonPoint =
+			criteria === "end" ? sectionEnd : sectionStart + (sectionEnd - sectionStart) / 2;
 
-		return scrollPosition < midpoint ? i : i + 1;
+		return scrollPosition < comparisonPoint ? i : i + 1;
 	}
 
 	// this means section offsets were not correctly loaded
@@ -92,7 +94,7 @@ function scrollToSection(targetSection: number): void {
 function handleScroll() {
 	if (!sectionOffsetsLoaded) reloadSectionOffsets();
 	const currentSection = get(websiteSection);
-	const realSection = getScrollPos();
+	const realSection = getRealSection("middle");
 	if (realSection !== currentSection) updateSection(realSection);
 }
 
@@ -101,6 +103,7 @@ export {
 	setOffsetsLoaded,
 	reloadSectionOffsets,
 	getSections,
+	getRealSection,
 	scrollToSection,
 	handleScroll,
 };

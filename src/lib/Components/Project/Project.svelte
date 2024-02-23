@@ -8,8 +8,12 @@
 	// imports
 	import type { ProjectData } from "../../../types/Project";
 
+	import { currentBreakpoint } from "../../../utils/stores";
+
 	import TextGroup from "../Text/TextGroup.svelte";
 	import Tag from "../Tags/Tag.svelte";
+	import Button from "../Button/Button.svelte";
+	import Anchor from "../Button/Anchor.svelte";
 
 	// props
 	export let projectData: ProjectData = {
@@ -19,19 +23,38 @@
 		imgName: "",
 		tags: [""],
 		techs: [""],
+		projectButtonText: "",
 		projectURL: "",
 	};
+
+	let smallBreakpoint: boolean = true;
+	currentBreakpoint.subscribe((value) => {
+		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
+	});
 </script>
 
 <li class="flex flex-col md:flex-row gap-8 md:gap-y-0">
-	<img
-		class="w-full md:w-1/3 max-w-[300px] self-center md:self-start aspect-square object-contain rounded-md"
-		src={`./projects/${projectData.imgName}-hd.jpg`}
-		alt={projectData.imgName}
-	/>
+	<div class="w-full h-full md:w-1/3 max-w-[300px] self-center md:self-start">
+		<img
+			class="aspect-square object-contain rounded-md"
+			src={`./projects/${projectData.imgName}-hd.jpg`}
+			alt={projectData.imgName}
+		/>
+		{#if !smallBreakpoint}
+			{#if projectData.projectURL !== ""}
+				<div class="flex">
+					<Anchor
+						class="w-fit px-6 py-4 mt-4 mx-auto text-center"
+						text={projectData.projectButtonText}
+						targetURL={projectData.projectURL}
+					/>
+				</div>
+			{/if}
+		{/if}
+	</div>
 	<div class="w-full md:w-2/3 flex flex-col text-main gap-6">
 		<div>
-			<TextGroup title={projectData.title} titleSize="5xl" paragraphs={projectData.description} />
+			<TextGroup title={projectData.title} titleSize="4xl" paragraphs={projectData.description} />
 		</div>
 		{#if projectData.contributions.length > 0}
 			<div>
@@ -54,8 +77,20 @@
 				{/each}
 			</div>
 		</div>
+		{#if smallBreakpoint}
+			{#if projectData.projectURL !== ""}
+				<div class="flex">
+					<Anchor
+						class="w-1/2 px-6 py-4 mx-auto text-center"
+						text={projectData.projectButtonText}
+						targetURL={projectData.projectURL}
+					/>
+				</div>
+			{/if}
+		{/if}
 	</div>
 </li>
+<hr class="text-main" />
 
 <style>
 </style>

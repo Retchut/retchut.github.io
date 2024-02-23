@@ -39,8 +39,10 @@
 	// Note to self: this is done via javascript, because we cannot handle the visibility of elements
 	//					which are not the subsequent siblings of another element we are hovering hover
 	let hideFront: boolean = false;
-	const toggleShowVisibility: () => void = () => {
+	let hideBack: boolean = true;
+	const toggleCardVisibility: () => void = () => {
 		hideFront = !hideFront;
+		hideBack = !hideBack;
 	};
 
 	const technologyRows: string[][] = splitArray(skillData.technologies, 2);
@@ -57,20 +59,22 @@
 	<GradientTransition toRight={smallBreakpoint ? false : onRight} />
 	<!-- bg image -->
 	<img
-		class="z-0 absolute inset-0 w-full opacity-30"
+		class="absolute inset-0 w-full opacity-30"
 		src={`./banners/${skillData.bannerImg}.jpg`}
 		alt={skillData.title}
 	/>
 	<!-- front -->
-	<div
-		class="z-10 peer flex items-center w-full {smallBreakpoint
+	<button
+		class="cursor-default flex items-center w-full {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'
 			: 'slider-right'}"
+		on:mouseenter={toggleCardVisibility}
+		on:mouseleave={toggleCardVisibility}
 	>
 		<div
-			class="w-full {smallBreakpoint ? 'pl-6' : onRight ? 'pr-6' : 'pl-6'}"
+			class="w-full {smallBreakpoint ? '' : onRight ? 'pr-6' : 'pl-6'}"
 			class:hide-left={onRight && hideFront}
 			class:hide-right={!onRight && hideFront}
 			class:return={!hideFront}
@@ -84,16 +88,18 @@
 				subtitlePadding={false}
 			/>
 		</div>
-	</div>
+	</button>
 	<!-- back -->
 	<button
-		class="z-20 absolute top-0 left-0 hidden w-full h-full peer-hover:flex hover:flex flex-col justify-center px-2 {smallBreakpoint
+		class="cursor-default absolute top-0 left-0 {hideBack
+			? 'hidden'
+			: 'flex'} w-full h-full flex-col justify-center px-2 {smallBreakpoint
 			? ''
 			: onRight
 			? 'slider-left'
 			: 'slider-right'}"
-		on:mouseenter={toggleShowVisibility}
-		on:mouseleave={toggleShowVisibility}
+		on:mouseenter={toggleCardVisibility}
+		on:mouseleave={toggleCardVisibility}
 	>
 		<div
 			class="w-full max-h-full flex flex-col justify-center {smallBreakpoint
@@ -102,12 +108,6 @@
 				? 'fade-in-right'
 				: 'fade-in-left'}"
 		>
-			<!-- <TextGroup
-				paragraphs={[skillData.description]}
-				showBar={false}
-				titleSize="2xl"
-				align={onRight ? "right" : "left"}
-			/> -->
 			{#each technologyRows as technologyRow}
 				<div
 					class="h-1/3 sm:h-1/2 flex items-center {smallBreakpoint
@@ -125,9 +125,6 @@
 					{/each}
 				</div>
 			{/each}
-			<!-- {#each skillData.technologies as imgName}
-				<img src={`./skills/${imgName}.png`} alt={imgName} class="h-full px-3" />
-			{/each} -->
 		</div>
 	</button>
 </li>

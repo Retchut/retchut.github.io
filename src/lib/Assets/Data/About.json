@@ -1,15 +1,15 @@
 {
 	"title": "About me",
 	"paragraphs": [
-		"My name is Mário Travassos, an aspiring Software Developer from Portugal. I'm deeply interested in **UX Design**, **Game Development** and **Web Development**.",
-		"When I'm not studying or working in the aforementioned areas, you may find me **repairing** and/or **tinkering** with electronics and clockwork, **automating** simple tasks I could have done myself by hand in 30 seconds, playing video or trading card **games**, or consuming all kinds of media.",
-		"Currently, I'm **studying** at the //Faculty of Engineering of the University of Porto// (FEUP) finishing up my master's degree.",
-		"I am the former President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, a youth association focused on Computer Graphics, Human-Computer Interaction and Game Development. We host a multitude of events, but our biggest one is the Game Dev Meet @Porto. Check ||us[ncgm.fe.up.pt]|| out, we're pretty cool."
+		"Hello there! My name is Mário Travassos, a passionate Software Developer from Portugal. I'm deeply interested in **Web Design**, **Computer Graphics** and **Game Development**.",
+		"I am finishing up my academic journey at ||FEUP[fe.up.pt]||, working on my thesis focused on **studying 3D reconstruction techniques**, with the ultimate goal of **streamlining the creation of photo-realistic WebVR experiences**.",
+		"During my term as the former President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, I led the youth association in hosting events and developing projects in **Computer Graphics**, **Human-Computer Interaction** and **Game Development**. Our flagship event is the monthly Game Dev Meet @Porto. Check ||us[ncgm.fe.up.pt]|| out, we do some pretty cool stuff!",
+		"Away from the digital world, you can find me engaging in multiple activities, from **repairing and tinkering** to **reading**, **cooking** or **playing video or trading card games**. I am also an avid **language learning enthusiast**, and I am currently hard at work studying japanese."
 	],
 	"title2": "What I'm up to",
 	"paragraphs2": [
-		"I'm currently attending the 2nd year of a Master's Degree in Informatics and Computer Engineering at FEUP, working on my thesis focused on **optimizing photo-realistic VR experiences for the web**.",
-		"Meanwhile, I'm still **immersing** and **sentence-mining** japanese media, so as to continue to improve my japanese language proficiency.",
-		"All the while, I continue **making games** as a hobby."
+		"Alongside my thesis, I am in the process of **designing and developing a portfolio website for a portuguese script writer**.",
+		"As part of my language-learning journey, I keep on **sentence-mining** and **immersing in japanese media**, with the goal of further improving my japanese language proficiency.",
+		"All the while, I continue **diving into graphics programming** as a hobby."
 	]
 }
