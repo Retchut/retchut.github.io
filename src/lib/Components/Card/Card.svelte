@@ -10,7 +10,6 @@
 	// imports
 	import type { CardData } from "../../../types/Card";
 
-	import GradientTransition from "../GradientTransition/GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
 
 	// props
@@ -31,16 +30,21 @@
 	};
 </script>
 
-<article class="flex relative color-fade-anim overflow-hidden rounded-lg h-[150px]">
-	<GradientTransition toRight={false} />
+<article
+	class="flex relative overflow-hidden rounded-lg h-[150px] bg-gradient-to-r from-accent0 from-60% to-background2"
+>
 	<!-- bg image -->
 	<img
 		class="absolute inset-0 w-full opacity-30"
 		src={`./banners/${cardData.coverImgName}.jpg`}
 		alt={cardData.coverImgName + " banner"}
 	/>
-	<header class="peer flex items-center w-full">
-		<div class="w-full pl-6" class:hide-left={hideFront} class:return={!hideFront}>
+	<header
+		class="peer flex items-center w-full"
+		class:hide-left={hideFront}
+		class:return={!hideFront}
+	>
+		<div class="w-full pl-6">
 			<TextGroup
 				title={cardData.frontTitle}
 				titlePadding={false}

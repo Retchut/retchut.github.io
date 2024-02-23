@@ -4,7 +4,6 @@
 
 	import Navbar from "../Components/Navigation/Navbar.svelte";
 	import Sidebar from "../Components/Navigation/Sidebar.svelte";
-	import ThemePicker from "../Components/Themes/ThemePicker.svelte";
 	import Interests from "../Sections/Interests.svelte";
 
 	import { currentBreakpoint } from "../../utils/stores";
@@ -23,7 +22,7 @@
 	let preserveGalleryWidth: () => void;
 
 	// TODO: refactor PageSection into a reactive page section, as it is used in About, Projects and Skillset in the exact same way
-	// this controls whether the navbar, sidebar and themepicker are shown
+	// this controls whether the sidebar is shown
 	let hideControls: boolean;
 	currentBreakpoint.subscribe((value) => {
 		hideControls = value == "sm" || value == "xs";
@@ -50,7 +49,6 @@
 	<Navbar />
 	{#if !hideControls}
 		<Sidebar />
-		<ThemePicker />
 	{/if}
 	<div class="flex flex-col">
 		<Interests />

@@ -27,7 +27,7 @@
 		<img
 			src="/profile.jpg"
 			alt="My portrait"
-			class="absolute right-6 sm:right-36 md:-right-6 -z-10 max-h-[300px] sm:max-h-[450px] md:max-h-[600px] rounded-sm"
+			class="absolute right-6 sm:right-36 md:-right-6 -z-10 max-h-[300px] sm:max-h-[450px] md:max-h-[600px] rounded-lg shadow-image shadow-accent0"
 		/>
 	</header>
 </PageSection>
