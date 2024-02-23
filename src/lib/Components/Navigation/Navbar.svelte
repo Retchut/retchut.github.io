@@ -36,6 +36,16 @@
 				{/each}
 			</div>
 		</div> -->
+		<div class="flex">
+			<a class="pr-4" href="/#/"
+				><h2 class="text-2xl font-babas-neue text-accent{themeVal} color-fade-anim">Home</h2></a
+			>
+			<a class="pl-4" href="/#/interests"
+				><h2 class="text-2xl font-babas-neue text-accent{themeVal} color-fade-anim">
+					Interests
+				</h2></a
+			>
+		</div>
 	</nav>
 </div>
 

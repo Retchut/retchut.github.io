@@ -5,7 +5,7 @@
 	import Navbar from "../Components/Navigation/Navbar.svelte";
 	import Sidebar from "../Components/Navigation/Sidebar.svelte";
 	import ThemePicker from "../Components/Themes/ThemePicker.svelte";
-	import NotFound from "../Sections/NotFound.svelte";
+	import Interests from "../Sections/Interests.svelte";
 
 	import { currentBreakpoint } from "../../utils/stores";
 	import {
@@ -53,7 +53,7 @@
 		<ThemePicker />
 	{/if}
 	<div class="flex flex-col">
-		<NotFound />
+		<Interests />
 	</div>
 </main>
 
