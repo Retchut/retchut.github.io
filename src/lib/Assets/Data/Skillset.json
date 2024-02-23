@@ -40,7 +40,7 @@
 		{
 			"title": "Computer Graphics",
 			"description": "Breathing Life into Pixels",
-			"technologies": ["webgl", "threejs", "aframe", "opencv", "opengl", "vulkan", "glslhlsl"],
+			"technologies": ["webgl", "threejs", "aframe", "opencv", "opengl", "glslhlsl"],
 			"bannerImg": "cg"
 		},
 		{

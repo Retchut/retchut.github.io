@@ -42,10 +42,6 @@ body {
 	overflow: hidden;
 }
 
-section {
-	scroll-snap-align: start;
-}
-
 p,
 h1,
 h2,

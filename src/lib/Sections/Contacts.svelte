@@ -25,20 +25,22 @@
 </script>
 
 <PageSection>
-	<div class="text-white relative">
-		<div class="z-10 flex flex-col relative">
-			<header class="mx-auto max-w-[150px] sm:max-w-[300px] lg:max-w-none">
-				<TextGroup {title} {paragraphs} align="center" />
-			</header>
-			<Button
-				class="mx-auto my-4 p-4"
-				text={contactBtnTxt}
-				action={() => (window.location.href = "mailto:mariotravassosdev@protonmail.com")}
-			/>
-		</div>
-		<div class="z-0 absolute inset-0 m-auto w-2/3 h-[60vh]">
-			<div class="{boxStyling} -inset-4 border-accent{themeVal}"></div>
-			<div class="{boxStyling} inset-4 border-accent{(themeVal + 1) % 4}"></div>
+	<div class="flex h-full justify-center items-center pt-12">
+		<div class="text-white h-[70%] w-[80%] p-8 relative">
+			<div class="z-0 absolute inset-0 m-auto h-full w-full">
+				<div class="{boxStyling} -inset-4 border-accent{themeVal}"></div>
+				<div class="{boxStyling} inset-4 border-accent{(themeVal + 1) % 4}"></div>
+			</div>
+			<div class="h-full z-10 flex flex-col justify-center relative">
+				<header>
+					<TextGroup {title} {paragraphs} align="center" />
+				</header>
+				<Button
+					class="mx-auto my-4 p-4"
+					text={contactBtnTxt}
+					action={() => (window.location.href = "mailto:mariotravassosdev@protonmail.com")}
+				/>
+			</div>
 		</div>
 	</div>
 </PageSection>
