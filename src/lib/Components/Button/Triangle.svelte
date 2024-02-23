@@ -6,17 +6,11 @@
 -->
 <script lang="ts">
 	// imports
-	import { theme, websiteSection } from "../../../utils/stores";
+	import { websiteSection } from "../../../utils/stores";
 	import { scrollToSection } from "../../../utils/scrolling";
 
 	// props
 	export let section: number = 0;
-
-	// component code
-	let themeVal!: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	let selected: boolean = false;
 	websiteSection.subscribe((value) => {
@@ -29,7 +23,7 @@
 	class="relative my-2 w-8 h-8 overflow-visible"
 	on:click={() => scrollToSection(section)}
 >
-	<div class="absolute outer border-t-accent{themeVal}"></div>
+	<div class="absolute outer border-t-accent0"></div>
 	<div class="absolute inner border-t-background2"></div>
 </button>
 
@@ -54,7 +48,7 @@
 	}
 
 	/* Test squares */
-	.outer-square {
+	/* .outer-square {
 		bottom: 0px;
 		left: 0px;
 		@apply border-solid;
@@ -67,4 +61,5 @@
 		@apply border-solid;
 		border-width: 18px;
 	}
+	*/
 </style>

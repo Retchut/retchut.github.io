@@ -19,8 +19,6 @@
 	// imports
 	import StyledParagraph from "../../Components/Text/StyledParagraph.svelte";
 
-	import { theme } from "../../../utils/stores";
-
 	// props
 	export let title: string = "";
 	export let subtitle: string = "";
@@ -35,11 +33,6 @@
 	export let blendTitle: boolean = false;
 
 	// component code
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
-
 	if (titleSize.match(/^(xs|sm|base|lg|[2-9]?xl)$/g) === null) titleSize = "6xl";
 
 	if (!["left", "center", "right"].includes(align)) align = "left";
@@ -61,7 +54,7 @@
 {/if}
 
 {#if showBar}
-	<hr class="w-16 border-accent{themeVal} border-2 rounded-full mb-6 color-fade-anim bar-{align}" />
+	<hr class="w-16 border-accent0 border-2 rounded-full mb-6 bar-{align}" />
 {/if}
 
 {#if paragraphs.length !== 0}

@@ -5,14 +5,8 @@
 -->
 <script lang="ts">
 	// imports
-	import { theme, currentBreakpoint } from "../../../utils/stores";
+	import { currentBreakpoint } from "../../../utils/stores";
 	import { scrollToSection } from "../../../utils/scrolling";
-
-	// component code
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	let smallBreakpoint: boolean = true;
 	currentBreakpoint.subscribe((value) => {
@@ -25,14 +19,12 @@
 		class="flex {smallBreakpoint ? 'justify-center' : 'justify-between'} items-center px-16 py-8"
 	>
 		<button on:click={() => scrollToSection(0)}
-			><h1 class="text-3xl font-babas-neue text-accent{themeVal} color-fade-anim">
-				MÁRIO TRAVASSOS
-			</h1></button
+			><h1 class="text-3xl font-babas-neue text-accent0">MÁRIO TRAVASSOS</h1></button
 		>
 		<!-- <div class="bg-background px-3 py-4 rounded-full">
 			<div class="space-y-2">
 				{#each Array(3) as _i}
-					<div class="w-8 h-0.5 color-fade-anim bg-accent{themeVal}"></div>
+					<div class="w-8 h-0.5 bg-accent0"></div>
 				{/each}
 			</div>
 		</div> -->

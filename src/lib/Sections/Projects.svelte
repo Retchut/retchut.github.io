@@ -14,7 +14,7 @@
 	import Project from "../Components/Project/Project.svelte";
 	import Card from "../Components/Card/Card.svelte";
 
-	import { theme, currentBreakpoint } from "../../utils/stores";
+	import { currentBreakpoint } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Projects.json";
 
 	// component code
@@ -26,12 +26,6 @@
 	}: { webDev: ProjectData[]; xrCG: ProjectData[]; gameDev: ProjectData[] } =
 		sectionData["projects"] ?? [];
 	const gitCardData: CardData = sectionData["gitCard"] ?? {};
-
-	// component code
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
 
 	let smallBreakpoint: boolean = true;
 	currentBreakpoint.subscribe((value) => {
@@ -128,8 +122,7 @@
 							2}px; --end-translate-y:{selectorHeight -
 							(selectorBarHeights[2] + selectorBarHeight) / 2 -
 							selectorBarPadding / 2}px;"
-						class="h-5 w-1 bg-accent{themeVal} rounded-full mr-2 color-fade-anim {visibleProjTab ===
-						0
+						class="h-5 w-1 bg-accent0 rounded-full mr-2 {visibleProjTab === 0
 							? 'translate-y-start'
 							: visibleProjTab === 1
 							? 'translate-y-middle'
@@ -141,8 +134,7 @@
 							2}px;--middle-translate-x:{(galleryWidth - selectorBarWidth) /
 							2}px; --end-translate-x:{galleryWidth -
 							(selectorBarWidths[2] + selectorBarWidth) / 2}px;"
-						class="w-16 border-accent{themeVal} border-2 rounded-full mb-6 color-fade-anim {visibleProjTab ===
-						0
+						class="w-16 border-accent0 border-2 rounded-full mb-6 {visibleProjTab === 0
 							? 'translate-x-start'
 							: visibleProjTab === 1
 							? 'translate-x-middle'

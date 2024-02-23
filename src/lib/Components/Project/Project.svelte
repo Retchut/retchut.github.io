@@ -12,7 +12,6 @@
 
 	import TextGroup from "../Text/TextGroup.svelte";
 	import Tag from "../Tags/Tag.svelte";
-	import Button from "../Button/Button.svelte";
 	import Anchor from "../Button/Anchor.svelte";
 
 	// props
@@ -36,7 +35,7 @@
 <li class="flex flex-col md:flex-row gap-8 md:gap-y-0">
 	<div class="w-full h-full md:w-1/3 max-w-[300px] self-center md:self-start">
 		<img
-			class="aspect-square object-contain rounded-md"
+			class="aspect-square object-contain rounded-lg shadow-image shadow-accent0"
 			src={`./projects/${projectData.imgName}-hd.jpg`}
 			alt={projectData.imgName}
 		/>
