@@ -8,28 +8,22 @@
 	import TextGroup from "../Components/Text/TextGroup.svelte";
 	import Button from "../Components/Button/Button.svelte";
 
-	import { theme } from "../../utils/stores";
 	import sectionData from "../Assets/Data/Contact.json";
 
 	// component code
-	let themeVal: number;
-	theme.subscribe((value) => {
-		themeVal = value;
-	});
-
 	const title: string = sectionData["title"] ?? "DefaultTitleTxt";
 	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];
 	const contactBtnTxt: string = sectionData["buttonText"] ?? "ContactBtnTxt";
 
-	const boxStyling = "absolute w-full h-full border-4 color-fade-anim";
+	const boxStyling = "absolute w-full h-full border-4";
 </script>
 
 <PageSection>
 	<div class="flex h-full justify-center items-center pt-12">
 		<div class="text-white h-[70%] w-[80%] p-8 relative">
 			<div class="z-0 absolute inset-0 m-auto h-full w-full">
-				<div class="{boxStyling} -inset-4 border-accent{themeVal}"></div>
-				<div class="{boxStyling} inset-4 border-accent{(themeVal + 1) % 4}"></div>
+				<div class="{boxStyling} -inset-4 border-accent0"></div>
+				<div class="{boxStyling} inset-4 border-accent1"></div>
 			</div>
 			<div class="h-full z-10 flex flex-col justify-center relative">
 				<header>

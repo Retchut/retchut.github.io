@@ -33,7 +33,11 @@
 		</header>
 		<div class="w-full lg:w-1/2 self-end flex flex-col text-main">
 			<div class="grow flex justify-center lg:justify-end items-start mb-8">
-				<img src="/about.jpg" alt="My portrait... again" class="w-[350px] rounded-sm" />
+				<img
+					src="/about.jpg"
+					alt="My portrait... again"
+					class="w-[350px] rounded-lg shadow-image shadow-accent0"
+				/>
 			</div>
 			<TextGroup title={title2} paragraphs={paragraphs2} />
 		</div>

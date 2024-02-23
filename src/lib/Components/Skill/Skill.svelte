@@ -9,7 +9,6 @@
 	// imports
 	import type { SkillData } from "../../../types/Skill";
 
-	import GradientTransition from "../GradientTransition/GradientTransition.svelte";
 	import TextGroup from "../Text/TextGroup.svelte";
 
 	import { splitArray } from "../../../utils/arrayFilters";
@@ -49,14 +48,13 @@
 </script>
 
 <li
-	class="skill flex relative color-fade-anim overflow-hidden rounded{smallBreakpoint
+	class="skill flex relative overflow-hidden rounded{smallBreakpoint
 		? ''
 		: onRight
 		? '-r'
-		: '-l'}-lg"
+		: '-l'}-lg bg-gradient-to-{onRight ? 'l' : 'r'} from-accent0 from-60% to-background2"
 	style="--width-percent:{widthPercent}; --after-width-px:{afterPaddingPX}; --skill-height-px:{skillHeightPX}"
 >
-	<GradientTransition toRight={smallBreakpoint ? false : onRight} />
 	<!-- bg image -->
 	<img
 		class="absolute inset-0 w-full opacity-30"
