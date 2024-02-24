@@ -27,19 +27,21 @@
 	};
 
 	let smallBreakpoint: boolean = true;
+	let buttonBelowText: boolean = true;
 	currentBreakpoint.subscribe((value) => {
 		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
+		buttonBelowText = value == "xs" || value == "sm";
 	});
 </script>
 
 <li class="flex flex-col md:flex-row gap-8 md:gap-y-0">
-	<div class="w-full h-full md:w-1/3 max-w-[300px] self-center md:self-start">
+	<div class="w-full h-full md:w-1/3 max-w-[300px] p-2 self-center md:self-start">
 		<img
 			class="aspect-square object-contain rounded-lg shadow-image shadow-accent0"
 			src={`./projects/${projectData.imgName}-hd.jpg`}
 			alt={projectData.imgName}
 		/>
-		{#if !smallBreakpoint}
+		{#if !buttonBelowText}
 			{#if projectData.projectURL !== ""}
 				<div class="flex">
 					<Anchor
@@ -76,7 +78,7 @@
 				{/each}
 			</div>
 		</div>
-		{#if smallBreakpoint}
+		{#if buttonBelowText}
 			{#if projectData.projectURL !== ""}
 				<div class="flex">
 					<Anchor
