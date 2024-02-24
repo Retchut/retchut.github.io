@@ -44,15 +44,14 @@
 				"projectURL": "https://www.shifteam.pt"
 			},
 			{
-				"title": "Atlas of Anatomical Pathology",
+				"title": "Atlas of Veterinarian Pathology",
 				"description": [
-					"An online Atlas of Anatomical Pathology. Still a WIP.",
-					"An educative tool made for a Veterinary Medicine teacher."
+					"An online Atlas of Veterinarian Pathology. A work in progress, currently on hiatus.",
+					"It is an educative tool made for Veterinary Medicine teachers at the |University of Trás-os-Montes and Alto Douro[utad.pt/en/university/]|, based on their |book[https://www.wook.pt/livro/atlas-de-patologia-veterinaria-maria-dos-anjos-pires/75229]|."
 				],
 				"imgName": "atlas",
 				"contributions": [
-					"Designed the interface and UI",
-					"Developed the front-end application, implementing the design",
+					"Developed a simple front-end application",
 					"Developed a web server to host and serve the application content",
 					"Host, perform maintenance and updates on the server and content, among other DevOps tasks"
 				],
@@ -77,6 +76,57 @@
 		],
 		"xrCG": [
 			{
+				"title": "OpenGL experiments",
+				"description": [
+					"Using mostly OpenGL, GLSL and C++, I'm currently developing a small tool where I can quickly create scenes and test different shaders, in order to replicate interesting and visually appealing scenes I commonly see in the media I appreciate.",
+					"The goal is not only to create this system, but also expand on my knowledge of how the graphics pipeline works at the lower level.",
+					"I not only hope to improve my general knowledge of graphics programming this way, but also to understand how common performance optimizations work deep down, and overall how the systems that we use to create stunning visuals work under the hood."
+				],
+				"imgName": "opengl-experiments",
+				"contributions": [
+					"Design and implement a simple renderer",
+					"Load and apply shaders to different objects",
+					"Parse a scene from a file",
+					"Play around with different types of common shaders"
+				],
+				"tags": ["Computer Graphics"],
+				"techs": ["OpenGL", "C++", "GLSL"],
+				"projectButtonText": "",
+				"projectURL": ""
+			},
+			{
+				"title": "Shadertoy",
+				"description": [
+					"On this platform, I have been playing around with shadder programming, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
+					"Check out the shaders I have published on my profile!",
+					"There's a lot more where those came from!"
+				],
+				"imgName": "shadertoy",
+				"contributions": [],
+				"tags": ["Computer Graphics"],
+				"techs": ["GLSL"],
+				"projectButtonText": "Visit my Profile",
+				"projectURL": "https://www.shadertoy.com/user/retchut"
+			},
+			{
+				"title": "Thesis Project",
+				"description": [
+					"Currently working on my Master's thesis in collaboration with INESC TEC, to explore challenges in capturing and rendering realistic 3D environments and objects, and study how these processes can be optimized for WebVR experiences."
+				],
+				"imgName": "thesis",
+				"contributions": [
+					"Obtain dataset of images for generating 3D representations of a scene",
+					"Generate 3D representations of the scene using Photogrammetry, NERFs and 3D Gaussian Splatting",
+					"Define metrics and compare the three methods according to them",
+					"Implement a WebVR system for each representation, and analyse the systems' performance",
+					"Apply and experiment with common rendering optimizations on each system"
+				],
+				"tags": ["Computer Graphics", "XR", "Web"],
+				"techs": ["A-Frame", "Meshroom", "NERFs", "3D Gaussian Splatting", "WebGL"],
+				"projectButtonText": "",
+				"projectURL": ""
+			},
+			{
 				"title": "VR A-Frame Explorer",
 				"description": [
 					"Project focused on both exploring the generation of photo-realistic 3D models based on real places, and on the development of a platform to explore these models on."
@@ -93,6 +143,49 @@
 				"techs": ["A-Frame", "Meshroom", "Express", "Vite", "Photogrammetry", "LiDAR"],
 				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
+			},
+			{
+				"title": "Interactive Graphics Systems Final Project",
+				"description": [
+					"Final project of the Interactive Graphics Systems Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
+					"The project consists of a WebGL checkers game. Players take turns selecting their pieces and make moves. Players can undo their moves if necessary, and save a replay of their game at the end.",
+					"The project also contains an XML parser which reads a scene and creates it from the data contained on an XML file encoding the scene's graph, according to a pre-determined format.",
+					"For this project, we also had to create a visually appealing scene, with textures, animations, lights, decorative elements. Because of our parser, we were also able to read other students' scenes, and play the game on the scenes they designed.",
+					"A big focus of this project was making this system as efficient and error prone as possible."
+				],
+				"imgName": "sgi-proj",
+				"contributions": [
+					"Created general primitives (ranging from simple triangles to toruses)",
+					"Created an XML parser to parse scene graphs and build the scene based on the file's data",
+					"Designed a scene file with decorative elements, lighting sources, animations, textures, among others",
+					"Implemented shaders for visual feedback when performing certain game interactions",
+					"Designed and implemented the main game mechanics and logic",
+					"Implemented a system for saving or replaying a game"
+				],
+				"tags": ["Computer Graphics"],
+				"techs": ["WebGL", "GLSL", "Javascript", "XML"],
+				"projectButtonText": "See the code",
+				"projectURL": "https://github.com/Retchut/sgi-proj/"
+			},
+			{
+				"title": "Computer Graphics Final Project",
+				"description": [
+					"Final project of the Interactive Graphics Systems Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
+					"The project involved the design and implementation of a system which allows us to build a complex underwater aquarium scene, with textures, shaders (including a moving water shader), among other decorative elements.",
+					"For this project, we were also tasked with creating a fish model, some animations and interactive elements, such as stones the player can pick up by controlling the fish.",
+					"A big focus of this project was getting familiar with the fundamentals of Computer Graphics, learning the best practices of creating a robust and efficient graphics system."
+				],
+				"imgName": "cgra-proj",
+				"contributions": [
+					"Developed primitives which allows us to model the aquarium scene with a fish and decorative elements",
+					"Implemented some shaders, including a moving water shader",
+					"Implemented animations which adapt to speed and direction",
+					"Add interactive elements to the scene, and scene controls"
+				],
+				"tags": ["Computer Graphics"],
+				"techs": ["WebGL", "GLSL", "Javascript"],
+				"projectButtonText": "See the code",
+				"projectURL": "https://github.com/Retchut/cgra-2020-2021"
 			}
 		],
 		"gameDev": [
