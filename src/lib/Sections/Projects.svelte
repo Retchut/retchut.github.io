@@ -122,7 +122,7 @@
 							2}px; --end-translate-y:{selectorHeight -
 							(selectorBarHeights[2] + selectorBarHeight) / 2 -
 							selectorBarPadding / 2}px;"
-						class="h-5 w-1 bg-accent0 rounded-full mr-2 {visibleProjTab === 0
+						class="h-5 w-1 bg-accent0 rounded-full color-fade-anim mr-2 {visibleProjTab === 0
 							? 'translate-y-start'
 							: visibleProjTab === 1
 							? 'translate-y-middle'
@@ -134,7 +134,8 @@
 							2}px;--middle-translate-x:{(galleryWidth - selectorBarWidth) /
 							2}px; --end-translate-x:{galleryWidth -
 							(selectorBarWidths[2] + selectorBarWidth) / 2}px;"
-						class="w-16 border-accent0 border-2 rounded-full mb-6 {visibleProjTab === 0
+						class="w-16 border-accent0 border-2 rounded-full color-fade-anim mb-6 {visibleProjTab ===
+						0
 							? 'translate-x-start'
 							: visibleProjTab === 1
 							? 'translate-x-middle'
