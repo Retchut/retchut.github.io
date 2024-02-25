@@ -26,14 +26,16 @@
 </script>
 
 <PageSection screenHeight={false}>
-	<div class="py-[12.5%] text-main">
+	<div class="pt-[40%] sm:pt-[25%] md:pt-[15%] lg:pt-[12.5%] text-main">
 		<header class="w-full pb-10">
 			<TextGroup {title} titleSize="6xl" {paragraphs} />
 		</header>
 
 		{#each interestSections as mediaType}
 			<TextGroup title={mediaType.title} titleSize="5xl" />
-			<div class="grid grid-cols-4 gap-8 mb-10">
+			<div
+				class="grid grid-cols-1 px-20 md:px-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-10"
+			>
 				{#each mediaType.entries as entry}
 					<div class="group relative rounded-lg shadow-image shadow-accent0 h-fit overflow-hidden">
 						<!-- front -->
