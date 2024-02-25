@@ -19,7 +19,9 @@
 		class="flex {smallBreakpoint ? 'justify-center' : 'justify-between'} items-center px-16 py-8"
 	>
 		<button on:click={() => scrollToSection(0)}
-			><h1 class="text-3xl font-babas-neue text-accent0">MÁRIO TRAVASSOS</h1></button
+			><h1 class="text-3xl font-babas-neue text-accent0 tracking-normal">
+				MÁRIO TRAVASSOS
+			</h1></button
 		>
 		<!-- <div class="bg-background px-3 py-4 rounded-full">
 			<div class="space-y-2">
