@@ -1,0 +1,281 @@
+{
+	"title": "My Interests",
+	"paragraphs": [
+		"Here you can follow some of the things I'm interested in, across a few fields.",
+		"These are works, mostly art-related ones, that inspire me to develop my skills and knowledge, and that I believe are worth being experienced by anyone."
+	],
+	"media": [
+		{
+			"title": "My Favourite Video Games",
+			"entries": [
+				{
+					"title": "Hyper Light Drifter",
+					"subtitle-title": "Developer",
+					"subtitle": "Heart Machine",
+					"imgName": "games/hld.png"
+				},
+				{
+					"title": "Furi",
+					"subtitle-title": "Developer",
+					"subtitle": "The Game Bakers",
+					"imgName": "games/furi.png"
+				},
+				{
+					"title": "NieR: Automata",
+					"subtitle-title": "Developer",
+					"subtitle": "PlatinumGames",
+					"imgName": "games/nier_automata.png"
+				},
+				{
+					"title": "Persona 3 FES",
+					"subtitle-title": "Developer",
+					"subtitle": "Atlus",
+					"imgName": "games/p3.png"
+				},
+				{
+					"title": "NieR Replicant ver.1.22474487139…",
+					"subtitle-title": "Developer",
+					"subtitle": "Toylogic",
+					"imgName": "games/nier_replicant.png"
+				},
+				{
+					"title": "Kingdom Hearts",
+					"subtitle-title": "Developer",
+					"subtitle": "Square Enix",
+					"imgName": "games/kh1.png"
+				},
+				{
+					"title": "Ratchet & Clank 2",
+					"subtitle-title": "Developer",
+					"subtitle": "Insomniac Games",
+					"imgName": "games/ratchet2.png"
+				},
+				{
+					"title": "Terraria",
+					"subtitle-title": "Developer",
+					"subtitle": "Re-Logic",
+					"imgName": "games/terraria.png"
+				},
+				{
+					"title": "Borderlands 2",
+					"subtitle-title": "Developer",
+					"subtitle": "Gearbox Software",
+					"imgName": "games/bl2.png"
+				},
+				{
+					"title": "Jak 3",
+					"subtitle-title": "Developer",
+					"subtitle": "Naughty Dog",
+					"imgName": "games/jak3.png"
+				},
+				{
+					"title": "Metro: Last Light",
+					"subtitle-title": "Developer",
+					"subtitle": "4A Games",
+					"imgName": "games/metro.png"
+				},
+				{
+					"title": "XCOM: Enemy Unknown",
+					"subtitle-title": "Developer",
+					"subtitle": "Firaxis Games",
+					"imgName": "games/xcom.png"
+				}
+			]
+		},
+		{
+			"title": "My Favourite Music Albums",
+			"entries": [
+				{
+					"title": "Hydeout Productions 2nd Collection",
+					"subtitle-title": "By",
+					"subtitle": "Nujabes",
+					"imgName": "music/hydeout_2nd.png"
+				},
+				{
+					"title": "Metaphorical Music",
+					"subtitle-title": "By",
+					"subtitle": "Nujabes",
+					"imgName": "music/metaphorical_music.png"
+				},
+				{
+					"title": "Modal Soul Classics II",
+					"subtitle-title": "By",
+					"subtitle": "Uyama Hiroto, Pase Rock, others",
+					"imgName": "music/modal_soul_classics_ii.png"
+				},
+				{
+					"title": "Fortune",
+					"subtitle-title": "By",
+					"subtitle": "SNUG SPACE",
+					"imgName": "music/fortune.png"
+				},
+				{
+					"title": "Cherish",
+					"subtitle-title": "By",
+					"subtitle": "KIRINJI",
+					"imgName": "music/cherish.png"
+				},
+				{
+					"title": "ホームタウン",
+					"subtitle-title": "By",
+					"subtitle": "Asian Kung-Fu Generation",
+					"imgName": "music/hometown.png"
+				},
+				{
+					"title": "Furi (Original Game Soundtrack)",
+					"subtitle-title": "By",
+					"subtitle": "Several Artists",
+					"imgName": "music/furi_ost.png"
+				},
+				{
+					"title": "NieR Gestalt & Replicant Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "Keiichi Okabe, others",
+					"imgName": "music/nier_ost.png"
+				},
+				{
+					"title": "NieR:Automata Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "Keiichi Okabe, others",
+					"imgName": "music/nier_automata_ost.png"
+				},
+				{
+					"title": "Persona 3 Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "Shoji Meguro",
+					"imgName": "music/p3_ost.png"
+				},
+				{
+					"title": "Ratchet & Clank Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "David Bergeaud",
+					"imgName": "music/ratchet_ost.png"
+				},
+				{
+					"title": "Tarot",
+					"subtitle-title": "By",
+					"subtitle": "Æther Realm",
+					"imgName": "music/tarot.png"
+				},
+				{
+					"title": "Winter's Gate",
+					"subtitle-title": "By",
+					"subtitle": "Insomnium",
+					"imgName": "music/winters_gate.png"
+				},
+				{
+					"title": "Urn",
+					"subtitle-title": "By",
+					"subtitle": "Ne Obliviscaris",
+					"imgName": "music/urn.png"
+				},
+				{
+					"title": "Stone's Reach",
+					"subtitle-title": "By",
+					"subtitle": "Be'lakor",
+					"imgName": "music/stones_reach.png"
+				}
+			]
+		},
+		{
+			"title": "My Favourite Movies",
+			"entries": [
+				{
+					"title": "Blade Runner",
+					"subtitle-title": "Director",
+					"subtitle": "Ridley Scott",
+					"imgName": "movies/blade_runner.png"
+				},
+				{
+					"title": "Chungking Express",
+					"subtitle-title": "Director",
+					"subtitle": "Kar-Wai Wong",
+					"imgName": "movies/chungking_express.png"
+				},
+				{
+					"title": "Perfect Blue",
+					"subtitle-title": "Director",
+					"subtitle": "Satoshi Kon",
+					"imgName": "movies/perfect_blue.png"
+				},
+				{
+					"title": "Monty Python and the Holy Grail",
+					"subtitle-title": "Directors",
+					"subtitle": "Terry Gilliam and Terry Jones",
+					"imgName": "movies/holy_grail.png"
+				},
+				{
+					"title": "Ghost In The Shell",
+					"subtitle-title": "Director",
+					"subtitle": "Mamoru Oshii",
+					"imgName": "movies/ghost_in_the_shell.png"
+				},
+				{
+					"title": "Whiplash",
+					"subtitle-title": "Director",
+					"subtitle": "Damien Chazelle",
+					"imgName": "movies/whiplash.png"
+				},
+				{
+					"title": "The End of Evangelion",
+					"subtitle-title": "Director",
+					"subtitle": "Hideaki Anno",
+					"imgName": "movies/end_of_eva.png"
+				},
+				{
+					"title": "Pulp Fiction",
+					"subtitle-title": "Director",
+					"subtitle": "Quentin Tarantino",
+					"imgName": "movies/pulp_fiction.png"
+				}
+			]
+		},
+		{
+			"title": "My Favourite TV Shows",
+			"entries": [
+				{
+					"title": "The Tatami Galaxy",
+					"subtitle-title": "Director",
+					"subtitle": "Masaaki Yuasa",
+					"imgName": "shows/tatami_galaxy.png"
+				},
+				{
+					"title": "Cowboy Bebop",
+					"subtitle-title": "Director",
+					"subtitle": "Shinichirō Watanabe",
+					"imgName": "shows/cowboy_bebop.png"
+				},
+				{
+					"title": "Samurai Champloo",
+					"subtitle-title": "Director",
+					"subtitle": "Shinichirō Watanabe",
+					"imgName": "shows/samurai_champloo.png"
+				},
+				{
+					"title": "South Park",
+					"subtitle-title": "Directors",
+					"subtitle": "Trey Parker and Matt Stone",
+					"imgName": "shows/south_park.png"
+				},
+				{
+					"title": "Death Parade",
+					"subtitle-title": "Director",
+					"subtitle": "Yuzuru Tachikawa",
+					"imgName": "shows/death_parade.png"
+				},
+				{
+					"title": "Bakuman",
+					"subtitle-title": "Director",
+					"subtitle": "Kenichi Kasai",
+					"imgName": "shows/bakuman.png"
+				},
+				{
+					"title": "It's Always Sunny in Philadelphia",
+					"subtitle-title": "Created by",
+					"subtitle": "Rob McElhenney",
+					"imgName": "shows/sunshine.png"
+				}
+			]
+		}
+	]
+}
