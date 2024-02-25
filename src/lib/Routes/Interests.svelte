@@ -47,9 +47,6 @@
 	on:scroll={() => handleScroll()}
 >
 	<Navbar />
-	{#if !hideControls}
-		<Sidebar />
-	{/if}
 	<div class="flex flex-col">
 		<Interests />
 	</div>
