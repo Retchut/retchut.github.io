@@ -12,73 +12,73 @@
 					"title": "Hyper Light Drifter",
 					"subtitle-title": "Developer",
 					"subtitle": "Heart Machine",
-					"imgName": "games/hld.png"
+					"imgName": "games/hld"
 				},
 				{
 					"title": "Furi",
 					"subtitle-title": "Developer",
 					"subtitle": "The Game Bakers",
-					"imgName": "games/furi.png"
+					"imgName": "games/furi"
 				},
 				{
 					"title": "NieR: Automata",
 					"subtitle-title": "Developer",
 					"subtitle": "PlatinumGames",
-					"imgName": "games/nier_automata.png"
+					"imgName": "games/nier_automata"
 				},
 				{
 					"title": "Persona 3 FES",
 					"subtitle-title": "Developer",
 					"subtitle": "Atlus",
-					"imgName": "games/p3.png"
+					"imgName": "games/p3"
 				},
 				{
 					"title": "NieR Replicant ver.1.22474487139…",
 					"subtitle-title": "Developer",
 					"subtitle": "Toylogic",
-					"imgName": "games/nier_replicant.png"
+					"imgName": "games/nier_replicant"
 				},
 				{
 					"title": "Kingdom Hearts",
 					"subtitle-title": "Developer",
 					"subtitle": "Square Enix",
-					"imgName": "games/kh1.png"
+					"imgName": "games/kh1"
 				},
 				{
 					"title": "Ratchet & Clank 2",
 					"subtitle-title": "Developer",
 					"subtitle": "Insomniac Games",
-					"imgName": "games/ratchet2.png"
+					"imgName": "games/ratchet2"
 				},
 				{
 					"title": "Terraria",
 					"subtitle-title": "Developer",
 					"subtitle": "Re-Logic",
-					"imgName": "games/terraria.png"
+					"imgName": "games/terraria"
 				},
 				{
 					"title": "Borderlands 2",
 					"subtitle-title": "Developer",
 					"subtitle": "Gearbox Software",
-					"imgName": "games/bl2.png"
+					"imgName": "games/bl2"
 				},
 				{
 					"title": "Jak 3",
 					"subtitle-title": "Developer",
 					"subtitle": "Naughty Dog",
-					"imgName": "games/jak3.png"
+					"imgName": "games/jak3"
 				},
 				{
 					"title": "Metro: Last Light",
 					"subtitle-title": "Developer",
 					"subtitle": "4A Games",
-					"imgName": "games/metro.png"
+					"imgName": "games/metro"
 				},
 				{
-					"title": "XCOM: Enemy Unknown",
+					"title": "Metal Gear Rising: Revengeance",
 					"subtitle-title": "Developer",
-					"subtitle": "Firaxis Games",
-					"imgName": "games/xcom.png"
+					"subtitle": "PlatinumGames",
+					"imgName": "games/mgrr"
 				}
 			]
 		},
@@ -89,91 +89,91 @@
 					"title": "Hydeout Productions 2nd Collection",
 					"subtitle-title": "By",
 					"subtitle": "Nujabes",
-					"imgName": "music/hydeout_2nd.png"
+					"imgName": "music/hydeout_2nd"
 				},
 				{
 					"title": "Metaphorical Music",
 					"subtitle-title": "By",
 					"subtitle": "Nujabes",
-					"imgName": "music/metaphorical_music.png"
+					"imgName": "music/metaphorical_music"
 				},
 				{
 					"title": "Modal Soul Classics II",
 					"subtitle-title": "By",
 					"subtitle": "Uyama Hiroto, Pase Rock, others",
-					"imgName": "music/modal_soul_classics_ii.png"
+					"imgName": "music/modal_soul_classics_ii"
 				},
 				{
 					"title": "Fortune",
 					"subtitle-title": "By",
 					"subtitle": "SNUG SPACE",
-					"imgName": "music/fortune.png"
+					"imgName": "music/fortune"
 				},
 				{
 					"title": "Cherish",
 					"subtitle-title": "By",
 					"subtitle": "KIRINJI",
-					"imgName": "music/cherish.png"
+					"imgName": "music/cherish"
 				},
 				{
 					"title": "ホームタウン",
 					"subtitle-title": "By",
 					"subtitle": "Asian Kung-Fu Generation",
-					"imgName": "music/hometown.png"
+					"imgName": "music/hometown"
 				},
 				{
 					"title": "Furi (Original Game Soundtrack)",
 					"subtitle-title": "By",
 					"subtitle": "Several Artists",
-					"imgName": "music/furi_ost.png"
+					"imgName": "music/furi_ost"
 				},
 				{
 					"title": "NieR Gestalt & Replicant Original Soundtrack",
 					"subtitle-title": "By",
 					"subtitle": "Keiichi Okabe, others",
-					"imgName": "music/nier_ost.png"
+					"imgName": "music/nier_ost"
 				},
 				{
 					"title": "NieR:Automata Original Soundtrack",
 					"subtitle-title": "By",
 					"subtitle": "Keiichi Okabe, others",
-					"imgName": "music/nier_automata_ost.png"
+					"imgName": "music/nier_automata_ost"
 				},
 				{
 					"title": "Persona 3 Original Soundtrack",
 					"subtitle-title": "By",
 					"subtitle": "Shoji Meguro",
-					"imgName": "music/p3_ost.png"
+					"imgName": "music/p3_ost"
 				},
 				{
 					"title": "Ratchet & Clank Original Soundtrack",
 					"subtitle-title": "By",
 					"subtitle": "David Bergeaud",
-					"imgName": "music/ratchet_ost.png"
+					"imgName": "music/ratchet_ost"
 				},
 				{
 					"title": "Tarot",
 					"subtitle-title": "By",
 					"subtitle": "Æther Realm",
-					"imgName": "music/tarot.png"
+					"imgName": "music/tarot"
 				},
 				{
 					"title": "Winter's Gate",
 					"subtitle-title": "By",
 					"subtitle": "Insomnium",
-					"imgName": "music/winters_gate.png"
+					"imgName": "music/winters_gate"
 				},
 				{
 					"title": "Urn",
 					"subtitle-title": "By",
 					"subtitle": "Ne Obliviscaris",
-					"imgName": "music/urn.png"
+					"imgName": "music/urn"
 				},
 				{
 					"title": "Stone's Reach",
 					"subtitle-title": "By",
 					"subtitle": "Be'lakor",
-					"imgName": "music/stones_reach.png"
+					"imgName": "music/stones_reach"
 				}
 			]
 		},
@@ -184,49 +184,49 @@
 					"title": "Blade Runner",
 					"subtitle-title": "Director",
 					"subtitle": "Ridley Scott",
-					"imgName": "movies/blade_runner.png"
+					"imgName": "movies/blade_runner"
 				},
 				{
 					"title": "Chungking Express",
 					"subtitle-title": "Director",
 					"subtitle": "Kar-Wai Wong",
-					"imgName": "movies/chungking_express.png"
+					"imgName": "movies/chungking_express"
 				},
 				{
 					"title": "Perfect Blue",
 					"subtitle-title": "Director",
 					"subtitle": "Satoshi Kon",
-					"imgName": "movies/perfect_blue.png"
+					"imgName": "movies/perfect_blue"
 				},
 				{
 					"title": "Monty Python and the Holy Grail",
 					"subtitle-title": "Directors",
 					"subtitle": "Terry Gilliam and Terry Jones",
-					"imgName": "movies/holy_grail.png"
+					"imgName": "movies/holy_grail"
 				},
 				{
 					"title": "Ghost In The Shell",
 					"subtitle-title": "Director",
 					"subtitle": "Mamoru Oshii",
-					"imgName": "movies/ghost_in_the_shell.png"
+					"imgName": "movies/ghost_in_the_shell"
 				},
 				{
 					"title": "Whiplash",
 					"subtitle-title": "Director",
 					"subtitle": "Damien Chazelle",
-					"imgName": "movies/whiplash.png"
+					"imgName": "movies/whiplash"
 				},
 				{
 					"title": "The End of Evangelion",
 					"subtitle-title": "Director",
 					"subtitle": "Hideaki Anno",
-					"imgName": "movies/end_of_eva.png"
+					"imgName": "movies/end_of_eva"
 				},
 				{
 					"title": "Pulp Fiction",
 					"subtitle-title": "Director",
 					"subtitle": "Quentin Tarantino",
-					"imgName": "movies/pulp_fiction.png"
+					"imgName": "movies/pulp_fiction"
 				}
 			]
 		},
@@ -237,43 +237,43 @@
 					"title": "The Tatami Galaxy",
 					"subtitle-title": "Director",
 					"subtitle": "Masaaki Yuasa",
-					"imgName": "shows/tatami_galaxy.png"
+					"imgName": "shows/tatami_galaxy"
 				},
 				{
 					"title": "Cowboy Bebop",
 					"subtitle-title": "Director",
 					"subtitle": "Shinichirō Watanabe",
-					"imgName": "shows/cowboy_bebop.png"
+					"imgName": "shows/cowboy_bebop"
 				},
 				{
 					"title": "Samurai Champloo",
 					"subtitle-title": "Director",
 					"subtitle": "Shinichirō Watanabe",
-					"imgName": "shows/samurai_champloo.png"
+					"imgName": "shows/samurai_champloo"
 				},
 				{
 					"title": "South Park",
-					"subtitle-title": "Directors",
+					"subtitle-title": "Created by",
 					"subtitle": "Trey Parker and Matt Stone",
-					"imgName": "shows/south_park.png"
+					"imgName": "shows/south_park"
 				},
 				{
 					"title": "Death Parade",
 					"subtitle-title": "Director",
 					"subtitle": "Yuzuru Tachikawa",
-					"imgName": "shows/death_parade.png"
+					"imgName": "shows/death_parade"
 				},
 				{
 					"title": "Bakuman",
 					"subtitle-title": "Director",
 					"subtitle": "Kenichi Kasai",
-					"imgName": "shows/bakuman.png"
+					"imgName": "shows/bakuman"
 				},
 				{
 					"title": "It's Always Sunny in Philadelphia",
 					"subtitle-title": "Created by",
 					"subtitle": "Rob McElhenney",
-					"imgName": "shows/sunshine.png"
+					"imgName": "shows/sunshine"
 				}
 			]
 		}
