@@ -75,10 +75,10 @@
 					"imgName": "games/metro.png"
 				},
 				{
-					"title": "XCOM: Enemy Unknown",
+					"title": "Metal Gear Rising: Revengeance",
 					"subtitle-title": "Developer",
-					"subtitle": "Firaxis Games",
-					"imgName": "games/xcom.png"
+					"subtitle": "PlatinumGames",
+					"imgName": "games/mgrr.png"
 				}
 			]
 		},
@@ -253,7 +253,7 @@
 				},
 				{
 					"title": "South Park",
-					"subtitle-title": "Directors",
+					"subtitle-title": "Created by",
 					"subtitle": "Trey Parker and Matt Stone",
 					"imgName": "shows/south_park.png"
 				},
