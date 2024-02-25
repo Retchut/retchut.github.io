@@ -50,7 +50,7 @@
 								titleSize="4xl"
 								title={entry.title}
 								paragraphs={entry.subtitle !== ""
-									? [entry["subtitle-title"] + ":" + entry.subtitle]
+									? [entry["subtitle-title"] + ": " + entry.subtitle]
 									: []}
 								align="center"
 							/>

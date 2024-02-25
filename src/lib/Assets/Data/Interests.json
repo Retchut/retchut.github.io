@@ -194,8 +194,8 @@
 				},
 				{
 					"title": "Perfect Blue",
-					"subtitle-title": "",
-					"subtitle": "",
+					"subtitle-title": "Director",
+					"subtitle": "Satoshi Kon",
 					"imgName": "movies/perfect_blue.png"
 				},
 				{
@@ -268,6 +268,12 @@
 					"subtitle-title": "Director",
 					"subtitle": "Kenichi Kasai",
 					"imgName": "shows/bakuman.png"
+				},
+				{
+					"title": "It's Always Sunny in Philadelphia",
+					"subtitle-title": "Created by",
+					"subtitle": "Rob McElhenney",
+					"imgName": "shows/sunshine.png"
 				}
 			]
 		}
