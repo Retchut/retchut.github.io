@@ -160,6 +160,7 @@
 					{/each}
 				</ul>
 				<ul
+					bind:this={smallTabEl}
 					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 1
 						? ''
 						: 'crop-to-small-tab'}"
@@ -169,7 +170,6 @@
 					{/each}
 				</ul>
 				<ul
-					bind:this={smallTabEl}
 					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 2
 						? ''
 						: 'crop-to-small-tab'}"

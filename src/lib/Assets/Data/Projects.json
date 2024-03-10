@@ -145,6 +145,24 @@
 				"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
 			},
 			{
+				"title": "Lost in the Drift",
+				"description": [
+					"Get ready to drift onto the scene in this nostalgia-infused infinite runner which pays homage to old school PS1 racing games, with their stylized visuals and slippery challenging controls.",
+					"The goal is simple: avoid obstacles, and get as far as you can while keeping your RC car on the road, or you risk losing the signal.",
+					"This game was developed in 48 hours for the 2024 Retro Jam, organized by the IEEE UP Student Branch."
+				],
+				"imgName": "lostinthedrift",
+				"contributions": [
+					"Designed and developed VFX and post-processing shaders",
+					"Developed the UI, enemy pathfinding and spawning, among other mechanics",
+					"Added sound effects"
+				],
+				"tags": ["Game Dev", "Computer Graphics"],
+				"techs": ["Unity", "HLSL", "C#"],
+				"projectButtonText": "Play the game",
+				"projectURL": "https://retchut.itch.io/lost-in-the-drift"
+			},
+			{
 				"title": "Interactive Graphics Systems Final Project",
 				"description": [
 					"Final project of the Interactive Graphics Systems Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
@@ -190,6 +208,24 @@
 		],
 		"gameDev": [
 			{
+				"title": "Lost in the Drift",
+				"description": [
+					"Get ready to drift onto the scene in this nostalgia-infused infinite runner which pays homage to old school PS1 racing games, with their stylized visuals and slippery challenging controls.",
+					"The goal is simple: avoid obstacles, and get as far as you can while keeping your RC car on the road, or you risk losing the signal.",
+					"This game was developed in 48 hours for the 2024 Retro Jam, organized by the IEEE UP Student Branch."
+				],
+				"imgName": "lostinthedrift",
+				"contributions": [
+					"Designed and developed VFX and post-processing shaders",
+					"Developed the UI, enemy pathfinding and spawning, among other mechanics",
+					"Added sound effects"
+				],
+				"tags": ["Game Dev", "Computer Graphics"],
+				"techs": ["Unity", "HLSL", "C#"],
+				"projectButtonText": "Play the game",
+				"projectURL": "https://retchut.itch.io/lost-in-the-drift"
+			},
+			{
 				"title": "Lucky Lapin",
 				"description": [
 					"Second place entry for ||Fabamaq[www.fabamaq.com/en]||'s ||Invictus Game Jam[invictvs.fabamaq.com/en]||.",
@@ -203,7 +239,7 @@
 					"Developed and tweaked some of the game's mechanics"
 				],
 				"tags": ["Game Dev", "Networking"],
-				"techs": ["Unity", "Websockets", "Linux"],
+				"techs": ["Unity", "C#", "Websockets", "Linux"],
 				"projectButtonText": "Play the game",
 				"projectURL": "https://retchut.itch.io/lucky-lapin"
 			},
@@ -222,7 +258,7 @@
 					"Performed some minor rigging and editing of test assets for the game"
 				],
 				"tags": ["Game Dev", "Sound Design"],
-				"techs": ["Unity", "Blender", "FMOD", "Reaper"],
+				"techs": ["Unity", "C#", "Blender", "FMOD", "Reaper"],
 				"projectButtonText": "Play the game",
 				"projectURL": "https://jfbaltazar.itch.io/miasma"
 			},
