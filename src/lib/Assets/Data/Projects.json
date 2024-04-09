@@ -90,6 +90,8 @@
 				],
 				"contributions": [
 					"Designed the interface and UI",
+					"Developed a system for updating content easily from a few files",
+					"Developed a parser for applying styles with a markdown-like syntax",
 					"Implemented the design"
 				],
 				"imgName": "website",
