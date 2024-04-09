@@ -15,7 +15,8 @@
 	// component code
 	const outerClass =
 		"flex justify-center items-center overflow-hidden" + (heroSection ? " bg-background" : "");
-	const innerClass =
+	let innerClass: string = "";
+	$: innerClass =
 		"flex justify-center mx-12 2xl:mx-0 " +
 		(heroSection ? "relative flex-row items-center w-auto" : "flex-col w-[80%] lg:w-[1300px]") +
 		(screenHeight ? " h-screen" : "");

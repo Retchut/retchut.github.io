@@ -4,9 +4,7 @@
 -->
 <script lang="ts">
 	// imports
-	import type { InterestCategory, InterestData } from "../../types/Interests";
-
-	import { currentBreakpoint } from "../../utils/stores";
+	import type { InterestCategory } from "../../types/Interests";
 
 	import PageSection from "../Components/Layout/PageSection.svelte";
 	import TextGroup from "../Components/Text/TextGroup.svelte";
@@ -18,11 +16,6 @@
 	const paragraphs: string[] = sectionData["paragraphs"] ?? ["DefaultValue"];
 
 	const interestSections: InterestCategory[] = sectionData["media"] ?? [];
-
-	let smallBreakpoint: boolean = true;
-	currentBreakpoint.subscribe((value) => {
-		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
-	});
 </script>
 
 <PageSection screenHeight={false}>
