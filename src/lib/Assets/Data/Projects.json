@@ -34,6 +34,32 @@
 				"projectURL": ""
 			},
 			{
+				"title": "NCGM's Website",
+				"description": [
+					"The website for the Nucleus of Computer Graphics and Multimedia.",
+					"I currently handle everything related to deployment, maintenance and other DevOps tasks.",
+					"I am also the website's team leader, and I am tutoring a team, teaching them all they need to know to maintain and improve upon the project when I'm gone."
+				],
+				"contributions": [
+					"Modernized and refactored the old project's code base",
+					"Developed features necessary for showcasing the group's projects",
+					"Bootstraped the server, which I currently maintain",
+					"Currently leading the project's team"
+				],
+				"imgName": "ncgmwebsite",
+				"tags": [
+					"Web"
+				],
+				"techs": [
+					"React",
+					"Bootstrap",
+					"Express",
+					"MongoDB"
+				],
+				"projectButtonText": "Visit the website",
+				"projectURL": "https://ncgm.fe.up.pt/en/home"
+			},
+			{
 				"title": "Shifteam",
 				"description": [
 					"Shifteam empowers managers to effortlessly craft efficient schedules, allowing them to allocate more time to prioritize essential responsibilities. With an exceptional user interface with an intuitive and responsive design, we guarantee a user-friendly experience for anyone."
@@ -55,6 +81,29 @@
 				],
 				"projectButtonText": "",
 				"projectURL": ""
+			},
+			{
+				"title": "Portfolio Website",
+				"description": [
+					"Repository holding this website's code.",
+					"Serves as a little archive of what I'm up to."
+				],
+				"contributions": [
+					"Designed the interface and UI",
+					"Implemented the design"
+				],
+				"imgName": "website",
+				"tags": [
+					"Web"
+				],
+				"techs": [
+					"Svelte",
+					"Tailwind",
+					"CSS",
+					"Vite"
+				],
+				"projectButtonText": "See the code",
+				"projectURL": "https://github.com/Retchut/retchut.github.io"
 			},
 			{
 				"title": "Atlas of Veterinarian Pathology",
@@ -79,29 +128,6 @@
 				],
 				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/atlas"
-			},
-			{
-				"title": "Portfolio Website",
-				"description": [
-					"Repository holding this website's code.",
-					"Serves as a little archive of what I'm up to."
-				],
-				"contributions": [
-					"Designed the interface and UI",
-					"Implemented the design"
-				],
-				"imgName": "website",
-				"tags": [
-					"Web"
-				],
-				"techs": [
-					"Svelte",
-					"Tailwind",
-					"CSS",
-					"Vite"
-				],
-				"projectButtonText": "See the code",
-				"projectURL": "https://github.com/Retchut/retchut.github.io"
 			}
 		],
 		"xrCG": [
