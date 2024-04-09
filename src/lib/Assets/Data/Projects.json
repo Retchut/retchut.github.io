@@ -16,13 +16,20 @@
 				],
 				"contributions": [
 					"Designing the user interface alongside the client",
-					"Architecturing the system and developing the full-stack application",
+					"Architecturing the system and developing the solution",
 					"Deploying and maintaining the server and application",
 					"Smoothening the client's workflow by developing a custom CMS for the website's content management"
 				],
 				"imgName": "oportocine",
-				"tags": ["Web"],
-				"techs": ["Figma", "React", "Bootstrap"],
+				"tags": [
+					"Web"
+				],
+				"techs": [
+					"Figma",
+					"Next",
+					"Bootstrap",
+					"Strapi"
+				],
 				"projectButtonText": "",
 				"projectURL": ""
 			},
@@ -38,15 +45,21 @@
 					"Single-handedly implemented the design for the company's brand website"
 				],
 				"imgName": "shifteam",
-				"tags": ["Web"],
-				"techs": ["React", "Tailwind", "Django"],
-				"projectButtonText": "Check out the project",
-				"projectURL": "https://www.shifteam.pt"
+				"tags": [
+					"Web"
+				],
+				"techs": [
+					"React",
+					"Tailwind",
+					"Django"
+				],
+				"projectButtonText": "",
+				"projectURL": ""
 			},
 			{
 				"title": "Atlas of Veterinarian Pathology",
 				"description": [
-					"An online Atlas of Veterinarian Pathology. A work in progress, currently on hiatus.",
+					"An online Atlas of Veterinarian Pathology. A work in progress, currently on hiatus, as it is missing content.",
 					"It is an educative tool made for Veterinary Medicine teachers at the |University of Trás-os-Montes and Alto Douro[utad.pt/en/university/]|, based on their |book[https://www.wook.pt/livro/atlas-de-patologia-veterinaria-maria-dos-anjos-pires/75229]|."
 				],
 				"imgName": "atlas",
@@ -55,8 +68,15 @@
 					"Developed a web server to host and serve the application content",
 					"Host, perform maintenance and updates on the server and content, among other DevOps tasks"
 				],
-				"tags": ["Web"],
-				"techs": ["React", "Tailwind", "Express", "MongoDB"],
+				"tags": [
+					"Web"
+				],
+				"techs": [
+					"React",
+					"Tailwind",
+					"Express",
+					"MongoDB"
+				],
 				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/atlas"
 			},
@@ -66,48 +86,25 @@
 					"Repository holding this website's code.",
 					"Serves as a little archive of what I'm up to."
 				],
-				"contributions": ["Designed the interface and UI", "Implemented the design"],
+				"contributions": [
+					"Designed the interface and UI",
+					"Implemented the design"
+				],
 				"imgName": "website",
-				"tags": ["Web"],
-				"techs": ["Svelte", "Tailwind", "CSS", "Vite"],
+				"tags": [
+					"Web"
+				],
+				"techs": [
+					"Svelte",
+					"Tailwind",
+					"CSS",
+					"Vite"
+				],
 				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/retchut.github.io"
 			}
 		],
 		"xrCG": [
-			{
-				"title": "OpenGL experiments",
-				"description": [
-					"Using mostly OpenGL, GLSL and C++, I'm currently developing a small tool where I can quickly create scenes and test different shaders, in order to replicate interesting and visually appealing scenes I commonly see in the media I appreciate.",
-					"The goal is not only to create this system, but also expand on my knowledge of how the graphics pipeline works at the lower level.",
-					"I not only hope to improve my general knowledge of graphics programming this way, but also to understand how common performance optimizations work deep down, and overall how the systems that we use to create stunning visuals work under the hood."
-				],
-				"imgName": "opengl-experiments",
-				"contributions": [
-					"Design and implement a simple renderer",
-					"Load and apply shaders to different objects",
-					"Parse a scene from a file",
-					"Play around with different types of common shaders"
-				],
-				"tags": ["Computer Graphics"],
-				"techs": ["OpenGL", "C++", "GLSL"],
-				"projectButtonText": "",
-				"projectURL": ""
-			},
-			{
-				"title": "Shadertoy",
-				"description": [
-					"On this platform, I have been playing around with shadder programming, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
-					"Check out the shaders I have published on my profile!",
-					"There's a lot more where those came from!"
-				],
-				"imgName": "shadertoy",
-				"contributions": [],
-				"tags": ["Computer Graphics"],
-				"techs": ["GLSL"],
-				"projectButtonText": "Visit my Profile",
-				"projectURL": "https://www.shadertoy.com/user/retchut"
-			},
 			{
 				"title": "Thesis Project",
 				"description": [
@@ -121,10 +118,44 @@
 					"Implement a WebVR system for each representation, and analyse the systems' performance",
 					"Apply and experiment with common rendering optimizations on each system"
 				],
-				"tags": ["Computer Graphics", "XR", "Web"],
-				"techs": ["A-Frame", "Meshroom", "NERFs", "3D Gaussian Splatting", "WebGL"],
+				"tags": [
+					"Computer Graphics",
+					"XR",
+					"Web"
+				],
+				"techs": [
+					"A-Frame",
+					"Meshroom",
+					"NERFs",
+					"3D Gaussian Splatting",
+					"WebGL"
+				],
 				"projectButtonText": "",
 				"projectURL": ""
+			},
+			{
+				"title": "Pretty Water",
+				"description": [
+					"An exploration of the techniques used in modern graphics rendering for simulating water.",
+					"Have implemented a simple sum of sines algorithm, with a simple **PBR model + fresnel**.",
+					"In the near future, I'll be looking to complement this project with screen space reflections, and experiment with other wave generation techniques, such as **Gerstner Waves**, different **sine-based variations** and with **Fractional Brownian Motion**."
+				],
+				"imgName": "pretty-water",
+				"contributions": [
+					"Study water simulation techniques and rendering algorithms",
+					"Implemented the wave generation algorithm and PBR",
+					"Implemented a simple UI for tweaking parameters during runtime"
+				],
+				"tags": [
+					"Computer Graphics"
+				],
+				"techs": [
+					"Unity",
+					"C#",
+					"HLSL"
+				],
+				"projectButtonText": "See the result",
+				"projectURL": "https://retchut.itch.io/pretty-water"
 			},
 			{
 				"title": "VR A-Frame Explorer",
@@ -139,56 +170,66 @@
 					"Ported some of Felix Mariotto's three-mesh-ui library to A-Frame, in order to help with UI creation",
 					"Developed a simple web server to host and serve our models, and allow uploading custom models"
 				],
-				"tags": ["XR", "Web"],
-				"techs": ["A-Frame", "Meshroom", "Express", "Vite", "Photogrammetry", "LiDAR"],
+				"tags": [
+					"XR",
+					"Web"
+				],
+				"techs": [
+					"A-Frame",
+					"Meshroom",
+					"Express",
+					"Vite",
+					"Photogrammetry",
+					"LiDAR"
+				],
 				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/vr-aframe-explorer"
 			},
 			{
-				"title": "Interactive Graphics Systems Final Project",
+				"title": "Shadertoy",
 				"description": [
-					"Final project of the Interactive Graphics Systems Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
-					"The project consists of a WebGL checkers game. Players take turns selecting their pieces and make moves. Players can undo their moves if necessary, and save a replay of their game at the end.",
-					"The project also contains an XML parser which reads a scene and creates it from the data contained on an XML file encoding the scene's graph, according to a pre-determined format.",
-					"For this project, we also had to create a visually appealing scene, with textures, animations, lights, decorative elements. Because of our parser, we were also able to read other students' scenes, and play the game on the scenes they designed.",
-					"A big focus of this project was making this system as efficient and error prone as possible."
+					"On this platform, I have been playing around with shadder programming, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
+					"Check out the shaders I have published on my profile!",
+					"There's a lot more where those came from!"
 				],
-				"imgName": "sgi-proj",
-				"contributions": [
-					"Created general primitives (ranging from simple triangles to toruses)",
-					"Created an XML parser to parse scene graphs and build the scene based on the file's data",
-					"Designed a scene file with decorative elements, lighting sources, animations, textures, among others",
-					"Implemented shaders for visual feedback when performing certain game interactions",
-					"Designed and implemented the main game mechanics and logic",
-					"Implemented a system for saving or replaying a game"
+				"imgName": "shadertoy",
+				"contributions": [],
+				"tags": [
+					"Computer Graphics"
 				],
-				"tags": ["Computer Graphics"],
-				"techs": ["WebGL", "GLSL", "Javascript", "XML"],
-				"projectButtonText": "See the code",
-				"projectURL": "https://github.com/Retchut/sgi-proj/"
-			},
-			{
-				"title": "Computer Graphics Final Project",
-				"description": [
-					"Final project of the Interactive Graphics Systems Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
-					"The project involved the design and implementation of a system which allows us to build a complex underwater aquarium scene, with textures, shaders (including a moving water shader), among other decorative elements.",
-					"For this project, we were also tasked with creating a fish model, some animations and interactive elements, such as stones the player can pick up by controlling the fish.",
-					"A big focus of this project was getting familiar with the fundamentals of Computer Graphics, learning the best practices of creating a robust and efficient graphics system."
+				"techs": [
+					"GLSL"
 				],
-				"imgName": "cgra-proj",
-				"contributions": [
-					"Developed primitives which allows us to model the aquarium scene with a fish and decorative elements",
-					"Implemented some shaders, including a moving water shader",
-					"Implemented animations which adapt to speed and direction",
-					"Add interactive elements to the scene, and scene controls"
-				],
-				"tags": ["Computer Graphics"],
-				"techs": ["WebGL", "GLSL", "Javascript"],
-				"projectButtonText": "See the code",
-				"projectURL": "https://github.com/Retchut/cgra-2020-2021"
+				"projectButtonText": "Visit my Profile",
+				"projectURL": "https://www.shadertoy.com/user/retchut"
 			}
 		],
 		"gameDev": [
+			{
+				"title": "Lost in the Drift",
+				"description": [
+					"Get ready to drift onto the scene in this nostalgia-infused infinite runner which pays homage to old school PS1 racing games, with their stylized visuals and slippery challenging controls.",
+					"The goal is simple: avoid obstacles, and get as far as you can while keeping your RC car on the road, or you risk losing the signal.",
+					"This game was developed in 48 hours for the 2024 Retro Jam, organized by the IEEE UP Student Branch."
+				],
+				"imgName": "lostinthedrift",
+				"contributions": [
+					"Designed and developed VFX and post-processing shaders",
+					"Developed the UI, enemy pathfinding and spawning, among other mechanics",
+					"Added sound effects"
+				],
+				"tags": [
+					"Game Dev",
+					"Computer Graphics"
+				],
+				"techs": [
+					"Unity",
+					"HLSL",
+					"C#"
+				],
+				"projectButtonText": "Play the game",
+				"projectURL": "https://retchut.itch.io/lost-in-the-drift"
+			},
 			{
 				"title": "Lucky Lapin",
 				"description": [
@@ -202,8 +243,16 @@
 					"Implemented the connectivity between the game and the slot machine's hardware",
 					"Developed and tweaked some of the game's mechanics"
 				],
-				"tags": ["Game Dev", "Networking"],
-				"techs": ["Unity", "Websockets", "Linux"],
+				"tags": [
+					"Game Dev",
+					"Networking"
+				],
+				"techs": [
+					"Unity",
+					"C#",
+					"Websockets",
+					"Linux"
+				],
 				"projectButtonText": "Play the game",
 				"projectURL": "https://retchut.itch.io/lucky-lapin"
 			},
@@ -221,28 +270,19 @@
 					"Recorded, sampled and edited sound effects and music for the game",
 					"Performed some minor rigging and editing of test assets for the game"
 				],
-				"tags": ["Game Dev", "Sound Design"],
-				"techs": ["Unity", "Blender", "FMOD", "Reaper"],
+				"tags": [
+					"Game Dev",
+					"Sound Design"
+				],
+				"techs": [
+					"Unity",
+					"C#",
+					"Blender",
+					"FMOD",
+					"Reaper"
+				],
 				"projectButtonText": "Play the game",
 				"projectURL": "https://jfbaltazar.itch.io/miasma"
-			},
-			{
-				"title": "FEUP Hell",
-				"description": [
-					"Preliminary project of the Game Development Course of the Masters in Informatics and Computing Engineering (M.EIC) of FEUP, during the year 2022/2023.",
-					"In this game, players try to last for as long as they can against an endless horde of undead cubes, in a stage reminiscent of FEUP's installations, with the help of a wide variety of weapons and perks!",
-					"A demo video of the game can be found ||here[youtu.be/B-S8YoB5miI?si=83otXu-ipS1gXJKy]||."
-				],
-				"imgName": "feuphell",
-				"contributions": [
-					"Performed game design related tasks",
-					"Performed general development of the game",
-					"3D model gathering and cleanup"
-				],
-				"tags": ["Game Dev"],
-				"techs": ["Unity", "Blender"],
-				"projectButtonText": "Play the game",
-				"projectURL": "https://retchut.itch.io/feup-hell"
 			}
 		]
 	}

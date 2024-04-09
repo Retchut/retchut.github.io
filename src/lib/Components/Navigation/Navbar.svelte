@@ -5,6 +5,9 @@
 -->
 <script lang="ts">
 	// imports
+	import { get } from "svelte/store";
+	import { location } from "svelte-spa-router";
+
 	import { currentBreakpoint } from "../../../utils/stores";
 	import { scrollToSection } from "../../../utils/scrolling";
 
@@ -12,13 +15,21 @@
 	currentBreakpoint.subscribe((value) => {
 		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
 	});
+
+	const homeScroll = () => {
+		if (get(location) === "/") {
+			scrollToSection(0);
+		} else {
+			window.location.href = "/#/";
+		}
+	};
 </script>
 
 <div class="fixed bg-background {smallBreakpoint ? 'z-40' : 'z-20'} w-full">
 	<nav
 		class="flex {smallBreakpoint ? 'justify-center' : 'justify-between'} items-center px-16 py-8"
 	>
-		<button class="mr-12" on:click={() => scrollToSection(0)}
+		<button class="mr-12" on:click={() => homeScroll()}
 			><h1 class="text-3xl font-babas-neue text-accent0 tracking-normal">
 				MÁRIO TRAVASSOS
 			</h1></button

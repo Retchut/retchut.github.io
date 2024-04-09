@@ -1,18 +1,14 @@
 <script lang="ts">
 	// imports
 	import { onMount } from "svelte";
+	import { get } from "svelte/store";
+	import { location } from "svelte-spa-router";
 
 	import Navbar from "../Components/Navigation/Navbar.svelte";
-	import Sidebar from "../Components/Navigation/Sidebar.svelte";
 	import Interests from "../Sections/Interests.svelte";
 
 	import { currentBreakpoint } from "../../utils/stores";
-	import {
-		setScrollingElement,
-		setOffsetsLoaded,
-		handleScroll,
-		scrollToSection,
-	} from "../../utils/scrolling";
+	import { setScrollingElement, setOffsetsLoaded, scrollToSection } from "../../utils/scrolling";
 	import { getCurrentBreakpoint } from "../../utils/responsivity";
 
 	// component code
@@ -20,13 +16,6 @@
 
 	// defined by the Projects.svelte component
 	let preserveGalleryWidth: () => void;
-
-	// TODO: refactor PageSection into a reactive page section, as it is used in About, Projects and Skillset in the exact same way
-	// this controls whether the sidebar is shown
-	let hideControls: boolean;
-	currentBreakpoint.subscribe((value) => {
-		hideControls = value == "sm" || value == "xs";
-	});
 
 	const updateBreakpoint = () => {
 		currentBreakpoint.update((_value) => getCurrentBreakpoint());
@@ -41,11 +30,7 @@
 	});
 </script>
 
-<main
-	bind:this={mainEl}
-	class="bg-background2 w-screen h-screen overflow-y-scroll"
-	on:scroll={() => handleScroll()}
->
+<main bind:this={mainEl} class="bg-background2 w-screen h-screen overflow-y-scroll">
 	<Navbar />
 	<div class="flex flex-col">
 		<Interests />
@@ -55,6 +40,9 @@
 <svelte:window
 	on:resize={() => {
 		updateBreakpoint();
-		preserveGalleryWidth();
+		// preserving gallery changes is only done inside the home route
+		if (get(location) === "/") {
+			preserveGalleryWidth();
+		}
 	}}
 />

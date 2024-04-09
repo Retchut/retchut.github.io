@@ -26,10 +26,8 @@
 		projectURL: "",
 	};
 
-	let smallBreakpoint: boolean = true;
 	let buttonBelowText: boolean = true;
 	currentBreakpoint.subscribe((value) => {
-		smallBreakpoint = value == "xs" || value == "sm" || value == "md";
 		buttonBelowText = value == "xs" || value == "sm";
 	});
 </script>
