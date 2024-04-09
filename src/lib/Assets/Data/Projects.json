@@ -76,6 +76,25 @@
 		],
 		"xrCG": [
 			{
+				"title": "Pretty Water",
+				"description": [
+					"This project is another step in my journey as a graphics programmer. Through it, I aim to better understand some of the techniques used in modern graphics rendering, particularly when it comes to simulating water.",
+					"Currently, the project is using a simple sum of sines algorithm for generating the water waves, with a simple physically based render model, with **ambient**, **diffuse** and **specular** lighting, alongside a simple **fresnel** effect. It's also possible to control the camera position and rotation, in order to see how the lighting varies with the camera position, and the scene contains a simple UI where the current water generation and lighting parameters can be changed.",
+					"In the near future, I'll be looking to complement this project with screen space reflections, and further experiment with wave generation techniques, namely using **Gerstner Waves**, different **sine-based variations** and lastly experimenting with integrating **Fractional Brownian Motion**."
+				],
+				"imgName": "pretty-water",
+				"contributions": [
+					"Study water simulation techniques and rendering algorithms",
+					"Implement a simple water wave generation algorithm bases on a sum of sines",
+					"Implement a simple physically based render model (ambient, diffuse, specular lighting + fresnel)",
+					"Implement a simple UI for tweaking parameters during runtime"
+				],
+				"tags": ["Computer Graphics"],
+				"techs": ["Unity", "C#", "HLSL"],
+				"projectButtonText": "See the result",
+				"projectURL": "https://retchut.itch.io/pretty-water"
+			},
+			{
 				"title": "OpenGL experiments",
 				"description": [
 					"Using mostly OpenGL, GLSL and C++, I'm currently developing a small tool where I can quickly create scenes and test different shaders, in order to replicate interesting and visually appealing scenes I commonly see in the media I appreciate.",
@@ -93,20 +112,6 @@
 				"techs": ["OpenGL", "C++", "GLSL"],
 				"projectButtonText": "",
 				"projectURL": ""
-			},
-			{
-				"title": "Shadertoy",
-				"description": [
-					"On this platform, I have been playing around with shadder programming, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
-					"Check out the shaders I have published on my profile!",
-					"There's a lot more where those came from!"
-				],
-				"imgName": "shadertoy",
-				"contributions": [],
-				"tags": ["Computer Graphics"],
-				"techs": ["GLSL"],
-				"projectButtonText": "Visit my Profile",
-				"projectURL": "https://www.shadertoy.com/user/retchut"
 			},
 			{
 				"title": "Thesis Project",
@@ -204,6 +209,20 @@
 				"techs": ["WebGL", "GLSL", "Javascript"],
 				"projectButtonText": "See the code",
 				"projectURL": "https://github.com/Retchut/cgra-2020-2021"
+			},
+			{
+				"title": "Shadertoy",
+				"description": [
+					"On this platform, I have been playing around with shadder programming, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
+					"Check out the shaders I have published on my profile!",
+					"There's a lot more where those came from!"
+				],
+				"imgName": "shadertoy",
+				"contributions": [],
+				"tags": ["Computer Graphics"],
+				"techs": ["GLSL"],
+				"projectButtonText": "Visit my Profile",
+				"projectURL": "https://www.shadertoy.com/user/retchut"
 			}
 		],
 		"gameDev": [
