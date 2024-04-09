@@ -26,33 +26,61 @@
 				"express",
 				"mongodb",
 				"sql",
-				"mariadb",
-				"nodejs"
+				"nodejs",
+				"next"
 			],
 			"bannerImg": "backend"
 		},
 		{
 			"title": "Game Development",
 			"description": "Crafting Virtual Realities",
-			"technologies": ["unity", "unrealengine", "godot", "xrtoolkit", "cplusplus", "csharp"],
+			"technologies": [
+				"unity",
+				"unrealengine",
+				"godot",
+				"xrtoolkit",
+				"cplusplus",
+				"csharp"
+			],
 			"bannerImg": "gamedev"
 		},
 		{
 			"title": "Computer Graphics",
 			"description": "Breathing Life into Pixels",
-			"technologies": ["webgl", "threejs", "aframe", "opencv", "opengl", "glslhlsl"],
+			"technologies": [
+				"webgl",
+				"threejs",
+				"aframe",
+				"opencv",
+				"opengl",
+				"glslhlsl"
+			],
 			"bannerImg": "cg"
 		},
 		{
 			"title": "Miscellaneous",
 			"description": "My Swiss Army Knife",
-			"technologies": ["git", "linux", "bash", "python", "c", "java"],
+			"technologies": [
+				"git",
+				"linux",
+				"bash",
+				"python",
+				"c",
+				"java"
+			],
 			"bannerImg": "misc"
 		},
 		{
 			"title": "3D Modeling & Visualization",
 			"description": "Making Sculptures of Reality",
-			"technologies": ["meshroom", "nerf", "gaussiansplatting", "instantmeshes", "blender", "maya"],
+			"technologies": [
+				"meshroom",
+				"nerf",
+				"gaussiansplatting",
+				"instantmeshes",
+				"blender",
+				"maya"
+			],
 			"bannerImg": "modeling"
 		}
 	]

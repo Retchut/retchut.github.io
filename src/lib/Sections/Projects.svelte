@@ -101,7 +101,7 @@
 					bind:this={selectorEl}
 					class="flex {smallBreakpoint ? 'flex-col' : 'flex-row'} justify-between"
 				>
-					{#each ["XR and Computer Graphics", "Web Development", "Game Development"] as title, index}
+					{#each ["Web Development", "XR and Computer Graphics", "Game Development"] as title, index}
 						<button on:click={() => galleryScrollTo(index)}>
 							<TextGroup
 								{title}
@@ -132,7 +132,7 @@
 				{:else}
 					<hr
 						style="--start-translate-x:{(selectorBarWidths[0] - selectorBarWidth) /
-							2}px;--middle-translate-x:{(galleryWidth + selectorBarWidth) /
+							2}px;--middle-translate-x:{(galleryWidth - selectorBarWidth) /
 							2}px; --end-translate-x:{galleryWidth -
 							(selectorBarWidths[2] + selectorBarWidth) / 2}px;"
 						class="w-16 border-accent0 border-2 rounded-full color-fade-anim mb-6 {visibleProjTab ===
@@ -155,21 +155,21 @@
 						? ''
 						: 'crop-to-small-tab'}"
 				>
+					{#each webDev as projectData}
+						<Project {projectData} />
+					{/each}
+				</ul>
+				<ul
+					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 1
+						? ''
+						: 'crop-to-small-tab'}"
+				>
 					{#each xrCG as projectData}
 						<Project {projectData} />
 					{/each}
 				</ul>
 				<ul
 					bind:this={smallTabEl}
-					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 1
-						? ''
-						: 'crop-to-small-tab'}"
-				>
-					{#each webDev as projectData}
-						<Project {projectData} />
-					{/each}
-				</ul>
-				<ul
 					class="2xl:px-20 w-full h-fit flex flex-col gap-12 flex-shrink-0 {visibleProjTab === 2
 						? ''
 						: 'crop-to-small-tab'}"
