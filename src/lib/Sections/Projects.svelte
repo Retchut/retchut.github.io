@@ -126,8 +126,8 @@
 						class="h-5 w-1 bg-accent0 rounded-full color-fade-anim mr-2 {visibleProjTab === 0
 							? 'translate-y-start'
 							: visibleProjTab === 1
-							? 'translate-y-middle'
-							: 'translate-y-end'}"
+								? 'translate-y-middle'
+								: 'translate-y-end'}"
 					></div>
 				{:else}
 					<hr
@@ -139,15 +139,15 @@
 						0
 							? 'translate-x-start'
 							: visibleProjTab === 1
-							? 'translate-x-middle'
-							: 'translate-x-end'}"
+								? 'translate-x-middle'
+								: 'translate-x-end'}"
 					/>
 				{/if}
 			</div>
 			<!-- Gallery thingy -->
 			<div
 				bind:this={galleryEl}
-				class="my-8 flex overflow-y-clip overflow-x-scroll no-scrollbar"
+				class="my-8 flex overflow-y-clip overflow-x-hidden no-scrollbar"
 				style="--small-tab-size:{smallTabSize};"
 			>
 				<ul
