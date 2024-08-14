@@ -35,7 +35,11 @@
 						<div
 							class="group-hover:brightness-[30%] group-hover:blur-sm duration-200 group-hover:scale-110"
 						>
-							<img src={"/interests/" + entry.imgName + ".jpg"} alt={entry.imgName.split("/")[1]} />
+							<img
+								class="w-full"
+								src={"/interests/" + entry.imgName + ".jpg"}
+								alt={entry.imgName.split("/")[1]}
+							/>
 						</div>
 						<!-- back -->
 						<div
