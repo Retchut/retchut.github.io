@@ -11,14 +11,13 @@
 			{
 				"title": "Oportocine Website",
 				"description": [
-					"I am currently designing and developing a website for a portuguese script writer.",
-					"My goal is fully understanding the client's vision, and ensuring that the final product becomes a true reflection of their narrative process and creativity."
+					"Flexible portfolio website, tailor made for a portuguese script writer, complete with a custom Content Management System.",
+					"My goal with this project was fully understanding the client's vision, and ensuring that the final product becomes a true reflection of their narrative process and creativity."
 				],
 				"contributions": [
-					"Designing the user interface alongside the client",
-					"Architecturing the system and developing the solution",
-					"Deploying and maintaining the server and application",
-					"Smoothening the client's workflow by developing a custom CMS for the website's content management"
+					"Iterative UI design alongside the client",
+					"System architecture and development",
+					"Deploying and maintaining the server and application"
 				],
 				"imgName": "oportocine",
 				"tags": [
@@ -27,11 +26,11 @@
 				"techs": [
 					"Figma",
 					"Next",
-					"Bootstrap",
-					"Strapi"
+					"Tailwind",
+					"Payload"
 				],
-				"projectButtonText": "",
-				"projectURL": ""
+				"projectButtonText": "Design Proposal",
+				"projectURL": "https://www.figma.com/design/sLj4oCTNqxTzgRTxCCMHvP/oportocine-website"
 			},
 			{
 				"title": "NCGM's Website",

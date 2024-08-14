@@ -1,15 +1,15 @@
 {
 	"title": "About me",
 	"paragraphs": [
-		"Hello there! My name is Mário Travassos, a passionate Software Developer from Portugal. I'm deeply interested in **Web Design**, **Computer Graphics** and **Game Development**.",
-		"I am finishing up my academic journey at ||FEUP[fe.up.pt]||, working on my thesis focused on **studying 3D reconstruction techniques**, with the ultimate goal of **streamlining the creation of photo-realistic WebVR experiences**.",
-		"During my term as the former President of the **Nucleus of Computer Graphics and  Multimedia (NCGM)** of FEUP, I led the youth association in hosting events and developing projects in **Computer Graphics**, **Human-Computer Interaction** and **Game Development**. Our flagship event is the monthly Game Dev Meet @Porto. Check ||us[ncgm.fe.up.pt]|| out, we do some pretty cool stuff!",
+		"My name is Mário Travassos, a highly-motivated, passionate Software Developer from Portugal. I'm deeply interested in **Web Design and Development**, **Computer Graphics** and **Game Development**.",
+		"With a solid foundation in Front-end and Full-stack web technologies, I seek to create **innovative applications that deliver engaging user experiences**. As my passions extend to computer graphics and game development, I continously explore new techniques in those fields to craft **immersive and thrilling digital adventures**.",
+		"I have just completed my academic journey at ||FEUP[fe.up.pt]||, where I developed my dissertation work focused on studying cutting-edge **3D reconstruction techniques**, with the ultimate goal of **streamlining the creation of photo-realistic WebVR experiences**.",
 		"Away from the digital world, you can find me engaging in multiple activities, from **repairing and tinkering** to **reading**, **cooking** or **playing video or trading card games**. I am also an avid **language learning enthusiast**, and I am currently hard at work studying japanese."
 	],
 	"title2": "What I'm up to",
 	"paragraphs2": [
-		"Alongside my thesis, I am in the process of **designing and developing a portfolio website for a portuguese script writer**.",
+		"I am currently working as a **freelance full-stack developer**. Currently looking for other ventures, but still open to new opportunities.",
 		"As part of my language-learning journey, I keep on **sentence-mining** and **immersing in japanese media**, with the goal of further improving my japanese language proficiency.",
-		"All the while, I continue **diving into web development** as a hobby."
+		"All the while, I continue **researching computer graphics** as a hobby."
 	]
 }

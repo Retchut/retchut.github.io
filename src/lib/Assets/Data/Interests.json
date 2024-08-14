@@ -21,16 +21,16 @@
 					"imgName": "games/furi"
 				},
 				{
+					"title": "Risk of Rain 2",
+					"subtitle-title": "Developer",
+					"subtitle": "Hopoo Games",
+					"imgName": "games/risk_of_rain_2"
+				},
+				{
 					"title": "NieR: Automata",
 					"subtitle-title": "Developer",
 					"subtitle": "PlatinumGames",
 					"imgName": "games/nier_automata"
-				},
-				{
-					"title": "Persona 3 FES",
-					"subtitle-title": "Developer",
-					"subtitle": "Atlus",
-					"imgName": "games/p3"
 				},
 				{
 					"title": "NieR Replicant ver.1.22474487139…",
@@ -39,16 +39,22 @@
 					"imgName": "games/nier_replicant"
 				},
 				{
+					"title": "Fallout: New Vegas",
+					"subtitle-title": "Developer",
+					"subtitle": "Obsidian Entertainment",
+					"imgName": "games/fallout_new_vegas"
+				},
+				{
+					"title": "Persona 3 FES",
+					"subtitle-title": "Developer",
+					"subtitle": "Atlus",
+					"imgName": "games/p3"
+				},
+				{
 					"title": "Kingdom Hearts",
 					"subtitle-title": "Developer",
 					"subtitle": "Square Enix",
 					"imgName": "games/kh1"
-				},
-				{
-					"title": "Ratchet & Clank 2",
-					"subtitle-title": "Developer",
-					"subtitle": "Insomniac Games",
-					"imgName": "games/ratchet2"
 				},
 				{
 					"title": "Terraria",
@@ -63,12 +69,6 @@
 					"imgName": "games/bl2"
 				},
 				{
-					"title": "Jak 3",
-					"subtitle-title": "Developer",
-					"subtitle": "Naughty Dog",
-					"imgName": "games/jak3"
-				},
-				{
 					"title": "Metro: Last Light",
 					"subtitle-title": "Developer",
 					"subtitle": "4A Games",
@@ -79,6 +79,18 @@
 					"subtitle-title": "Developer",
 					"subtitle": "PlatinumGames",
 					"imgName": "games/mgrr"
+				},
+				{
+					"title": "Ratchet & Clank 2",
+					"subtitle-title": "Developer",
+					"subtitle": "Insomniac Games",
+					"imgName": "games/ratchet2"
+				},
+				{
+					"title": "Jak 3",
+					"subtitle-title": "Developer",
+					"subtitle": "Naughty Dog",
+					"imgName": "games/jak3"
 				}
 			]
 		},
@@ -116,18 +128,6 @@
 					"imgName": "music/cherish"
 				},
 				{
-					"title": "ホームタウン",
-					"subtitle-title": "By",
-					"subtitle": "Asian Kung-Fu Generation",
-					"imgName": "music/hometown"
-				},
-				{
-					"title": "Furi (Original Game Soundtrack)",
-					"subtitle-title": "By",
-					"subtitle": "Several Artists",
-					"imgName": "music/furi_ost"
-				},
-				{
 					"title": "NieR Gestalt & Replicant Original Soundtrack",
 					"subtitle-title": "By",
 					"subtitle": "Keiichi Okabe, others",
@@ -140,16 +140,40 @@
 					"imgName": "music/nier_automata_ost"
 				},
 				{
-					"title": "Persona 3 Original Soundtrack",
+					"title": "Furi (Original Game Soundtrack)",
 					"subtitle-title": "By",
-					"subtitle": "Shoji Meguro",
-					"imgName": "music/p3_ost"
+					"subtitle": "Several Artists",
+					"imgName": "music/furi_ost"
 				},
 				{
-					"title": "Ratchet & Clank Original Soundtrack",
+					"title": "Reborn",
 					"subtitle-title": "By",
-					"subtitle": "David Bergeaud",
-					"imgName": "music/ratchet_ost"
+					"subtitle": "Kavinsky",
+					"imgName": "music/furi_ost"
+				},
+				{
+					"title": "Awakening",
+					"subtitle-title": "By",
+					"subtitle": "Magic Sword",
+					"imgName": "music/awakening"
+				},
+				{
+					"title": "Volume I",
+					"subtitle-title": "By",
+					"subtitle": "Magic Sword",
+					"imgName": "music/legend_ep"
+				},
+				{
+					"title": "Volume I",
+					"subtitle-title": "By",
+					"subtitle": "Magic Sword",
+					"imgName": "music/magic_sword_vol1"
+				},
+				{
+					"title": "EP II",
+					"subtitle-title": "By",
+					"subtitle": "Carpenter Brut",
+					"imgName": "music/epii"
 				},
 				{
 					"title": "Tarot",
@@ -174,6 +198,24 @@
 					"subtitle-title": "By",
 					"subtitle": "Be'lakor",
 					"imgName": "music/stones_reach"
+				},
+				{
+					"title": "ホームタウン",
+					"subtitle-title": "By",
+					"subtitle": "Asian Kung-Fu Generation",
+					"imgName": "music/hometown"
+				},
+				{
+					"title": "Persona 3 Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "Shoji Meguro",
+					"imgName": "music/p3_ost"
+				},
+				{
+					"title": "Ratchet & Clank Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "David Bergeaud",
+					"imgName": "music/ratchet_ost"
 				}
 			]
 		},
@@ -197,6 +239,18 @@
 					"subtitle-title": "Director",
 					"subtitle": "Satoshi Kon",
 					"imgName": "movies/perfect_blue"
+				},
+				{
+					"title": "Drive",
+					"subtitle-title": "Director",
+					"subtitle": "Nicolas Winding Refn",
+					"imgName": "movies/drive"
+				},
+				{
+					"title": "Blade Runner 2049",
+					"subtitle-title": "Director",
+					"subtitle": "Denis Villeneuve",
+					"imgName": "movies/blade_runner_2049"
 				},
 				{
 					"title": "Monty Python and the Holy Grail",
@@ -227,6 +281,12 @@
 					"subtitle-title": "Director",
 					"subtitle": "Quentin Tarantino",
 					"imgName": "movies/pulp_fiction"
+				},
+				{
+					"title": "Dreams",
+					"subtitle-title": "Director",
+					"subtitle": "Akira Kurosawa",
+					"imgName": "movies/dreams"
 				}
 			]
 		},
@@ -252,10 +312,10 @@
 					"imgName": "shows/samurai_champloo"
 				},
 				{
-					"title": "South Park",
+					"title": "The Sopranos",
 					"subtitle-title": "Created by",
-					"subtitle": "Trey Parker and Matt Stone",
-					"imgName": "shows/south_park"
+					"subtitle": "David Chase",
+					"imgName": "shows/thesopranos"
 				},
 				{
 					"title": "Death Parade",
@@ -268,6 +328,18 @@
 					"subtitle-title": "Director",
 					"subtitle": "Kenichi Kasai",
 					"imgName": "shows/bakuman"
+				},
+				{
+					"title": "FLCL",
+					"subtitle-title": "Created by",
+					"subtitle": "Kazuya Tsurumaki",
+					"imgName": "shows/flcl"
+				},
+				{
+					"title": "South Park",
+					"subtitle-title": "Created by",
+					"subtitle": "Trey Parker and Matt Stone",
+					"imgName": "shows/south_park"
 				},
 				{
 					"title": "It's Always Sunny in Philadelphia",

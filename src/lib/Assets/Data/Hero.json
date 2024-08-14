@@ -1,6 +1,9 @@
 {
 	"title": "Hello, I'm Mário",
 	"subtitle": "",
-	"paragraphs": ["Web, XR and Computer", "Graphics Engineer"],
+	"paragraphs": [
+		"Web Designer/Developer",
+		"Graphics Enthusiast"
+	],
 	"contact": "Contact me"
 }
