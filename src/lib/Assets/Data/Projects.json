@@ -109,7 +109,7 @@
 			{
 				"title": "Atlas of Veterinarian Pathology",
 				"description": [
-					"An online Atlas of Veterinarian Pathology. A work in progress, currently on hiatus, as it is missing content.",
+					"An online Atlas of Veterinarian Pathology. A work currently on hiatus, as it is missing content.",
 					"It is an educative tool made for Veterinary Medicine teachers at the ||University of Trás-os-Montes and Alto Douro[utad.pt/en/university/]||, based on their ||book[www.wook.pt/livro/atlas-de-patologia-veterinaria-maria-dos-anjos-pires/75229]||."
 				],
 				"imgName": "atlas",
@@ -127,15 +127,15 @@
 					"Express",
 					"MongoDB"
 				],
-				"projectButtonText": "See the code",
-				"projectURL": "https://github.com/Retchut/atlas"
+				"projectButtonText": "",
+				"projectURL": ""
 			}
 		],
 		"xrCG": [
 			{
 				"title": "Thesis Project",
 				"description": [
-					"Currently working on my Master's thesis in collaboration with INESC TEC, to explore challenges in capturing and rendering realistic 3D environments and objects, and study how these processes can be optimized for WebVR experiences."
+					"Finished my Master's thesis in collaboration with INESC TEC, to explore challenges in capturing and rendering realistic 3D environments and objects, and study how these processes can be optimized for WebVR experiences."
 				],
 				"imgName": "thesis",
 				"contributions": [
