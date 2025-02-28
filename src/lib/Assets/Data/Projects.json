@@ -133,6 +133,30 @@
 		],
 		"xrCG": [
 			{
+				"title": "Pretty Water",
+				"description": [
+					"An exploration of the techniques used in modern graphics rendering for simulating water.",
+					"Have implemented a simple sum of sines algorithm, with a simple **PBR model + fresnel**.",
+					"In the near future, I'll be looking to complement this project with screen space reflections, and experiment with other wave generation techniques, such as **Gerstner Waves**, different **sine-based variations** and with **Fractional Brownian Motion**."
+				],
+				"imgName": "pretty-water",
+				"contributions": [
+					"Study water simulation techniques and rendering algorithms",
+					"Implemented the wave generation algorithm and PBR",
+					"Implemented a simple UI for tweaking parameters during runtime"
+				],
+				"tags": [
+					"Computer Graphics"
+				],
+				"techs": [
+					"Unity",
+					"C#",
+					"HLSL"
+				],
+				"projectButtonText": "See the result",
+				"projectURL": "https://retchut.itch.io/pretty-water"
+			},
+			{
 				"title": "Thesis Project",
 				"description": [
 					"Finished my Master's thesis in collaboration with INESC TEC, to explore challenges in capturing and rendering realistic 3D environments and objects, and study how these processes can be optimized for WebVR experiences."
@@ -159,30 +183,6 @@
 				],
 				"projectButtonText": "",
 				"projectURL": ""
-			},
-			{
-				"title": "Pretty Water",
-				"description": [
-					"An exploration of the techniques used in modern graphics rendering for simulating water.",
-					"Have implemented a simple sum of sines algorithm, with a simple **PBR model + fresnel**.",
-					"In the near future, I'll be looking to complement this project with screen space reflections, and experiment with other wave generation techniques, such as **Gerstner Waves**, different **sine-based variations** and with **Fractional Brownian Motion**."
-				],
-				"imgName": "pretty-water",
-				"contributions": [
-					"Study water simulation techniques and rendering algorithms",
-					"Implemented the wave generation algorithm and PBR",
-					"Implemented a simple UI for tweaking parameters during runtime"
-				],
-				"tags": [
-					"Computer Graphics"
-				],
-				"techs": [
-					"Unity",
-					"C#",
-					"HLSL"
-				],
-				"projectButtonText": "See the result",
-				"projectURL": "https://retchut.itch.io/pretty-water"
 			},
 			{
 				"title": "VR A-Frame Explorer",
