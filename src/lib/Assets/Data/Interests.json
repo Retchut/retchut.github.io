@@ -21,6 +21,12 @@
 					"imgName": "games/furi"
 				},
 				{
+					"title": "Ultrakill",
+					"subtitle-title": "Developer",
+					"subtitle": "Arsi \"Hakita\" Patala",
+					"imgName": "games/ultrakill"
+				},
+				{
 					"title": "Risk of Rain 2",
 					"subtitle-title": "Developer",
 					"subtitle": "Hopoo Games",
@@ -116,6 +122,12 @@
 					"imgName": "music/modal_soul_classics_ii"
 				},
 				{
+					"title": "Seychelles",
+					"subtitle-title": "By",
+					"subtitle": "Masayoshi Takanaka",
+					"imgName": "music/seychelles"
+				},
+				{
 					"title": "Fortune",
 					"subtitle-title": "By",
 					"subtitle": "SNUG SPACE",
@@ -140,6 +152,18 @@
 					"imgName": "music/nier_automata_ost"
 				},
 				{
+					"title": "Groove District",
+					"subtitle-title": "By",
+					"subtitle": "Starjunk 95",
+					"imgName": "music/groove_district"
+				},
+				{
+					"title": "Bomb Rush Cyberfunk Original Soundtrack",
+					"subtitle-title": "By",
+					"subtitle": "Several Artists",
+					"imgName": "music/brc_ost"
+				},
+				{
 					"title": "Furi (Original Game Soundtrack)",
 					"subtitle-title": "By",
 					"subtitle": "Several Artists",
@@ -149,7 +173,7 @@
 					"title": "Reborn",
 					"subtitle-title": "By",
 					"subtitle": "Kavinsky",
-					"imgName": "music/furi_ost"
+					"imgName": "music/reborn"
 				},
 				{
 					"title": "Awakening",

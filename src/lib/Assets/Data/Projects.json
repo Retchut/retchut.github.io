@@ -29,8 +29,8 @@
 					"Tailwind",
 					"Payload"
 				],
-				"projectButtonText": "Design Proposal",
-				"projectURL": "https://www.figma.com/design/sLj4oCTNqxTzgRTxCCMHvP/oportocine-website"
+				"projectButtonText": "Visit the website",
+				"projectURL": "https://oportocine.com"
 			},
 			{
 				"title": "NCGM's Website",
@@ -85,7 +85,8 @@
 				"title": "Portfolio Website",
 				"description": [
 					"Repository holding this website's code.",
-					"Serves as a little archive of what I'm up to."
+					"Serves as a little archive of what I'm up to.",
+					"Quite proud of this one, it has served me well. Go check out the code!"
 				],
 				"contributions": [
 					"Designed the interface and UI",
@@ -215,9 +216,8 @@
 			{
 				"title": "Shadertoy",
 				"description": [
-					"On this platform, I have been playing around with shadder programming, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
-					"Check out the shaders I have published on my profile!",
-					"There's a lot more where those came from!"
+					"On this platform, I occasionally fiddle around with some fragment shaders, trying to recreate some interesting effects I have seen in games and other media I enjoy.",
+					"More content will be added as I go."
 				],
 				"imgName": "shadertoy",
 				"contributions": [],
@@ -268,7 +268,8 @@
 				"contributions": [
 					"Actively participated in design decisions",
 					"Implemented the connectivity between the game and the slot machine's hardware",
-					"Developed and tweaked some of the game's mechanics"
+					"Developed and tweaked some of the game's mechanics",
+					"Implemented some particle effects and shaders."
 				],
 				"tags": [
 					"Game Dev",
@@ -277,6 +278,7 @@
 				"techs": [
 					"Unity",
 					"C#",
+					"HLSL",
 					"Websockets",
 					"Linux"
 				],

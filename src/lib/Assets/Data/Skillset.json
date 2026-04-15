@@ -53,7 +53,8 @@
 				"aframe",
 				"opencv",
 				"opengl",
-				"glslhlsl"
+				"glslhlsl",
+				"vulkan"
 			],
 			"bannerImg": "cg"
 		},
